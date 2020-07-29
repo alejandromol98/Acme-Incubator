@@ -16,5 +16,25 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<import resource="conversion-service.xml" />
+	
+	<!-- Molina Bulletins -->
+	
+	<bean id="bulletin01" class="acme.entities.molinaBulletins.MolinaBulletin">
+		<property name="author" value="John Doe" />
+		<property name="text" value="Hello World!" />
+		<property name="moment" value="2019/09/10 15:15" />
+	</bean>
+	
+	<bean id="bulletin02" class="acme.entities.molinaBulletins.MolinaBulletin">
+		<property name="author" value="Kevin Bacon" />
+		<property name="text" value="I love trains" />
+		<property name="moment" value="2020/01/01 10:50" />
+	</bean>
+	
+	<bean id="bulletin03" class="acme.entities.molinaBulletins.MolinaBulletin">
+		<property name="author" value="Jane Doe" />
+		<property name="text" value="Happy birthday Joe!" />
+		<property name="moment" value="2019/05/12 09:09s" />
+	</bean>
 
 </beans>

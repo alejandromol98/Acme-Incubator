@@ -1,0 +1,14 @@
+# i18n_en.messages
+
+
+# List
+anonymous.molinaBulletin.list.label.moment = Moment
+anonymous.molinaBulletin.list.label.author = Author
+anonymous.molinaBulletin.list.label.text = Text
+anonymous.molinaBulletin.list.button.create = Create MolinaBulletin
+
+# Form
+anonymous.molinaBulletin.form.label.author = Author
+anonymous.molinaBulletin.form.label.text = Text
+anonymous.molinaBulletin.form.label.create = Create
+anonymous.molinaBulletin.form.label.return = Return

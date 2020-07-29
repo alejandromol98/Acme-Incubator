@@ -19,8 +19,12 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.anonymous.alejandro-link" action="http://www.youtube.com"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.anonymous.molinaBulletin.list" action="/anonymous/molina-bulletin/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.molinaBulletin.create" action="/anonymous/molina-bulletin/create"/>
 		</acme:menu-option>
+		
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>

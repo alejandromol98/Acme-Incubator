@@ -29,7 +29,9 @@ master.menu.sign-out = Sign out
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anonymous
-master.menu.anonymous.favourite-link = Favourite link
+master.menu.anonymous.alejandro-link = Alejandro's Favourite link
+master.menu.anonymous.molinaBulletin.list = MolinaBulletins List
+master.menu.anonymous.molinaBulletin.create = Create MolinaBulletin
 
 # master.menu.administrator ###################################################
 
