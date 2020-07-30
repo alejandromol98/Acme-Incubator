@@ -24,6 +24,9 @@ public class MolinaBulletin extends DomainEntity {
 	// Attributes ------------------------------------------------------------
 
 	@NotBlank
+	private String				title;
+
+	@NotBlank
 	private String				author;
 
 	@NotBlank
