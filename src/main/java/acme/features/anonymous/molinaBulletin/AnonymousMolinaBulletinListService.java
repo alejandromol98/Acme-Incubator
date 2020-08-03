@@ -45,7 +45,7 @@ public class AnonymousMolinaBulletinListService implements AbstractListService<A
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "author", "text", "moment");
+		request.unbind(entity, model, "title", "author", "text", "moment");
 	}
 
 }

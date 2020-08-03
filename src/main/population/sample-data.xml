@@ -20,21 +20,24 @@
 	<!-- Molina Bulletins -->
 	
 	<bean id="bulletin01" class="acme.entities.molinaBulletins.MolinaBulletin">
+		<property name="title" value="My first Bulletin" />
 		<property name="author" value="John Doe" />
 		<property name="text" value="Hello World!" />
 		<property name="moment" value="2019/09/10 15:15" />
 	</bean>
 	
 	<bean id="bulletin02" class="acme.entities.molinaBulletins.MolinaBulletin">
+		<property name="title" value="My Hobbies" />
 		<property name="author" value="Kevin Bacon" />
-		<property name="text" value="I love trains" />
+		<property name="text" value="I love videogames" />
 		<property name="moment" value="2020/01/01 10:50" />
 	</bean>
 	
 	<bean id="bulletin03" class="acme.entities.molinaBulletins.MolinaBulletin">
+		<property name="title" value="Joe´s Birthday" />
 		<property name="author" value="Jane Doe" />
 		<property name="text" value="Happy birthday Joe!" />
-		<property name="moment" value="2019/05/12 09:09s" />
+		<property name="moment" value="2019/05/12 09:09" />
 	</bean>
 
 </beans>
