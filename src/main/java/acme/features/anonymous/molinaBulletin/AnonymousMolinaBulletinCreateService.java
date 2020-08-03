@@ -39,6 +39,7 @@ public class AnonymousMolinaBulletinCreateService implements AbstractCreateServi
 		moment = new Date(System.currentTimeMillis() - 1);
 
 		result = new MolinaBulletin();
+		result.setTitle("Bulletin Title");
 		result.setAuthor("John Doe");
 		result.setText("Lore ipsum");
 		result.setMoment(moment);
@@ -52,7 +53,7 @@ public class AnonymousMolinaBulletinCreateService implements AbstractCreateServi
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "author", "text");
+		request.unbind(entity, model, "title", "author", "text");
 	}
 
 	@Override

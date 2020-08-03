@@ -2,12 +2,14 @@
 
 
 # List
+anonymous.molinaBulletin.list.label.title = Título
 anonymous.molinaBulletin.list.label.moment = Momento
 anonymous.molinaBulletin.list.label.author = Autor
 anonymous.molinaBulletin.list.label.text = Texto
 anonymous.molinaBulletin.list.button.create = Crear MolinaBulletin
 
 # Form
+anonymous.molinaBulletin.form.label.title = Título
 anonymous.molinaBulletin.form.label.author = Autor
 anonymous.molinaBulletin.form.label.text = Texto
 anonymous.molinaBulletin.form.label.create = Crear

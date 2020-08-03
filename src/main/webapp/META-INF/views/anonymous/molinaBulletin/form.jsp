@@ -5,6 +5,7 @@
 
 <acme:form>
 
+	<acme:form-textbox code="anonymous.molinaBulletin.form.label.title" path="title" />
 	<acme:form-textbox code="anonymous.molinaBulletin.form.label.author" path="author" />
 	<acme:form-textarea code="anonymous.molinaBulletin.form.label.text" path="text" />
 	

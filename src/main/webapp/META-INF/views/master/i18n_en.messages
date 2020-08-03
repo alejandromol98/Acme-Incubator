@@ -10,7 +10,8 @@
 
 # master.banner.welcome #######################################################
 
-master.banner.background = #FFE97F 
+master.banner.background = #FFFFFF
+# master.banner.background = #FFE97F 
 
 # master.welcome ##############################################################
 
@@ -77,7 +78,7 @@ master.company.text = \
 	Starter Project, Inc. is a fictitious fictitious company that provides a \
 	starter project for the students of the Design and Testing subject of the \
 	Software Engineering Curriculum of the University of Sevilla.
-master.company.name = Starter Project, Inc.
+master.company.name = Acme Incubator, Inc.
 master.company.address = Number Street, City, State, Country
 master.company.phone = +000 123 456
 master.company.email = contact@acme.com

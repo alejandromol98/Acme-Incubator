@@ -308,6 +308,7 @@ has v</panel_attributes>
 MolinaBulletin
 --
 + moment: Date {Temporal(TIMESTAMP), Past}
++ title: String {NotBlank}
 + author: String {NotBlank}
 + text: String {NotBlank}</panel_attributes>
     <additional_attributes/>
