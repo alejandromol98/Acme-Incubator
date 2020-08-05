@@ -1,0 +1,11 @@
+#i18n_en.messages
+
+administrator.notice.list.label.deadline = Deadline
+administrator.notice.list.label.title = Title
+
+administrator.notice.form.label.headerPicture = Header Picture
+administrator.notice.form.label.title = Title
+administrator.notice.form.label.moment = Moment
+administrator.notice.form.label.deadline = Deadline
+administrator.notice.form.label.body = Body
+administrator.notice.form.button.return = Return

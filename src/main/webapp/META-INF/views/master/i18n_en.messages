@@ -30,14 +30,24 @@ master.menu.sign-out = Sign out
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anonymous
+master.menu.anonymous.links = Links
 master.menu.anonymous.alejandro-link = Alejandro's Favourite link
 master.menu.anonymous.molinaBulletin.list = MolinaBulletins List
 master.menu.anonymous.molinaBulletin.create = Create MolinaBulletin
+master.menu.anonymous.notice = Notices
+master.menu.anonymous.notice.list = Notices List
+
+# master.menu.authenticated ###################################################
+
+master.menu.authenticated = Authenticated
+master.menu.authenticated.notice = Notices
+master.menu.authenticated.notice.list = Notices List
 
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
 master.menu.administrator.user-accounts = User accounts
+master.menu.administrator.notice.list = All Notices
 master.menu.administrator.shutdown = Shut down
 
 # master.menu.provider ########################################################

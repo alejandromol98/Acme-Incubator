@@ -1,0 +1,11 @@
+#i18n_en.messages
+
+authenticated.notice.list.label.deadline = Deadline
+authenticated.notice.list.label.title = Title
+
+authenticated.notice.form.label.headerPicture = Header Picture
+authenticated.notice.form.label.title = Title
+authenticated.notice.form.label.moment = Moment
+authenticated.notice.form.label.deadline = Deadline
+authenticated.notice.form.label.body = Body
+authenticated.notice.form.button.return = Return

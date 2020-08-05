@@ -39,5 +39,32 @@
 		<property name="text" value="Happy birthday Joe!" />
 		<property name="moment" value="2019/05/12 09:09" />
 	</bean>
+	
+	<!-- Notices -->
+	<bean id="notice01" class="acme.entities.notices.Notice">
+		<property name="headerPicture" value="https://concepto.de/wp-content/uploads/2015/03/paisaje-e1549600034372.jpg"/>
+		<property name="title" value="First Notice" />
+		<property name="moment" value="2019/05/12 09:09" />
+		<property name="deadline" value="2019/05/12 09:09" />
+		<property name="body" value="This is the First Notice of the web!" />
+		<property name="links" ><null/></property>
+	</bean>
+	<bean id="notice02" class="acme.entities.notices.Notice">
+		<property name="headerPicture" value="https://tecnologia-informatica.com/wp-content/uploads/2019/02/que-es-la-tecnologia-5.jpeg"/>
+		<property name="title" value="New Jobs in Tech" />
+		<property name="moment" value="2020/01/19 16:16" />
+		<property name="deadline" value="2021/01/19 16:16" />
+		<property name="body" value="There are new jobs in technology sector" />
+		<property name="links" ><null/></property>
+	</bean>
+	<bean id="notice03" class="acme.entities.notices.Notice">
+		<property name="headerPicture" value="https://concepto.de/wp-content/uploads/2015/03/paisaje-e1549600034372.jpg"/>
+		<property name="title" value="Third Notice" />
+		<property name="moment" value="2019/05/12 09:09" />
+		<property name="deadline" value="2021/05/12 09:09" />
+		<property name="body" value="This is the First Notice of the web!" />
+		<property name="links" ><null/></property>
+	</bean>
+
 
 </beans>

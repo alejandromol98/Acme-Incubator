@@ -300,7 +300,7 @@ has v</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>189</x>
-      <y>315</y>
+      <y>357</y>
       <w>224</w>
       <h>126</h>
     </coordinates>
@@ -311,6 +311,124 @@ MolinaBulletin
 + title: String {NotBlank}
 + author: String {NotBlank}
 + text: String {NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>189</x>
+      <y>504</y>
+      <w>224</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Notice
+--
++ headerPicture: String {NotBlank}
++ title: String {NotBlank}
++ moment: Date {Temporal(TIMESTAMP), Past}
++ deadline: Date {Temporal(TIMESTAMP)}
++ body: String {NotBlank}
++ links: String {URL}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>462</x>
+      <y>504</y>
+      <w>224</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Overture
+--
++ title: String {NotBlank}
++ moment: Date {Temporal(TIMESTAMP), Past}
++ deadline: Date{Temporal(TIMESTAMP)}
++ description: String{NotBlank}
++ moneyInterval: Money {NotNull}
++ email: String {NotBlank, Email}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>462</x>
+      <y>357</y>
+      <w>224</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Inquire
+--
++ title: String {NotBlank}
++ moment: Date {Temporal(TIMESTAMP), Past}
++ deadline: Date{Temporal(TIMESTAMP)}
++ description: String{NotBlank}
++ moneyInterval: Money {NotNull}
++ email: String {NotBlank, Email}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>721</x>
+      <y>357</y>
+      <w>224</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+TechonologyRecord
+--
++ title: String {NotBlank}
++ activitySector: String {NotBlank}
++ investor: String {NotBlank}
++ description: String{NotBlank}
++ website: String {NotBlank, URL}
++ email: String {NotBlank, Email}
++ openSource: Boolean {NotNull}
++ rate: Integer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>721</x>
+      <y>504</y>
+      <w>224</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+ToolRecord
+--
++ title: String {NotBlank}
++ activitySector: String {NotBlank}
++ investor: String {NotBlank}
++ description: String{NotBlank}
++ website: String {NotBlank, URL}
++ email: String {NotBlank, Email}
++ open-source: Boolean {NotNull}
++ rate: Integer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>973</x>
+      <y>357</y>
+      <w>224</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Challenge
+--
++ title: String {NotBlank}
++ deadline: Date{Temporal(TIMESTAMP)}
++ description: String{NotBlank}
++ goalRewardRookie: Money {NotNull}
++ goalRewardAverage: Money {NotNull}
++ goalRewardExpert: Money {NotNull}</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

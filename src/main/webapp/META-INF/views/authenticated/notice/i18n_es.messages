@@ -1,0 +1,11 @@
+#i18n_es.messages
+
+authenticated.notice.list.label.deadline = Fecha Límite
+authenticated.notice.list.label.title = Título
+
+authenticated.notice.form.label.headerPicture = Imagen de Cabecera
+authenticated.notice.form.label.title = Título
+authenticated.notice.form.label.moment = Momento
+authenticated.notice.form.label.deadline = Fecha Límite
+authenticated.notice.form.label.body = Cuerpo
+authenticated.notice.form.button.return = Volver

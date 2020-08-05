@@ -25,11 +25,23 @@
 
     drop table if exists `authenticated`;
 
+    drop table if exists `challenge`;
+
     drop table if exists `consumer`;
+
+    drop table if exists `inquire`;
 
     drop table if exists `molina_bulletin`;
 
+    drop table if exists `notice`;
+
+    drop table if exists `overture`;
+
     drop table if exists `provider`;
+
+    drop table if exists `technology_record`;
+
+    drop table if exists `tool_record`;
 
     drop table if exists `user_account`;
 

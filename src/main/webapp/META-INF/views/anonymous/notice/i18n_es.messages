@@ -1,0 +1,11 @@
+#i18n_es.messages
+
+anonymous.notice.list.label.deadline = Fecha Límite
+anonymous.notice.list.label.title = Título
+
+anonymous.notice.form.label.headerPicture = Imagen de cabecera
+anonymous.notice.form.label.title = Título
+anonymous.notice.form.label.moment = Fecha Creación
+anonymous.notice.form.label.deadline = Fecha Límite
+anonymous.notice.form.label.body = Cuerpo
+anonymous.notice.form.button.return = Volver

@@ -1,0 +1,11 @@
+#i18n_es.messages
+
+administrator.notice.list.label.deadline = Fecha Límite
+administrator.notice.list.label.title = Título
+
+administrator.notice.form.label.headerPicture = Imagen de cabecera
+administrator.notice.form.label.title = Título
+administrator.notice.form.label.moment = Fecha Creación
+administrator.notice.form.label.deadline = Fecha Límite
+administrator.notice.form.label.body = Cuerpo
+administrator.notice.form.button.return = Volver
