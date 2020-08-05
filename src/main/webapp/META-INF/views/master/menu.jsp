@@ -22,6 +22,7 @@
 			<acme:menu-suboption code="master.menu.anonymous.molinaBulletin.list" action="/anonymous/molina-bulletin/list"/>
 	<%-- 	<acme:menu-suboption code="master.menu.anonymous.molinaBulletin.create" action="/anonymous/molina-bulletin/create"/> --%>
 			<acme:menu-suboption code="master.menu.anonymous.notice.list" action="/anonymous/notice/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.technologyRecord.list" action="/anonymous/technology-record/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.anonymous.links" access="isAnonymous()">
@@ -45,6 +46,7 @@
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.authenticated.notice.list" action="/authenticated/notice/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.technologyRecord.list" action="/authenticated/technology-record/list"/>
 		</acme:menu-option>
 		
 		

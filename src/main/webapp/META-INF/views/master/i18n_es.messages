@@ -37,12 +37,14 @@ master.menu.anonymous.molinaBulletin.list = Lista de MolinaBulletins
 master.menu.anonymous.molinaBulletin.create = Crear MolinaBulletin
 master.menu.anonymous.notice = Noticias
 master.menu.anonymous.notice.list = Lista de Noticias
+master.menu.anonymous.technologyRecord.list = Lista de Registros Tecnológicos
 
 # master.menu.authenticated ###################################################
 
 master.menu.authenticated = Autenticado
 master.menu.authenticated.notice = Noticias
 master.menu.authenticated.notice.list = Lista de Noticias
+master.menu.authenticated.technologyRecord.list = Lista de Registros Tecnológicos
 
 
 # master.menu.administrator ###################################################

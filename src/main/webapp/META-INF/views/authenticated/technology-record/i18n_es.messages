@@ -1,0 +1,16 @@
+#i18n_es.messages
+
+authenticated.technologyRecord.list.label.title = Título
+authenticated.technologyRecord.list.label.activitySector = Sector de Actividad
+authenticated.technologyRecord.list.label.rate = Estrellas
+
+authenticated.technologyRecord.form.label.title = Título
+authenticated.technologyRecord.form.label.activitySector = Sector de Actividad
+authenticated.technologyRecord.form.label.investor = Inversor
+authenticated.technologyRecord.form.label.description = Descripción
+authenticated.technologyRecord.form.label.website = Página web
+authenticated.technologyRecord.form.label.email = Email
+authenticated.technologyRecord.form.label.openSource = Código Abierto
+authenticated.technologyRecord.form.label.rate = Estrellas 
+
+authenticated.technologyRecord.form.button.return = Volver

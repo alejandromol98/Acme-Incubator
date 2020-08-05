@@ -102,7 +102,7 @@
         `description` varchar(255),
         `email` varchar(255),
         `investor` varchar(255),
-        `open_source` bit not null,
+        `open_source` integer,
         `rate` integer,
         `title` varchar(255),
         `website` varchar(255),
