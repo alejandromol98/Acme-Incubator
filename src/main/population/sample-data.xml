@@ -99,4 +99,36 @@
 	</bean>
 
 
+	<!-- Tool Records -->
+	<bean id="toolRecord01" class="acme.entities.toolRecords.ToolRecord">
+		<property name="title" value="Tool Record 1" />
+		<property name="activitySector" value="Marketing" />
+		<property name="investor" value="Matthew Andrew" />
+		<property name="description" value="This is one Tool Record" />
+		<property name="website" value="http://www.google.com"/>
+		<property name="email" value="ejemplo@ejemplo.com" />
+		<property name="openSource" value="Open_Source" />
+		<property name="rate" value="-3" />
+	</bean>
+	<bean id="toolRecord02" class="acme.entities.toolRecords.ToolRecord">
+		<property name="title" value="Tool Record 2" />
+		<property name="activitySector" value="Engineering" />
+		<property name="investor" value="Alex Perez" />
+		<property name="description" value="This Tool Record is about Engineering" />
+		<property name="website" value="http://www.ejemplo.com"/>
+		<property name="email" value="hello@hello.com" />
+		<property name="openSource" value="Open_Source" />
+		<property name="rate" value="3" />
+	</bean>
+	<bean id="toolRecord03" class="acme.entities.toolRecords.ToolRecord">
+		<property name="title" value="Tool Record 3" />
+		<property name="activitySector" value="Marketing" />
+		<property name="investor" value="George Michael" />
+		<property name="description" value="Another Tool Record" />
+		<property name="website" value="http://www.website.com"/>
+		<property name="email" value="george@email.com" />
+		<property name="openSource" value="Closed_Source" />
+		<property name="rate"><null/></property>
+	</bean>
+
 </beans>
