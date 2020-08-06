@@ -44,9 +44,11 @@
         `deadline` datetime(6),
         `description` varchar(255),
         `email` varchar(255),
+        `max_amount` double precision,
+        `max_currency` varchar(255),
+        `min_amount` double precision,
+        `min_currency` varchar(255),
         `moment` datetime(6),
-        `money_interval_amount` double precision,
-        `money_interval_currency` varchar(255),
         `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
@@ -79,9 +81,11 @@
         `deadline` datetime(6),
         `description` varchar(255),
         `email` varchar(255),
+        `max_amount` double precision,
+        `max_currency` varchar(255),
+        `min_amount` double precision,
+        `min_currency` varchar(255),
         `moment` datetime(6),
-        `money_interval_amount` double precision,
-        `money_interval_currency` varchar(255),
         `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;

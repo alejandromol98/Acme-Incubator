@@ -98,7 +98,6 @@
 		<property name="rate"><null/></property>
 	</bean>
 
-
 	<!-- Tool Records -->
 	<bean id="toolRecord01" class="acme.entities.toolRecords.ToolRecord">
 		<property name="title" value="Tool Record 1" />
@@ -129,6 +128,86 @@
 		<property name="email" value="george@email.com" />
 		<property name="openSource" value="Closed_Source" />
 		<property name="rate"><null/></property>
+	</bean>
+	
+		<!-- Money -->
+
+	<bean id="money01" class="acme.framework.datatypes.Money">
+		<property name="amount" value="30000" />
+		<property name="currency" value="€" />
+	</bean>
+
+	<bean id="money02" class="acme.framework.datatypes.Money">
+		<property name="amount" value="40000" />
+		<property name="currency" value="€" />
+	</bean>
+
+	<bean id="money03" class="acme.framework.datatypes.Money">
+		<property name="amount" value="50000" />
+		<property name="currency" value="€" />
+	</bean>
+
+	<bean id="money04" class="acme.framework.datatypes.Money">
+		<property name="amount" value="20000" />
+		<property name="currency" value="€" />
+	</bean>
+	
+	<!-- Overtures -->
+	<bean id="overture01" class="acme.entities.overtures.Overture">
+		<property name="title" value="First Overture" />
+		<property name="moment" value="2019/05/12 09:09" />
+		<property name="deadline" value="2019/05/12 09:09" />
+		<property name="description" value="This is the First Overture of the web!" />
+		<property name="min" ref="money01" />
+		<property name="max" ref="money02" />
+		<property name="email" value="ejemplo@ejemplo.com" />
+	</bean>
+	<bean id="overture02" class="acme.entities.overtures.Overture">
+		<property name="title" value="Group Overture" />
+		<property name="moment" value="2019/05/12 09:09" />
+		<property name="deadline" value="2021/10/19 17:17" />
+		<property name="description" value="I wanna make an overture about making a group" />
+		<property name="min" ref="money01" />
+		<property name="max" ref="money03" />
+		<property name="email" value="mike@ejemplo.com" />
+	</bean>
+	<bean id="overture03" class="acme.entities.overtures.Overture">
+		<property name="title" value="Overture notice 2" />
+		<property name="moment" value="2019/05/12 09:09" />
+		<property name="deadline" value="2020/12/19 17:17" />
+		<property name="description" value="I wanna make an overture about notice 2" />
+		<property name="min" ref="money02" />
+		<property name="max" ref="money03" />
+		<property name="email" value="peter@ejemplo.com" />
+	</bean>
+	
+	<!-- Inquires -->
+	<bean id="inquire01" class="acme.entities.inquires.Inquire">
+		<property name="title" value="First Inquire" />
+		<property name="moment" value="2019/05/12 09:09" />
+		<property name="deadline" value="2019/05/12 09:09" />
+		<property name="description" value="This is the First Inquire of the web!" />
+		<property name="min" ref="money01" />
+		<property name="max" ref="money02" />
+		<property name="email" value="ejemplo@ejemplo.com" />
+	</bean>
+	<bean id="inquire02" class="acme.entities.inquires.Inquire">
+		<property name="title" value="Inquire about notice 1" />
+		<property name="moment" value="2019/10/19 19:32" />
+		<property name="deadline" value="2021/10/19 17:17" />
+		<property name="description" value="I wanna inquire about notice 1 from the webpage " />
+		<property name="min" ref="money04" />
+		<property name="max" ref="money01" />
+		<property name="email" value="hola@ejemplo.com" />
+	</bean>
+	<bean id="inquire03" class="acme.entities.inquires.Inquire">
+		<property name="title" value="Inquire about computers" />
+		<property name="moment" value="2019/05/12 09:09" />
+		<property name="deadline" value="2021/05/12 09:09" />
+		<property name="description" value="Anyone knows how to buy Windows 10?" />
+		<property name="min" ref="money01" />
+		<property name="max" ref="money03" />
+		<property name="email" value="dave@ejemplo.com" />
 	</bean>
 
 </beans>

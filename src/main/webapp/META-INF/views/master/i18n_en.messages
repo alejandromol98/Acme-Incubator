@@ -45,6 +45,8 @@ master.menu.authenticated.notice = Notices
 master.menu.authenticated.notice.list = Notices List
 master.menu.authenticated.technologyRecord.list = Technology Records List
 master.menu.authenticated.toolRecord.list = Tool Records List
+master.menu.authenticated.overture.list = Overtures List
+master.menu.authenticated.inquire.list = Inquires List
 
 # master.menu.administrator ###################################################
 

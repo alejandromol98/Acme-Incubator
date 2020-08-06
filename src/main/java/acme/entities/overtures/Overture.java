@@ -40,7 +40,10 @@ public class Overture extends DomainEntity {
 	private String				description;
 
 	@NotNull
-	private Money				moneyInterval;
+	private Money				min;
+
+	@NotNull
+	private Money				max;
 
 	@NotBlank
 	@Email

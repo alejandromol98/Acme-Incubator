@@ -1,0 +1,14 @@
+#i18n_en.messages
+
+authenticated.inquire.list.label.deadline = Deadline
+authenticated.inquire.list.label.title = Title
+
+authenticated.inquire.form.label.title = Title
+authenticated.inquire.form.label.moment = Moment
+authenticated.inquire.form.label.deadline = Deadline
+authenticated.inquire.form.label.description = Description
+authenticated.inquire.form.label.min = Min
+authenticated.inquire.form.label.max = Max
+authenticated.inquire.form.label.email = E-mail
+
+authenticated.inquire.form.button.return = Return
