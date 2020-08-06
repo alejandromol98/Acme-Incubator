@@ -209,5 +209,31 @@
 		<property name="max" ref="money03" />
 		<property name="email" value="dave@ejemplo.com" />
 	</bean>
+	
+	<!-- Challenges -->
+	<bean id="challenge01" class="acme.entities.challenges.Challenge">
+		<property name="title" value="First Challenge" />
+		<property name="deadline" value="2021/05/12 09:09" />
+		<property name="description" value="This is the First Challenge of the web!" />
+		<property name="goalRewardRookie" ref="money01" />
+		<property name="goalRewardAverage" ref="money02" />
+		<property name="goalRewardExpert" ref="money03" />
+	</bean>
+	<bean id="challenge02" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Fast Challenge" />
+		<property name="deadline" value="2020/10/01 13:34" />
+		<property name="description" value="This Challenge is really fast, do it as soon as possible." />
+		<property name="goalRewardRookie" ref="money04" />
+		<property name="goalRewardAverage" ref="money01" />
+		<property name="goalRewardExpert" ref="money02" />
+	</bean>
+	<bean id="challenge03" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Hard Challenge" />
+		<property name="deadline" value="2022/05/12 09:09" />
+		<property name="description" value="This is a hard challenge." />
+		<property name="goalRewardRookie" ref="money04" />
+		<property name="goalRewardAverage" ref="money02" />
+		<property name="goalRewardExpert" ref="money03" />
+	</bean>
 
 </beans>

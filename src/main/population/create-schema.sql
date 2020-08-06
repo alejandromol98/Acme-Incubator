@@ -25,6 +25,12 @@
         `version` integer not null,
         `deadline` datetime(6),
         `description` varchar(255),
+        `goal_reward_average_amount` double precision,
+        `goal_reward_average_currency` varchar(255),
+        `goal_reward_expert_amount` double precision,
+        `goal_reward_expert_currency` varchar(255),
+        `goal_reward_rookie_amount` double precision,
+        `goal_reward_rookie_currency` varchar(255),
         `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;

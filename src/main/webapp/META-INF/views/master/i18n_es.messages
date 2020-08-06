@@ -48,6 +48,7 @@ master.menu.authenticated.technologyRecord.list = Lista de Registros Tecnológic
 master.menu.authenticated.toolRecord.list = Lista de Registros de Herramientas
 master.menu.authenticated.overture.list = List de Propuestas
 master.menu.authenticated.inquire.list = Lista de Consultas
+master.menu.authenticated.challenge.list = Lista de Desafíos
 
 # master.menu.administrator ###################################################
 
