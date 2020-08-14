@@ -29,6 +29,8 @@
 
     drop table if exists `consumer`;
 
+    drop table if exists `customisation`;
+
     drop table if exists `inquire`;
 
     drop table if exists `molina_bulletin`;
