@@ -130,7 +130,7 @@
 		<property name="rate"><null/></property>
 	</bean>
 	
-		<!-- Money -->
+	<!-- Money -->
 
 	<bean id="money01" class="acme.framework.datatypes.Money">
 		<property name="amount" value="30000" />
@@ -215,25 +215,34 @@
 		<property name="title" value="First Challenge" />
 		<property name="deadline" value="2021/05/12 09:09" />
 		<property name="description" value="This is the First Challenge of the web!" />
-		<property name="goalRewardRookie" ref="money01" />
-		<property name="goalRewardAverage" ref="money02" />
-		<property name="goalRewardExpert" ref="money03" />
+		<property name="goalRookie" value="Challenge 1 goal Rookie" />
+		<property name="goalAverage" value="Challenge 1 goal Average" />
+		<property name="goalExpert" value="Challenge 1 goal Expert" />
+		<property name="rewardRookie" ref="money01" />
+		<property name="rewardAverage" ref="money02" />
+		<property name="rewardExpert" ref="money03" />
 	</bean>
 	<bean id="challenge02" class="acme.entities.challenges.Challenge">
 		<property name="title" value="Fast Challenge" />
 		<property name="deadline" value="2020/10/01 13:34" />
 		<property name="description" value="This Challenge is really fast, do it as soon as possible." />
-		<property name="goalRewardRookie" ref="money04" />
-		<property name="goalRewardAverage" ref="money01" />
-		<property name="goalRewardExpert" ref="money02" />
+		<property name="goalRookie" value="Challenge 2 goal Rookie" />
+		<property name="goalAverage" value="Challenge 2 goal Average" />
+		<property name="goalExpert" value="Challenge 2 goal Expert" />
+		<property name="rewardRookie" ref="money04" />
+		<property name="rewardAverage" ref="money01" />
+		<property name="rewardExpert" ref="money02" />
 	</bean>
 	<bean id="challenge03" class="acme.entities.challenges.Challenge">
 		<property name="title" value="Hard Challenge" />
 		<property name="deadline" value="2022/05/12 09:09" />
 		<property name="description" value="This is a hard challenge." />
-		<property name="goalRewardRookie" ref="money04" />
-		<property name="goalRewardAverage" ref="money02" />
-		<property name="goalRewardExpert" ref="money03" />
+		<property name="goalRookie" value="Hard Challenge goal Rookie" />
+		<property name="goalAverage" value="Hard Challenge goal Average" />
+		<property name="goalExpert" value="Hard Challenge goal Expert" />
+		<property name="rewardRookie" ref="money04" />
+		<property name="rewardAverage" ref="money02" />
+		<property name="rewardExpert" ref="money03" />
 	</bean>
 
 </beans>
