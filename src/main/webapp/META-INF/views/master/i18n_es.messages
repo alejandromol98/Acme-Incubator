@@ -46,7 +46,7 @@ master.menu.authenticated.notice = Noticias
 master.menu.authenticated.notice.list = Lista de Noticias
 master.menu.authenticated.technologyRecord.list = Lista de Registros Tecnológicos
 master.menu.authenticated.toolRecord.list = Lista de Registros de Herramientas
-master.menu.authenticated.overture.list = List de Propuestas
+master.menu.authenticated.overture.list = Lista de Propuestas
 master.menu.authenticated.inquire.list = Lista de Consultas
 master.menu.authenticated.challenge.list = Lista de Desafíos
 

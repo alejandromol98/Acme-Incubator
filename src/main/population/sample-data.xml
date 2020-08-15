@@ -244,6 +244,17 @@
 		<property name="rewardAverage" ref="money02" />
 		<property name="rewardExpert" ref="money03" />
 	</bean>
+	<bean id="challenge04" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Challenge Not Active" />
+		<property name="deadline" value="2019/05/12 09:09" />
+		<property name="description" value="This challenge is not active." />
+		<property name="goalRookie" value="Challenge goal Rookie" />
+		<property name="goalAverage" value="Challenge goal Average" />
+		<property name="goalExpert" value="Challenge goal Expert" />
+		<property name="rewardRookie" ref="money04" />
+		<property name="rewardAverage" ref="money02" />
+		<property name="rewardExpert" ref="money03" />
+	</bean>
 	
 	<!-- Customisation -->
 	

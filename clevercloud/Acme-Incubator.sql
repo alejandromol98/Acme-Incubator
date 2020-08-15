@@ -97,6 +97,41 @@ INSERT INTO `authenticated` VALUES (5,0,3);
 UNLOCK TABLES;
 
 --
+-- Table structure for table `challenge`
+--
+
+DROP TABLE IF EXISTS `challenge`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `challenge` (
+  `id` int NOT NULL,
+  `version` int NOT NULL,
+  `deadline` datetime(6) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `goal_average` varchar(255) DEFAULT NULL,
+  `goal_expert` varchar(255) DEFAULT NULL,
+  `goal_rookie` varchar(255) DEFAULT NULL,
+  `reward_average_amount` double DEFAULT NULL,
+  `reward_average_currency` varchar(255) DEFAULT NULL,
+  `reward_expert_amount` double DEFAULT NULL,
+  `reward_expert_currency` varchar(255) DEFAULT NULL,
+  `reward_rookie_amount` double DEFAULT NULL,
+  `reward_rookie_currency` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `challenge`
+--
+
+LOCK TABLES `challenge` WRITE;
+/*!40000 ALTER TABLE `challenge` DISABLE KEYS */;
+/*!40000 ALTER TABLE `challenge` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `consumer`
 --
 
@@ -125,6 +160,32 @@ LOCK TABLES `consumer` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `customisation`
+--
+
+DROP TABLE IF EXISTS `customisation`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `customisation` (
+  `id` int NOT NULL,
+  `version` int NOT NULL,
+  `activity_sectors` varchar(255) DEFAULT NULL,
+  `spamwords` varchar(255) DEFAULT NULL,
+  `threshold` double DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `customisation`
+--
+
+LOCK TABLES `customisation` WRITE;
+/*!40000 ALTER TABLE `customisation` DISABLE KEYS */;
+/*!40000 ALTER TABLE `customisation` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `hibernate_sequence`
 --
 
@@ -144,6 +205,38 @@ LOCK TABLES `hibernate_sequence` WRITE;
 /*!40000 ALTER TABLE `hibernate_sequence` DISABLE KEYS */;
 INSERT INTO `hibernate_sequence` VALUES (6);
 /*!40000 ALTER TABLE `hibernate_sequence` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `inquire`
+--
+
+DROP TABLE IF EXISTS `inquire`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `inquire` (
+  `id` int NOT NULL,
+  `version` int NOT NULL,
+  `deadline` datetime(6) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `max_amount` double DEFAULT NULL,
+  `max_currency` varchar(255) DEFAULT NULL,
+  `min_amount` double DEFAULT NULL,
+  `min_currency` varchar(255) DEFAULT NULL,
+  `moment` datetime(6) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `inquire`
+--
+
+LOCK TABLES `inquire` WRITE;
+/*!40000 ALTER TABLE `inquire` DISABLE KEYS */;
+/*!40000 ALTER TABLE `inquire` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -171,6 +264,67 @@ CREATE TABLE `molina_bulletin` (
 LOCK TABLES `molina_bulletin` WRITE;
 /*!40000 ALTER TABLE `molina_bulletin` DISABLE KEYS */;
 /*!40000 ALTER TABLE `molina_bulletin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `notice`
+--
+
+DROP TABLE IF EXISTS `notice`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `notice` (
+  `id` int NOT NULL,
+  `version` int NOT NULL,
+  `body` varchar(255) DEFAULT NULL,
+  `deadline` datetime(6) DEFAULT NULL,
+  `header_picture` varchar(255) DEFAULT NULL,
+  `links` varchar(255) DEFAULT NULL,
+  `moment` datetime(6) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `notice`
+--
+
+LOCK TABLES `notice` WRITE;
+/*!40000 ALTER TABLE `notice` DISABLE KEYS */;
+/*!40000 ALTER TABLE `notice` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `overture`
+--
+
+DROP TABLE IF EXISTS `overture`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `overture` (
+  `id` int NOT NULL,
+  `version` int NOT NULL,
+  `deadline` datetime(6) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `max_amount` double DEFAULT NULL,
+  `max_currency` varchar(255) DEFAULT NULL,
+  `min_amount` double DEFAULT NULL,
+  `min_currency` varchar(255) DEFAULT NULL,
+  `moment` datetime(6) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `overture`
+--
+
+LOCK TABLES `overture` WRITE;
+/*!40000 ALTER TABLE `overture` DISABLE KEYS */;
+/*!40000 ALTER TABLE `overture` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -202,6 +356,68 @@ LOCK TABLES `provider` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `technology_record`
+--
+
+DROP TABLE IF EXISTS `technology_record`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `technology_record` (
+  `id` int NOT NULL,
+  `version` int NOT NULL,
+  `activity_sector` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `investor` varchar(255) DEFAULT NULL,
+  `open_source` int DEFAULT NULL,
+  `rate` int DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `website` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `technology_record`
+--
+
+LOCK TABLES `technology_record` WRITE;
+/*!40000 ALTER TABLE `technology_record` DISABLE KEYS */;
+/*!40000 ALTER TABLE `technology_record` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tool_record`
+--
+
+DROP TABLE IF EXISTS `tool_record`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tool_record` (
+  `id` int NOT NULL,
+  `version` int NOT NULL,
+  `activity_sector` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `investor` varchar(255) DEFAULT NULL,
+  `open_source` int DEFAULT NULL,
+  `rate` int DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `website` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tool_record`
+--
+
+LOCK TABLES `tool_record` WRITE;
+/*!40000 ALTER TABLE `tool_record` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tool_record` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `user_account`
 --
 
@@ -228,7 +444,7 @@ CREATE TABLE `user_account` (
 
 LOCK TABLES `user_account` WRITE;
 /*!40000 ALTER TABLE `user_account` DISABLE KEYS */;
-INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$Ck9nMQlM7T2npaukSqcYSek9sHD5Ck8Dofb9Pu.rBdQEOpC4fTlBe','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$fCvI64N0q9tQsA5cQ.hVKOxUdECOkv6KQix0yrWgDEWLzl9vmj/4m','administrator');
+INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$c8r/JGt..Yx93YCsxSpoRu3w6GRdnYoFjcDJ6fMJ3iwJsvj88uxzW','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$wrj219ZSJH1cVaARUdmUpu0DTLVKZR2OOR0d/jsPYFvStDKD0lUkS','administrator');
 /*!40000 ALTER TABLE `user_account` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -241,4 +457,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-08-03 21:03:22
+-- Dump completed on 2020-08-16  1:10:05
