@@ -44,7 +44,7 @@ public class ToolRecord extends DomainEntity {
 	private String				email;
 
 	@NotNull
-	private boolean				openSource;
+	private Source				openSource;
 
 	@Range(min = -5, max = 5)
 	private Integer				rate;

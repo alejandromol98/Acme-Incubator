@@ -65,6 +65,203 @@
 		<property name="body" value="This is the First Notice of the web!" />
 		<property name="links" ><null/></property>
 	</bean>
+	
+	<!-- Technology Records -->
+	<bean id="techRecord01" class="acme.entities.technologyRecords.TechnologyRecord">
+		<property name="title" value="Technology Record 1" />
+		<property name="activitySector" value="Technologies" />
+		<property name="investor" value="Matthew Andrew" />
+		<property name="description" value="This is one Techn. Record" />
+		<property name="website" value="http://www.google.com"/>
+		<property name="email" value="ejemplo@ejemplo.com" />
+		<property name="openSource" value="Open_Source" />
+		<property name="rate" value="-3" />
+	</bean>
+	<bean id="techRecord02" class="acme.entities.technologyRecords.TechnologyRecord">
+		<property name="title" value="Technology Record 2" />
+		<property name="activitySector" value="Engineering" />
+		<property name="investor" value="Alex Perez" />
+		<property name="description" value="This Tech. Record is about Engineering" />
+		<property name="website" value="http://www.ejemplo.com"/>
+		<property name="email" value="hello@hello.com" />
+		<property name="openSource" value="Open_Source" />
+		<property name="rate" value="3" />
+	</bean>
+	<bean id="techRecord03" class="acme.entities.technologyRecords.TechnologyRecord">
+		<property name="title" value="Technology Record 3" />
+		<property name="activitySector" value="Technologies" />
+		<property name="investor" value="George Michael" />
+		<property name="description" value="Another Tech. Record" />
+		<property name="website" value="http://www.website.com"/>
+		<property name="email" value="george@email.com" />
+		<property name="openSource" value="Closed_Source" />
+		<property name="rate"><null/></property>
+	</bean>
 
+	<!-- Tool Records -->
+	<bean id="toolRecord01" class="acme.entities.toolRecords.ToolRecord">
+		<property name="title" value="Tool Record 1" />
+		<property name="activitySector" value="Marketing" />
+		<property name="investor" value="Matthew Andrew" />
+		<property name="description" value="This is one Tool Record" />
+		<property name="website" value="http://www.google.com"/>
+		<property name="email" value="ejemplo@ejemplo.com" />
+		<property name="openSource" value="Open_Source" />
+		<property name="rate" value="-3" />
+	</bean>
+	<bean id="toolRecord02" class="acme.entities.toolRecords.ToolRecord">
+		<property name="title" value="Tool Record 2" />
+		<property name="activitySector" value="Engineering" />
+		<property name="investor" value="Alex Perez" />
+		<property name="description" value="This Tool Record is about Engineering" />
+		<property name="website" value="http://www.ejemplo.com"/>
+		<property name="email" value="hello@hello.com" />
+		<property name="openSource" value="Open_Source" />
+		<property name="rate" value="3" />
+	</bean>
+	<bean id="toolRecord03" class="acme.entities.toolRecords.ToolRecord">
+		<property name="title" value="Tool Record 3" />
+		<property name="activitySector" value="Marketing" />
+		<property name="investor" value="George Michael" />
+		<property name="description" value="Another Tool Record" />
+		<property name="website" value="http://www.website.com"/>
+		<property name="email" value="george@email.com" />
+		<property name="openSource" value="Closed_Source" />
+		<property name="rate"><null/></property>
+	</bean>
+	
+	<!-- Money -->
+
+	<bean id="money01" class="acme.framework.datatypes.Money">
+		<property name="amount" value="30000" />
+		<property name="currency" value="€" />
+	</bean>
+
+	<bean id="money02" class="acme.framework.datatypes.Money">
+		<property name="amount" value="40000" />
+		<property name="currency" value="€" />
+	</bean>
+
+	<bean id="money03" class="acme.framework.datatypes.Money">
+		<property name="amount" value="50000" />
+		<property name="currency" value="€" />
+	</bean>
+
+	<bean id="money04" class="acme.framework.datatypes.Money">
+		<property name="amount" value="20000" />
+		<property name="currency" value="€" />
+	</bean>
+	
+	<!-- Overtures -->
+	<bean id="overture01" class="acme.entities.overtures.Overture">
+		<property name="title" value="First Overture" />
+		<property name="moment" value="2019/05/12 09:09" />
+		<property name="deadline" value="2019/05/12 09:09" />
+		<property name="description" value="This is the First Overture of the web!" />
+		<property name="min" ref="money01" />
+		<property name="max" ref="money02" />
+		<property name="email" value="ejemplo@ejemplo.com" />
+	</bean>
+	<bean id="overture02" class="acme.entities.overtures.Overture">
+		<property name="title" value="Group Overture" />
+		<property name="moment" value="2019/05/12 09:09" />
+		<property name="deadline" value="2021/10/19 17:17" />
+		<property name="description" value="I wanna make an overture about making a group" />
+		<property name="min" ref="money01" />
+		<property name="max" ref="money03" />
+		<property name="email" value="mike@ejemplo.com" />
+	</bean>
+	<bean id="overture03" class="acme.entities.overtures.Overture">
+		<property name="title" value="Overture notice 2" />
+		<property name="moment" value="2019/05/12 09:09" />
+		<property name="deadline" value="2020/12/19 17:17" />
+		<property name="description" value="I wanna make an overture about notice 2" />
+		<property name="min" ref="money02" />
+		<property name="max" ref="money03" />
+		<property name="email" value="peter@ejemplo.com" />
+	</bean>
+	
+	<!-- Inquires -->
+	<bean id="inquire01" class="acme.entities.inquires.Inquire">
+		<property name="title" value="First Inquire" />
+		<property name="moment" value="2019/05/12 09:09" />
+		<property name="deadline" value="2019/05/12 09:09" />
+		<property name="description" value="This is the First Inquire of the web!" />
+		<property name="min" ref="money01" />
+		<property name="max" ref="money02" />
+		<property name="email" value="ejemplo@ejemplo.com" />
+	</bean>
+	<bean id="inquire02" class="acme.entities.inquires.Inquire">
+		<property name="title" value="Inquire about notice 1" />
+		<property name="moment" value="2019/10/19 19:32" />
+		<property name="deadline" value="2021/10/19 17:17" />
+		<property name="description" value="I wanna inquire about notice 1 from the webpage " />
+		<property name="min" ref="money04" />
+		<property name="max" ref="money01" />
+		<property name="email" value="hola@ejemplo.com" />
+	</bean>
+	<bean id="inquire03" class="acme.entities.inquires.Inquire">
+		<property name="title" value="Inquire about computers" />
+		<property name="moment" value="2019/05/12 09:09" />
+		<property name="deadline" value="2021/05/12 09:09" />
+		<property name="description" value="Anyone knows how to buy Windows 10?" />
+		<property name="min" ref="money01" />
+		<property name="max" ref="money03" />
+		<property name="email" value="dave@ejemplo.com" />
+	</bean>
+	
+	<!-- Challenges -->
+	<bean id="challenge01" class="acme.entities.challenges.Challenge">
+		<property name="title" value="First Challenge" />
+		<property name="deadline" value="2021/05/12 09:09" />
+		<property name="description" value="This is the First Challenge of the web!" />
+		<property name="goalRookie" value="Challenge 1 goal Rookie" />
+		<property name="goalAverage" value="Challenge 1 goal Average" />
+		<property name="goalExpert" value="Challenge 1 goal Expert" />
+		<property name="rewardRookie" ref="money01" />
+		<property name="rewardAverage" ref="money02" />
+		<property name="rewardExpert" ref="money03" />
+	</bean>
+	<bean id="challenge02" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Fast Challenge" />
+		<property name="deadline" value="2020/10/01 13:34" />
+		<property name="description" value="This Challenge is really fast, do it as soon as possible." />
+		<property name="goalRookie" value="Challenge 2 goal Rookie" />
+		<property name="goalAverage" value="Challenge 2 goal Average" />
+		<property name="goalExpert" value="Challenge 2 goal Expert" />
+		<property name="rewardRookie" ref="money04" />
+		<property name="rewardAverage" ref="money01" />
+		<property name="rewardExpert" ref="money02" />
+	</bean>
+	<bean id="challenge03" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Hard Challenge" />
+		<property name="deadline" value="2022/05/12 09:09" />
+		<property name="description" value="This is a hard challenge." />
+		<property name="goalRookie" value="Hard Challenge goal Rookie" />
+		<property name="goalAverage" value="Hard Challenge goal Average" />
+		<property name="goalExpert" value="Hard Challenge goal Expert" />
+		<property name="rewardRookie" ref="money04" />
+		<property name="rewardAverage" ref="money02" />
+		<property name="rewardExpert" ref="money03" />
+	</bean>
+	<bean id="challenge04" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Challenge Not Active" />
+		<property name="deadline" value="2019/05/12 09:09" />
+		<property name="description" value="This challenge is not active." />
+		<property name="goalRookie" value="Challenge goal Rookie" />
+		<property name="goalAverage" value="Challenge goal Average" />
+		<property name="goalExpert" value="Challenge goal Expert" />
+		<property name="rewardRookie" ref="money04" />
+		<property name="rewardAverage" ref="money02" />
+		<property name="rewardExpert" ref="money03" />
+	</bean>
+	
+	<!-- Customisation -->
+	
+	<bean id="Customisation" class="acme.entities.customisations.Customisation">
+		<property name="spamwords" value="sex,hard core,viagra,cialis,nigeria,you've won, million dollar,sexo,duro,has ganado,millon de dolares"/>
+		<property name="threshold" value="2.50"/>
+		<property name="activitySectors" value="Technology,Science,Arts,Business,Health"/>
+	</bean>
 
 </beans>

@@ -1,0 +1,18 @@
+#i18n_en.messages
+
+authenticated.challenge.list.label.deadline = Deadline
+authenticated.challenge.list.label.title = Title
+
+authenticated.challenge.form.label.title = Title
+authenticated.challenge.form.label.deadline = Deadline
+authenticated.challenge.form.label.description = Description
+authenticated.challenge.form.label.goalReward = Goal and Rewards List
+authenticated.challenge.form.label.goalRookie = Rookie Goal
+authenticated.challenge.form.label.rewardRookie = Rookie Reward
+authenticated.challenge.form.label.goalAverage = Average Goal
+authenticated.challenge.form.label.rewardAverage = Average Reward
+authenticated.challenge.form.label.goalExpert = Expert Goal
+authenticated.challenge.form.label.rewardExpert = Expert Reward
+
+
+authenticated.challenge.form.button.return = Return

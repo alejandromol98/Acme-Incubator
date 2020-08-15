@@ -7,7 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
+import acme.framework.datatypes.Money;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -31,13 +33,22 @@ public class Challenge extends DomainEntity {
 	@NotBlank
 	private String				description;
 
-	//	@NotNull
-	//	private Map<String, Money>	goalRewardRookie;
-	//
-	//	@NotNull
-	//	private Map<String, Money>	goalRewardAverage;
-	//
-	//	@NotNull
-	//	private Map<String, Money>	goalRewardExpert;
+	@NotBlank
+	private String				goalRookie;
+
+	@NotBlank
+	private String				goalAverage;
+
+	@NotBlank
+	private String				goalExpert;
+
+	@NotNull
+	private Money				rewardRookie;
+
+	@NotNull
+	private Money				rewardAverage;
+
+	@NotNull
+	private Money				rewardExpert;
 
 }

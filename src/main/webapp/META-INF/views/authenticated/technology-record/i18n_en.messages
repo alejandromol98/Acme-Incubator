@@ -1,0 +1,16 @@
+#i18n_en.messages
+
+authenticated.technologyRecord.list.label.title = Title
+authenticated.technologyRecord.list.label.activitySector = Activity Sector
+authenticated.technologyRecord.list.label.rate = Stars
+
+authenticated.technologyRecord.form.label.title = Title
+authenticated.technologyRecord.form.label.activitySector = Activity Sector
+authenticated.technologyRecord.form.label.investor = Investor
+authenticated.technologyRecord.form.label.description = Description
+authenticated.technologyRecord.form.label.website = Website
+authenticated.technologyRecord.form.label.email = Email
+authenticated.technologyRecord.form.label.openSource = OpenSource
+authenticated.technologyRecord.form.label.rate = Stars 
+
+authenticated.technologyRecord.form.button.return = Return

@@ -1,0 +1,16 @@
+#i18n_es.messages
+
+anonymous.technologyRecord.list.label.title = Título
+anonymous.technologyRecord.list.label.activitySector = Sector de Actividad
+anonymous.technologyRecord.list.label.rate = Estrellas
+
+anonymous.technologyRecord.form.label.title = Título
+anonymous.technologyRecord.form.label.activitySector = Sector de Actividad
+anonymous.technologyRecord.form.label.investor = Inversor
+anonymous.technologyRecord.form.label.description = Descripción
+anonymous.technologyRecord.form.label.website = Página web
+anonymous.technologyRecord.form.label.email = Email
+anonymous.technologyRecord.form.label.openSource = Código Abierto
+anonymous.technologyRecord.form.label.rate = Estrellas 
+
+anonymous.technologyRecord.form.button.return = Volver

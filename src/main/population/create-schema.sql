@@ -25,6 +25,15 @@
         `version` integer not null,
         `deadline` datetime(6),
         `description` varchar(255),
+        `goal_average` varchar(255),
+        `goal_expert` varchar(255),
+        `goal_rookie` varchar(255),
+        `reward_average_amount` double precision,
+        `reward_average_currency` varchar(255),
+        `reward_expert_amount` double precision,
+        `reward_expert_currency` varchar(255),
+        `reward_rookie_amount` double precision,
+        `reward_rookie_currency` varchar(255),
         `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
@@ -38,15 +47,26 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `customisation` (
+       `id` integer not null,
+        `version` integer not null,
+        `activity_sectors` varchar(255),
+        `spamwords` varchar(255),
+        `threshold` double precision,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `inquire` (
        `id` integer not null,
         `version` integer not null,
         `deadline` datetime(6),
         `description` varchar(255),
         `email` varchar(255),
+        `max_amount` double precision,
+        `max_currency` varchar(255),
+        `min_amount` double precision,
+        `min_currency` varchar(255),
         `moment` datetime(6),
-        `money_interval_amount` double precision,
-        `money_interval_currency` varchar(255),
         `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
@@ -79,9 +99,11 @@
         `deadline` datetime(6),
         `description` varchar(255),
         `email` varchar(255),
+        `max_amount` double precision,
+        `max_currency` varchar(255),
+        `min_amount` double precision,
+        `min_currency` varchar(255),
         `moment` datetime(6),
-        `money_interval_amount` double precision,
-        `money_interval_currency` varchar(255),
         `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
@@ -102,7 +124,7 @@
         `description` varchar(255),
         `email` varchar(255),
         `investor` varchar(255),
-        `open_source` bit not null,
+        `open_source` integer,
         `rate` integer,
         `title` varchar(255),
         `website` varchar(255),
@@ -116,7 +138,7 @@
         `description` varchar(255),
         `email` varchar(255),
         `investor` varchar(255),
-        `open_source` bit not null,
+        `open_source` integer,
         `rate` integer,
         `title` varchar(255),
         `website` varchar(255),

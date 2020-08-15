@@ -1,0 +1,14 @@
+#i18n_es.messages
+
+authenticated.overture.list.label.deadline = Fecha Límite
+authenticated.overture.list.label.title = Título
+
+authenticated.overture.form.label.title = Título
+authenticated.overture.form.label.moment = Momento
+authenticated.overture.form.label.deadline = Fecha Límite
+authenticated.overture.form.label.description = Descripción
+authenticated.overture.form.label.min = Min
+authenticated.overture.form.label.max = Max
+authenticated.overture.form.label.email = E-mail
+
+authenticated.overture.form.button.return = Volver

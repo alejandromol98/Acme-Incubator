@@ -324,7 +324,7 @@ MolinaBulletin
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Notice
 --
-+ headerPicture: String {NotBlank}
++ headerPicture: String {NotBlank, URL}
 + title: String {NotBlank}
 + moment: Date {Temporal(TIMESTAMP), Past}
 + deadline: Date {Temporal(TIMESTAMP)}
@@ -347,7 +347,8 @@ Overture
 + moment: Date {Temporal(TIMESTAMP), Past}
 + deadline: Date{Temporal(TIMESTAMP)}
 + description: String{NotBlank}
-+ moneyInterval: Money {NotNull}
++ min: Money {NotNull}
++ max: Money {NotNull}
 + email: String {NotBlank, Email}</panel_attributes>
     <additional_attributes/>
   </element>
@@ -366,7 +367,8 @@ Inquire
 + moment: Date {Temporal(TIMESTAMP), Past}
 + deadline: Date{Temporal(TIMESTAMP)}
 + description: String{NotBlank}
-+ moneyInterval: Money {NotNull}
++ min: Money {NotNull}
++ max: Money {NotNull}
 + email: String {NotBlank, Email}</panel_attributes>
     <additional_attributes/>
   </element>
@@ -387,8 +389,8 @@ TechonologyRecord
 + description: String{NotBlank}
 + website: String {NotBlank, URL}
 + email: String {NotBlank, Email}
-+ openSource: Boolean {NotNull}
-+ rate: Integer</panel_attributes>
++ openSource: Source {NotNull}
++ rate: Integer{Range(-5,5)}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -408,8 +410,8 @@ ToolRecord
 + description: String{NotBlank}
 + website: String {NotBlank, URL}
 + email: String {NotBlank, Email}
-+ open-source: Boolean {NotNull}
-+ rate: Integer</panel_attributes>
++ openSource: Source {NotNull}
++ rate: Integer{range(-5,5)}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -418,7 +420,7 @@ ToolRecord
       <x>973</x>
       <y>357</y>
       <w>224</w>
-      <h>126</h>
+      <h>140</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Challenge
@@ -426,9 +428,43 @@ Challenge
 + title: String {NotBlank}
 + deadline: Date{Temporal(TIMESTAMP)}
 + description: String{NotBlank}
-+ goalRewardRookie: Money {NotNull}
-+ goalRewardAverage: Money {NotNull}
-+ goalRewardExpert: Money {NotNull}</panel_attributes>
++ goalRookie: String{NotBlank}
++ goalAverage: String{NotBlank}
++ goalExpert: String{NotBlank}
++ rewardRookie: Money {NotNull}
++ rewardAverage: Money {NotNull}
++ rewardExpert: Money {NotNull}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>973</x>
+      <y>504</y>
+      <w>224</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Customisation
+--
++ spamwords: String {NotBlank}
++ threshold: Double {NotNull, Range(0,100)}
++ activitySectors: String {NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>378</y>
+      <w>154</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+Source
+--
++ OPEN_SOURCE
++ CLOSED_SOURCE</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

@@ -1,0 +1,14 @@
+#i18n_es.messages
+
+authenticated.inquire.list.label.deadline = Fecha Límite
+authenticated.inquire.list.label.title = Título
+
+authenticated.inquire.form.label.title = Título
+authenticated.inquire.form.label.moment = Momento
+authenticated.inquire.form.label.deadline = Fecha Límite
+authenticated.inquire.form.label.description = Descripción
+authenticated.inquire.form.label.min = Min
+authenticated.inquire.form.label.max = Max
+authenticated.inquire.form.label.email = E-mail
+
+authenticated.inquire.form.button.return = Volver

@@ -1,0 +1,16 @@
+#i18n_en.messages
+
+authenticated.toolRecord.list.label.title = Title
+authenticated.toolRecord.list.label.activitySector = Activity Sector
+authenticated.toolRecord.list.label.rate = Stars
+
+authenticated.toolRecord.form.label.title = Title
+authenticated.toolRecord.form.label.activitySector = Activity Sector
+authenticated.toolRecord.form.label.investor = Investor
+authenticated.toolRecord.form.label.description = Description
+authenticated.toolRecord.form.label.website = Website
+authenticated.toolRecord.form.label.email = Email
+authenticated.toolRecord.form.label.openSource = OpenSource
+authenticated.toolRecord.form.label.rate = Stars 
+
+authenticated.toolRecord.form.button.return = Return

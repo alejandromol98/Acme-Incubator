@@ -1,0 +1,17 @@
+#i18n_es.messages
+
+authenticated.challenge.list.label.deadline = Fecha Límite
+authenticated.challenge.list.label.title = Título
+
+authenticated.challenge.form.label.title = Título
+authenticated.challenge.form.label.deadline = Fecha Límite
+authenticated.challenge.form.label.description = Descripción
+authenticated.challenge.form.label.goalReward = Lista de Objetivos y Recompensas
+authenticated.challenge.form.label.goalRookie = Objetivo Novato
+authenticated.challenge.form.label.rewardRookie = Recompensa Novato
+authenticated.challenge.form.label.goalAverage = Objetivo Medio
+authenticated.challenge.form.label.rewardAverage = Recompensa Medio
+authenticated.challenge.form.label.goalExpert = Objetivo Experto
+authenticated.challenge.form.label.rewardExpert = Recompensa Experto
+
+authenticated.challenge.form.button.return = Volver
