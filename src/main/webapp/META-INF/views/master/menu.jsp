@@ -38,6 +38,8 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.inquiry.create" action="/administrator/inquiry/create"/>
 			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.overture.create" action="/administrator/overture/create"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.customisation" action="/administrator/customisation/show"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>

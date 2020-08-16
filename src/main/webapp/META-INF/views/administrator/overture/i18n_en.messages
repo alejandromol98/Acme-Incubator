@@ -1,0 +1,13 @@
+#i18n_en.messages
+
+administrator.overture.form.label.title = Title
+administrator.overture.form.label.deadline = Deadline
+administrator.overture.form.label.description = Description
+administrator.overture.form.label.min = Minimum 
+administrator.overture.form.label.max = Maximum 
+administrator.overture.form.label.email = Email
+
+administrator.overture.form.button.create = Create
+administrator.overture.form.button.update = Update
+administrator.overture.form.button.delete = Delete
+administrator.overture.form.button.return = Return

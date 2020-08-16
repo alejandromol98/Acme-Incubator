@@ -1,10 +1,10 @@
 
-package acme.features.administrator.inquiry;
+package acme.features.administrator.overture;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.inquiries.Inquiry;
+import acme.entities.overtures.Overture;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -12,25 +12,25 @@ import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractDeleteService;
 
 @Service
-public class AdministratorInquiryDeleteService implements AbstractDeleteService<Administrator, Inquiry> {
+public class AdministratorOvertureDeleteService implements AbstractDeleteService<Administrator, Overture> {
 
 	// Internal State ---------------------------------------------------------
 
 	@Autowired
-	AdministratorInquiryRepository repository;
+	AdministratorOvertureRepository repository;
 
 
-	// AbstractDeleteService<Administrator, Inquire> Interface -----------------
+	// AbstractDeleteService<Administrator, Overture> Interface -----------------
 
 	@Override
-	public boolean authorise(final Request<Inquiry> request) {
+	public boolean authorise(final Request<Overture> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public void bind(final Request<Inquiry> request, final Inquiry entity, final Errors errors) {
+	public void bind(final Request<Overture> request, final Overture entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -39,7 +39,7 @@ public class AdministratorInquiryDeleteService implements AbstractDeleteService<
 	}
 
 	@Override
-	public void unbind(final Request<Inquiry> request, final Inquiry entity, final Model model) {
+	public void unbind(final Request<Overture> request, final Overture entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -49,10 +49,10 @@ public class AdministratorInquiryDeleteService implements AbstractDeleteService<
 	}
 
 	@Override
-	public Inquiry findOne(final Request<Inquiry> request) {
+	public Overture findOne(final Request<Overture> request) {
 		assert request != null;
 
-		Inquiry result;
+		Overture result;
 		int id;
 
 		id = request.getModel().getInteger("id");
@@ -62,7 +62,7 @@ public class AdministratorInquiryDeleteService implements AbstractDeleteService<
 	}
 
 	@Override
-	public void validate(final Request<Inquiry> request, final Inquiry entity, final Errors errors) {
+	public void validate(final Request<Overture> request, final Overture entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -70,7 +70,7 @@ public class AdministratorInquiryDeleteService implements AbstractDeleteService<
 	}
 
 	@Override
-	public void delete(final Request<Inquiry> request, final Inquiry entity) {
+	public void delete(final Request<Overture> request, final Overture entity) {
 		assert request != null;
 		assert entity != null;
 
