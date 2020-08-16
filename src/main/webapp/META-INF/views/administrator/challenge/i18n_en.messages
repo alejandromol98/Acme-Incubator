@@ -1,0 +1,21 @@
+#i18n_en.messages
+
+administrator.challenge.form.label.title = Title
+administrator.challenge.form.label.deadline = Deadline
+administrator.challenge.form.label.description = Description
+administrator.challenge.form.label.goalReward = Goal and Rewards List
+administrator.challenge.form.label.goalRookie = Rookie Goal
+administrator.challenge.form.label.rewardRookie = Rookie Reward
+administrator.challenge.form.label.goalAverage = Average Goal
+administrator.challenge.form.label.rewardAverage = Average Reward
+administrator.challenge.form.label.goalExpert = Expert Goal
+administrator.challenge.form.label.rewardExpert = Expert Reward
+
+administrator.challenge.form.button.create = Create
+administrator.challenge.form.button.delete = Delete
+administrator.challenge.form.button.update = Update
+
+administrator.challenge.form.error.invaliddeadline = Deadline must be 1 month in future
+administrator.challenge.form.error.invalidmoney = Invalid Currency, it must be EUR or €
+
+administrator.challenge.form.button.return = Return

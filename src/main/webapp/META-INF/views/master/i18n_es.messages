@@ -58,6 +58,7 @@ master.menu.administrator.notice.list = Todas las Noticias
 master.menu.administrator.notice.create = Crear Noticia
 master.menu.administrator.inquiry.create = Crear Consulta
 master.menu.administrator.overture.create = Crear Propuesta
+master.menu.administrator.challenge.create = Crear Desafío
 master.menu.administrator.customisation = Parámetros de Personalización
 master.menu.administrator.shutdown = Parar el sistema
 
