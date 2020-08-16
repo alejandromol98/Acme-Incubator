@@ -9,6 +9,8 @@
 	<acme:form-moment code="anonymous.notice.form.label.moment" path="moment"/>
 	<acme:form-moment code="anonymous.notice.form.label.deadline" path="deadline"/>
 	<acme:form-textarea code="anonymous.notice.form.label.body" path="body"/>
+	<acme:form-url code="anonymous.notice.form.label.link" path="link1"/>
+	<acme:form-url code="anonymous.notice.form.label.link" path="link2"/>
 	
 	<acme:form-return code="anonymous.notice.form.button.return"/>
 </acme:form>

@@ -9,4 +9,8 @@
 	<acme:list-column code="administrator.notice.list.label.deadline" path="deadline" width="20%" />
 	
 </acme:list>
+<acme:form>
+	<acme:menu-option code="administrator.notice.list.label.create" action="/administrator/notice/create" />
+</acme:form>
+
 

@@ -47,7 +47,8 @@
 		<property name="moment" value="2019/05/12 09:09" />
 		<property name="deadline" value="2019/05/12 09:09" />
 		<property name="body" value="This is the First Notice of the web!" />
-		<property name="links" ><null/></property>
+		<property name="link1" value="http://ejemplo.com"/>
+		<property name="link2" value="http://ejemplo2.com"/>
 	</bean>
 	<bean id="notice02" class="acme.entities.notices.Notice">
 		<property name="headerPicture" value="https://tecnologia-informatica.com/wp-content/uploads/2019/02/que-es-la-tecnologia-5.jpeg"/>
@@ -55,7 +56,8 @@
 		<property name="moment" value="2020/01/19 16:16" />
 		<property name="deadline" value="2021/01/19 16:16" />
 		<property name="body" value="There are new jobs in technology sector" />
-		<property name="links" ><null/></property>
+		<property name="link1" ><null/></property>
+		<property name="link2" ><null/></property>
 	</bean>
 	<bean id="notice03" class="acme.entities.notices.Notice">
 		<property name="headerPicture" value="https://concepto.de/wp-content/uploads/2015/03/paisaje-e1549600034372.jpg"/>
@@ -63,7 +65,8 @@
 		<property name="moment" value="2019/05/12 09:09" />
 		<property name="deadline" value="2021/05/12 09:09" />
 		<property name="body" value="This is the First Notice of the web!" />
-		<property name="links" ><null/></property>
+		<property name="link1" ><null/></property>
+		<property name="link2" ><null/></property>
 	</bean>
 	
 	<!-- Technology Records -->
