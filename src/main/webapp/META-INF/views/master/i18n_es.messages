@@ -56,6 +56,7 @@ master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.notice.list = Todas las Noticias
 master.menu.administrator.notice.create = Crear Noticia
+master.menu.administrator.inquiry.create = Crear consulta
 master.menu.administrator.customisation = Parámetros de Personalización
 master.menu.administrator.shutdown = Parar el sistema
 

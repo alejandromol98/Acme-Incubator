@@ -184,27 +184,27 @@
 		<property name="email" value="peter@ejemplo.com" />
 	</bean>
 	
-	<!-- Inquires -->
-	<bean id="inquire01" class="acme.entities.inquires.Inquire">
-		<property name="title" value="First Inquire" />
+	<!-- Inquiries -->
+	<bean id="inquiry01" class="acme.entities.inquiries.Inquiry">
+		<property name="title" value="First Inquiry" />
 		<property name="moment" value="2019/05/12 09:09" />
 		<property name="deadline" value="2019/05/12 09:09" />
-		<property name="description" value="This is the First Inquire of the web!" />
+		<property name="description" value="This is the First Inquiry of the web!" />
 		<property name="min" ref="money01" />
 		<property name="max" ref="money02" />
 		<property name="email" value="ejemplo@ejemplo.com" />
 	</bean>
-	<bean id="inquire02" class="acme.entities.inquires.Inquire">
-		<property name="title" value="Inquire about notice 1" />
+	<bean id="inquiry02" class="acme.entities.inquiries.Inquiry">
+		<property name="title" value="Inquiry about notice 1" />
 		<property name="moment" value="2019/10/19 19:32" />
 		<property name="deadline" value="2021/10/19 17:17" />
-		<property name="description" value="I wanna inquire about notice 1 from the webpage " />
+		<property name="description" value="I wanna inquiry about notice 1 from the webpage " />
 		<property name="min" ref="money04" />
 		<property name="max" ref="money01" />
 		<property name="email" value="hola@ejemplo.com" />
 	</bean>
-	<bean id="inquire03" class="acme.entities.inquires.Inquire">
-		<property name="title" value="Inquire about computers" />
+	<bean id="inquiry03" class="acme.entities.inquiries.Inquiry">
+		<property name="title" value="Inquiry about computers" />
 		<property name="moment" value="2019/05/12 09:09" />
 		<property name="deadline" value="2021/05/12 09:09" />
 		<property name="description" value="Anyone knows how to buy Windows 10?" />

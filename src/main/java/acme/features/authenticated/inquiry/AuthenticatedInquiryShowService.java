@@ -1,35 +1,35 @@
 
-package acme.features.authenticated.inquire;
+package acme.features.authenticated.inquiry;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.inquires.Inquire;
+import acme.entities.inquiries.Inquiry;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AuthenticatedInquireShowService implements AbstractShowService<Authenticated, Inquire> {
+public class AuthenticatedInquiryShowService implements AbstractShowService<Authenticated, Inquiry> {
 
 	// Internal State ---------------------------------------
 	@Autowired
-	AuthenticatedInquireRepository repository;
+	AuthenticatedInquiryRepository repository;
 
 
 	// AbstractListService interface ------------------------
 	@Override
-	public boolean authorise(final Request<Inquire> request) {
+	public boolean authorise(final Request<Inquiry> request) {
 		assert request != null;
 		return true;
 	}
 
 	@Override
-	public Inquire findOne(final Request<Inquire> request) {
+	public Inquiry findOne(final Request<Inquiry> request) {
 		assert request != null;
 
-		Inquire result;
+		Inquiry result;
 		int id;
 
 		id = request.getModel().getInteger("id");
@@ -38,7 +38,7 @@ public class AuthenticatedInquireShowService implements AbstractShowService<Auth
 	}
 
 	@Override
-	public void unbind(final Request<Inquire> request, final Inquire entity, final Model model) {
+	public void unbind(final Request<Inquiry> request, final Inquiry entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;

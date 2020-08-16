@@ -56,7 +56,7 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `inquire` (
+    create table `inquiry` (
        `id` integer not null,
         `version` integer not null,
         `deadline` datetime(6),

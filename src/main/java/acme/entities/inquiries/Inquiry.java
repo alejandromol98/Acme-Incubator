@@ -1,5 +1,5 @@
 
-package acme.entities.inquires;
+package acme.entities.inquiries;
 
 import java.util.Date;
 
@@ -19,7 +19,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Inquire extends DomainEntity {
+public class Inquiry extends DomainEntity {
 
 	// Serialisation identifier ----------------------------------------------
 	private static final long	serialVersionUID	= 1L;
@@ -33,6 +33,7 @@ public class Inquire extends DomainEntity {
 	@Past
 	private Date				moment;
 
+	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				deadline;
 
