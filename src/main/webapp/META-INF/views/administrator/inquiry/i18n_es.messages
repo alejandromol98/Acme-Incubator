@@ -11,3 +11,5 @@ administrator.inquiry.form.button.create = Crear
 administrator.inquiry.form.button.update = Actualizar
 administrator.inquiry.form.button.delete = Eliminar
 administrator.inquiry.form.button.return = Volver
+
+administrator.inquiry.form.error.invalidmoney = Moneda no válida, debe ser EUR o €

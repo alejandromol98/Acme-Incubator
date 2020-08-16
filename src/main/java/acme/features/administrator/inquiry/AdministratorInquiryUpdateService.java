@@ -69,6 +69,18 @@ public class AdministratorInquiryUpdateService implements AbstractUpdateService<
 		assert entity != null;
 		assert errors != null;
 
+		Boolean isValidmin;
+		if (!errors.hasErrors("min")) {
+			isValidmin = entity.getMin().getCurrency().equals("EUR") || entity.getMin().getCurrency().equals("€");
+			errors.state(request, isValidmin, "min", "administrator.inquiry.form.error.invalidmoney");
+		}
+
+		Boolean isValidmax;
+		if (!errors.hasErrors("max")) {
+			isValidmax = entity.getMax().getCurrency().equals("EUR") || entity.getMax().getCurrency().equals("€");
+			errors.state(request, isValidmax, "max", "administrator.inquiry.form.error.invalidmoney");
+		}
+
 	}
 
 	@Override

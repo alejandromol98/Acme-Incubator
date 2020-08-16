@@ -11,3 +11,5 @@ administrator.overture.form.button.create = Crear
 administrator.overture.form.button.update = Actualizar
 administrator.overture.form.button.delete = Eliminar
 administrator.overture.form.button.return = Volver
+
+administrator.overture.form.error.invalidmoney = Moneda no válida, debe ser EUR o €
