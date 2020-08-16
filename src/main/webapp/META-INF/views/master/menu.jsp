@@ -37,8 +37,10 @@
 			<acme:menu-suboption code="master.menu.administrator.notice.create" action="/administrator/notice/create"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.inquiry.create" action="/administrator/inquiry/create"/>
-			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.overture.create" action="/administrator/overture/create"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.technologyRecord.create" action="/administrator/technology-record/create"/>
+			<acme:menu-suboption code="master.menu.administrator.toolRecord.create" action="/administrator/tool-record/create"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.challenge.create" action="/administrator/challenge/create"/>
 			<acme:menu-separator/>

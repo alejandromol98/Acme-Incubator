@@ -125,8 +125,8 @@
         `description` varchar(255),
         `email` varchar(255),
         `investor` varchar(255),
-        `open_source` integer,
         `rate` integer,
+        `source` integer,
         `title` varchar(255),
         `website` varchar(255),
         primary key (`id`)
@@ -139,8 +139,8 @@
         `description` varchar(255),
         `email` varchar(255),
         `investor` varchar(255),
-        `open_source` integer,
         `rate` integer,
+        `source` integer,
         `title` varchar(255),
         `website` varchar(255),
         primary key (`id`)

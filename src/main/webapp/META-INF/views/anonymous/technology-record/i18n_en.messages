@@ -10,7 +10,9 @@ anonymous.technologyRecord.form.label.investor = Investor
 anonymous.technologyRecord.form.label.description = Description
 anonymous.technologyRecord.form.label.website = Website
 anonymous.technologyRecord.form.label.email = Email
-anonymous.technologyRecord.form.label.openSource = OpenSource
+anonymous.technologyRecord.form.label.source = OpenSource or ClosedSource
+anonymous.technologyRecord.form.label.status.openSource = OpenSource
+anonymous.technologyRecord.form.label.status.closedSource = ClosedSource
 anonymous.technologyRecord.form.label.rate = Stars 
 
 anonymous.technologyRecord.form.button.return = Return

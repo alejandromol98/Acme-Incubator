@@ -1,0 +1,18 @@
+#i18n_es.messages
+
+administrator.technologyRecord.form.label.title = Título
+administrator.technologyRecord.form.label.activitySector = Sector de Actividad
+administrator.technologyRecord.form.label.investor = Inversor
+administrator.technologyRecord.form.label.description = Descripción
+administrator.technologyRecord.form.label.website = Página web
+administrator.technologyRecord.form.label.email = Email
+administrator.technologyRecord.form.label.source = CódigoAbierto o CódigoCerrado
+administrator.technologyRecord.form.label.status.openSource = CódigoAbierto
+administrator.technologyRecord.form.label.status.closedSource = CódigoCerrado
+administrator.technologyRecord.form.label.rate = Estrellas 
+
+administrator.technologyRecord.form.button.create = Crear
+administrator.technologyRecord.form.button.update = Actualizar
+administrator.technologyRecord.form.button.delete = Eliminar
+
+authenticated.technologyRecord.form.button.return = Volver

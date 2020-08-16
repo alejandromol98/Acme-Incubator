@@ -10,7 +10,9 @@ authenticated.technologyRecord.form.label.investor = Inversor
 authenticated.technologyRecord.form.label.description = Descripción
 authenticated.technologyRecord.form.label.website = Página web
 authenticated.technologyRecord.form.label.email = Email
-authenticated.technologyRecord.form.label.openSource = Código Abierto
+authenticated.technologyRecord.form.label.source = CódigoAbierto o CódigoCerrado
+authenticated.technologyRecord.form.label.status.openSource = CódigoAbierto
+authenticated.technologyRecord.form.label.status.closedSource = CódigoCerrado
 authenticated.technologyRecord.form.label.rate = Estrellas 
 
 authenticated.technologyRecord.form.button.return = Volver

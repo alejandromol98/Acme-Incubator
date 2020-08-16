@@ -1,0 +1,18 @@
+#i18n_en.messages
+
+administrator.toolRecord.form.label.title = Title
+administrator.toolRecord.form.label.activitySector = Activity Sector
+administrator.toolRecord.form.label.investor = Investor
+administrator.toolRecord.form.label.description = Description
+administrator.toolRecord.form.label.website = Website
+administrator.toolRecord.form.label.email = Email
+administrator.toolRecord.form.label.source = OpenSource or ClosedSource
+administrator.toolRecord.form.label.status.openSource = OpenSource
+administrator.toolRecord.form.label.status.closedSource = ClosedSource
+administrator.toolRecord.form.label.rate = Stars 
+
+administrator.toolRecord.form.button.create = Create
+administrator.toolRecord.form.button.update = Update
+administrator.toolRecord.form.button.delete = Delete
+
+administrator.toolRecord.form.button.return = Return

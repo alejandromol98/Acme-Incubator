@@ -1,0 +1,18 @@
+#i18n_en.messages
+
+administrator.technologyRecord.form.label.title = Title
+administrator.technologyRecord.form.label.activitySector = Activity Sector
+administrator.technologyRecord.form.label.investor = Investor
+administrator.technologyRecord.form.label.description = Description
+administrator.technologyRecord.form.label.website = Website
+administrator.technologyRecord.form.label.email = Email
+administrator.technologyRecord.form.label.source = OpenSource or ClosedSource
+administrator.technologyRecord.form.label.status.openSource = OpenSource
+administrator.technologyRecord.form.label.status.closedSource = ClosedSource
+administrator.technologyRecord.form.label.rate = Stars 
+
+administrator.technologyRecord.form.button.create = Create
+administrator.technologyRecord.form.button.update = Update
+administrator.technologyRecord.form.button.delete = Delete
+
+administrator.technologyRecord.form.button.return = Return

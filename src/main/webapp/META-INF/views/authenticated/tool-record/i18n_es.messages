@@ -10,7 +10,9 @@ authenticated.toolRecord.form.label.investor = Inversor
 authenticated.toolRecord.form.label.description = Descripción
 authenticated.toolRecord.form.label.website = Página web
 authenticated.toolRecord.form.label.email = Email
-authenticated.toolRecord.form.label.openSource = Código Abierto
+authenticated.toolRecord.form.label.source = CódigoAbierto o CódigoCerrado
+authenticated.toolRecord.form.label.status.openSource = CódigoAbierto
+authenticated.toolRecord.form.label.status.closedSource = CódigoCerrado
 authenticated.toolRecord.form.label.rate = Estrellas 
 
 authenticated.toolRecord.form.button.return = Volver

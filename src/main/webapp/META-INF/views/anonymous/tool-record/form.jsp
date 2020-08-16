@@ -10,7 +10,10 @@
 	<acme:form-textarea code="anonymous.toolRecord.form.label.description" path="description"/>
 	<acme:form-url code="anonymous.toolRecord.form.label.website" path="website"/>
 	<acme:form-textbox code="anonymous.toolRecord.form.label.email" path="email"/>
-	<acme:form-textbox code="anonymous.toolRecord.form.label.openSource" path="openSource"/>
+	<acme:form-select code="anonymous.toolRecord.form.label.source" path="source" >
+		<acme:form-option code="anonymous.toolRecord.form.label.status.openSource" value="Open_Source" selected="${source == 'Open_Source'}"/>
+        <acme:form-option code="anonymous.toolRecord.form.label.status.closedSource" value="Closed_Source" selected="${source == 'Closed_Source'}"/>
+    </acme:form-select>
 	<acme:form-integer code="anonymous.toolRecord.form.label.rate" path="rate"/>
 	
 	<acme:form-return code="anonymous.toolRecord.form.button.return"/>

@@ -44,7 +44,7 @@ public class TechnologyRecord extends DomainEntity {
 	private String				email;
 
 	@NotNull
-	private Source				openSource;
+	private Source				source;
 
 	@Range(min = -5, max = 5)
 	private Integer				rate;
