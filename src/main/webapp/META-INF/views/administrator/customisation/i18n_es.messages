@@ -4,4 +4,6 @@ administrator.customisation.form.label.spamwords = Palabras Spam
 administrator.customisation.form.label.threshold = Umbral de Spam
 administrator.customisation.form.label.activitySectors = Lista de Sectores de Actividad
 
+administrator.customisation.form.button.update = Actualizar
+
 administrator.customisation.form.button.return = Volver
