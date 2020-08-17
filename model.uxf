@@ -318,7 +318,7 @@ MolinaBulletin
     <coordinates>
       <x>189</x>
       <y>504</y>
-      <w>224</w>
+      <w>231</w>
       <h>126</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
@@ -327,7 +327,7 @@ Notice
 + headerPicture: String {NotBlank, URL}
 + title: String {NotBlank}
 + moment: Date {Temporal(TIMESTAMP), Past}
-+ deadline: Date {Temporal(TIMESTAMP)}
++ deadline: Date {Temporal(TIMESTAMP), NotNull}
 + body: String {NotBlank}
 + links: String {URL}</panel_attributes>
     <additional_attributes/>
@@ -337,7 +337,7 @@ Notice
     <coordinates>
       <x>462</x>
       <y>504</y>
-      <w>224</w>
+      <w>231</w>
       <h>126</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
@@ -345,7 +345,7 @@ Overture
 --
 + title: String {NotBlank}
 + moment: Date {Temporal(TIMESTAMP), Past}
-+ deadline: Date{Temporal(TIMESTAMP)}
++ deadline: Date{Temporal(TIMESTAMP), NotNull}
 + description: String{NotBlank}
 + min: Money {NotNull}
 + max: Money {NotNull}
@@ -357,15 +357,15 @@ Overture
     <coordinates>
       <x>462</x>
       <y>357</y>
-      <w>224</w>
+      <w>231</w>
       <h>126</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Inquire
+Inquiry
 --
 + title: String {NotBlank}
 + moment: Date {Temporal(TIMESTAMP), Past}
-+ deadline: Date{Temporal(TIMESTAMP)}
++ deadline: Date{Temporal(TIMESTAMP), NotNull}
 + description: String{NotBlank}
 + min: Money {NotNull}
 + max: Money {NotNull}
@@ -389,7 +389,7 @@ TechonologyRecord
 + description: String{NotBlank}
 + website: String {NotBlank, URL}
 + email: String {NotBlank, Email}
-+ openSource: Source {NotNull}
++ source: Source {NotNull}
 + rate: Integer{Range(-5,5)}</panel_attributes>
     <additional_attributes/>
   </element>
@@ -410,7 +410,7 @@ ToolRecord
 + description: String{NotBlank}
 + website: String {NotBlank, URL}
 + email: String {NotBlank, Email}
-+ openSource: Source {NotNull}
++ source: Source {NotNull}
 + rate: Integer{range(-5,5)}</panel_attributes>
     <additional_attributes/>
   </element>
@@ -426,7 +426,7 @@ ToolRecord
 Challenge
 --
 + title: String {NotBlank}
-+ deadline: Date{Temporal(TIMESTAMP)}
++ deadline: Date{Temporal(TIMESTAMP), NotNull}
 + description: String{NotBlank}
 + goalRookie: String{NotBlank}
 + goalAverage: String{NotBlank}
