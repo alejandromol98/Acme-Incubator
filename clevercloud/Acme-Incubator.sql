@@ -208,17 +208,17 @@ INSERT INTO `hibernate_sequence` VALUES (6);
 UNLOCK TABLES;
 
 --
--- Table structure for table `inquire`
+-- Table structure for table `inquiry`
 --
 
-DROP TABLE IF EXISTS `inquire`;
+DROP TABLE IF EXISTS `inquiry`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `inquire` (
+CREATE TABLE `inquiry` (
   `id` int NOT NULL,
   `version` int NOT NULL,
   `deadline` datetime(6) DEFAULT NULL,
-  `description` varchar(255) DEFAULT NULL,
+  `description` varchar(1024) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `max_amount` double DEFAULT NULL,
   `max_currency` varchar(255) DEFAULT NULL,
@@ -231,12 +231,12 @@ CREATE TABLE `inquire` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `inquire`
+-- Dumping data for table `inquiry`
 --
 
-LOCK TABLES `inquire` WRITE;
-/*!40000 ALTER TABLE `inquire` DISABLE KEYS */;
-/*!40000 ALTER TABLE `inquire` ENABLE KEYS */;
+LOCK TABLES `inquiry` WRITE;
+/*!40000 ALTER TABLE `inquiry` DISABLE KEYS */;
+/*!40000 ALTER TABLE `inquiry` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -279,7 +279,8 @@ CREATE TABLE `notice` (
   `body` varchar(255) DEFAULT NULL,
   `deadline` datetime(6) DEFAULT NULL,
   `header_picture` varchar(255) DEFAULT NULL,
-  `links` varchar(255) DEFAULT NULL,
+  `link1` varchar(255) DEFAULT NULL,
+  `link2` varchar(255) DEFAULT NULL,
   `moment` datetime(6) DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -306,7 +307,7 @@ CREATE TABLE `overture` (
   `id` int NOT NULL,
   `version` int NOT NULL,
   `deadline` datetime(6) DEFAULT NULL,
-  `description` varchar(255) DEFAULT NULL,
+  `description` varchar(1024) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `max_amount` double DEFAULT NULL,
   `max_currency` varchar(255) DEFAULT NULL,
@@ -369,8 +370,8 @@ CREATE TABLE `technology_record` (
   `description` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `investor` varchar(255) DEFAULT NULL,
-  `open_source` int DEFAULT NULL,
   `rate` int DEFAULT NULL,
+  `source` int DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
   `website` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -400,8 +401,8 @@ CREATE TABLE `tool_record` (
   `description` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `investor` varchar(255) DEFAULT NULL,
-  `open_source` int DEFAULT NULL,
   `rate` int DEFAULT NULL,
+  `source` int DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
   `website` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -444,7 +445,7 @@ CREATE TABLE `user_account` (
 
 LOCK TABLES `user_account` WRITE;
 /*!40000 ALTER TABLE `user_account` DISABLE KEYS */;
-INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$c8r/JGt..Yx93YCsxSpoRu3w6GRdnYoFjcDJ6fMJ3iwJsvj88uxzW','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$wrj219ZSJH1cVaARUdmUpu0DTLVKZR2OOR0d/jsPYFvStDKD0lUkS','administrator');
+INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$Tt0Fe0tn92CXZFMaY05y3.kxICfQsQdXKfFHi7k4x/a0Swbt7m4dm','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$bFz7bT1cmocBrZv4i7lUK.RFPpxvbd017JYXaWaRIg38aaomYi2qy','administrator');
 /*!40000 ALTER TABLE `user_account` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -457,4 +458,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-08-16  1:10:05
+-- Dump completed on 2020-08-18 19:30:28

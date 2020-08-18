@@ -56,11 +56,11 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `inquire` (
+    create table `inquiry` (
        `id` integer not null,
         `version` integer not null,
         `deadline` datetime(6),
-        `description` varchar(255),
+        `description` varchar(1024),
         `email` varchar(255),
         `max_amount` double precision,
         `max_currency` varchar(255),
@@ -87,7 +87,8 @@
         `body` varchar(255),
         `deadline` datetime(6),
         `header_picture` varchar(255),
-        `links` varchar(255),
+        `link1` varchar(255),
+        `link2` varchar(255),
         `moment` datetime(6),
         `title` varchar(255),
         primary key (`id`)
@@ -97,7 +98,7 @@
        `id` integer not null,
         `version` integer not null,
         `deadline` datetime(6),
-        `description` varchar(255),
+        `description` varchar(1024),
         `email` varchar(255),
         `max_amount` double precision,
         `max_currency` varchar(255),
@@ -124,8 +125,8 @@
         `description` varchar(255),
         `email` varchar(255),
         `investor` varchar(255),
-        `open_source` integer,
         `rate` integer,
+        `source` integer,
         `title` varchar(255),
         `website` varchar(255),
         primary key (`id`)
@@ -138,8 +139,8 @@
         `description` varchar(255),
         `email` varchar(255),
         `investor` varchar(255),
-        `open_source` integer,
         `rate` integer,
+        `source` integer,
         `title` varchar(255),
         `website` varchar(255),
         primary key (`id`)

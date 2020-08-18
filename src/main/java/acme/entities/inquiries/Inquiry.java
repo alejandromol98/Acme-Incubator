@@ -1,8 +1,9 @@
 
-package acme.entities.inquires;
+package acme.entities.inquiries;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -19,7 +20,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Inquire extends DomainEntity {
+public class Inquiry extends DomainEntity {
 
 	// Serialisation identifier ----------------------------------------------
 	private static final long	serialVersionUID	= 1L;
@@ -33,10 +34,12 @@ public class Inquire extends DomainEntity {
 	@Past
 	private Date				moment;
 
+	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				deadline;
 
 	@NotBlank
+	@Column(length = 1024)
 	private String				description;
 
 	@NotNull

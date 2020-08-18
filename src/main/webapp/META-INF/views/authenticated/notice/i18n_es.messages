@@ -8,4 +8,6 @@ authenticated.notice.form.label.title = Título
 authenticated.notice.form.label.moment = Momento
 authenticated.notice.form.label.deadline = Fecha Límite
 authenticated.notice.form.label.body = Cuerpo
+authenticated.notice.form.label.link = Link Relacionado
+
 authenticated.notice.form.button.return = Volver

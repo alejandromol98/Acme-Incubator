@@ -55,6 +55,12 @@ master.menu.authenticated.challenge.list = Lista de Desafíos
 master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.notice.list = Todas las Noticias
+master.menu.administrator.notice.create = Crear Noticia
+master.menu.administrator.inquiry.create = Crear Consulta
+master.menu.administrator.overture.create = Crear Propuesta
+master.menu.administrator.technologyRecord.create = Crear Registro Tecnológico
+master.menu.administrator.toolRecord.create = Crear Registro de Herramientas
+master.menu.administrator.challenge.create = Crear Desafío
 master.menu.administrator.customisation = Parámetros de Personalización
 master.menu.administrator.shutdown = Parar el sistema
 

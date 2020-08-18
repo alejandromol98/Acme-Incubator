@@ -1,0 +1,21 @@
+#i18n_es.messages
+
+administrator.challenge.form.label.title = Título
+administrator.challenge.form.label.deadline = Fecha Límite
+administrator.challenge.form.label.description = Descripción
+administrator.challenge.form.label.goalReward = Lista de Objetivos y Recompensas
+administrator.challenge.form.label.goalRookie = Objetivo Novato
+administrator.challenge.form.label.rewardRookie = Recompensa Novato
+administrator.challenge.form.label.goalAverage = Objetivo Medio
+administrator.challenge.form.label.rewardAverage = Recompensa Medio
+administrator.challenge.form.label.goalExpert = Objetivo Experto
+administrator.challenge.form.label.rewardExpert = Recompensa Experto
+
+administrator.challenge.form.button.create = Crear
+administrator.challenge.form.button.delete = Eliminar
+administrator.challenge.form.button.update = Actualizar
+
+administrator.challenge.form.error.invaliddeadline = La fecha límite debe ser por lo menos 1 mes en el futuro
+administrator.challenge.form.error.invalidmoney = Moneda no válida, debe ser EUR o €
+
+administrator.challenge.form.button.return = Volver

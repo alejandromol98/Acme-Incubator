@@ -10,7 +10,9 @@ anonymous.toolRecord.form.label.investor = Investor
 anonymous.toolRecord.form.label.description = Description
 anonymous.toolRecord.form.label.website = Website
 anonymous.toolRecord.form.label.email = Email
-anonymous.toolRecord.form.label.openSource = OpenSource
+anonymous.toolRecord.form.label.source = OpenSource or ClosedSource
+anonymous.toolRecord.form.label.status.openSource = OpenSource
+anonymous.toolRecord.form.label.status.closedSource = ClosedSource
 anonymous.toolRecord.form.label.rate = Stars 
 
 anonymous.toolRecord.form.button.return = Return

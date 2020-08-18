@@ -10,7 +10,9 @@ authenticated.toolRecord.form.label.investor = Investor
 authenticated.toolRecord.form.label.description = Description
 authenticated.toolRecord.form.label.website = Website
 authenticated.toolRecord.form.label.email = Email
-authenticated.toolRecord.form.label.openSource = OpenSource
+authenticated.toolRecord.form.label.source = OpenSource or ClosedSource
+authenticated.toolRecord.form.label.status.openSource = OpenSource
+authenticated.toolRecord.form.label.status.closedSource = ClosedSource
 authenticated.toolRecord.form.label.rate = Stars 
 
 authenticated.toolRecord.form.button.return = Return

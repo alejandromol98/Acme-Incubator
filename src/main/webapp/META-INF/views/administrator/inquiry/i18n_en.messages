@@ -1,0 +1,15 @@
+#i18n_en.messages
+
+administrator.inquiry.form.label.title = Title
+administrator.inquiry.form.label.deadline = Deadline
+administrator.inquiry.form.label.description = Description
+administrator.inquiry.form.label.min = Minimum
+administrator.inquiry.form.label.max = Maximum 
+administrator.inquiry.form.label.email = Email
+
+administrator.inquiry.form.button.create = Create
+administrator.inquiry.form.button.update = Update
+administrator.inquiry.form.button.delete = Delete
+administrator.inquiry.form.button.return = Return
+
+administrator.inquiry.form.error.invalidmoney = Invalid Currency, it must be EUR or €

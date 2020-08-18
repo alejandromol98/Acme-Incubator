@@ -3,6 +3,7 @@ package acme.entities.overtures;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -33,10 +34,12 @@ public class Overture extends DomainEntity {
 	@Past
 	private Date				moment;
 
+	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				deadline;
 
 	@NotBlank
+	@Column(length = 1024)
 	private String				description;
 
 	@NotNull

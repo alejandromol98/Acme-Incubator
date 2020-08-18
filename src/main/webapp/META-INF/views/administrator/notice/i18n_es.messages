@@ -2,10 +2,14 @@
 
 administrator.notice.list.label.deadline = Fecha Límite
 administrator.notice.list.label.title = Título
+administrator.notice.list.label.create = Crear Noticia
 
 administrator.notice.form.label.headerPicture = Imagen de cabecera
 administrator.notice.form.label.title = Título
 administrator.notice.form.label.moment = Fecha Creación
 administrator.notice.form.label.deadline = Fecha Límite
 administrator.notice.form.label.body = Cuerpo
+administrator.notice.form.label.link = Link Relacionado
+
+administrator.notice.form.button.create = Crear
 administrator.notice.form.button.return = Volver

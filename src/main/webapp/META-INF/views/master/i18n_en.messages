@@ -46,7 +46,7 @@ master.menu.authenticated.notice.list = Notices List
 master.menu.authenticated.technologyRecord.list = Technology Records List
 master.menu.authenticated.toolRecord.list = Tool Records List
 master.menu.authenticated.overture.list = Overtures List
-master.menu.authenticated.inquire.list = Inquires List
+master.menu.authenticated.inquire.list = Inquiries List
 master.menu.authenticated.challenge.list = Challenges List
 
 # master.menu.administrator ###################################################
@@ -54,6 +54,12 @@ master.menu.authenticated.challenge.list = Challenges List
 master.menu.administrator = Administrator
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.notice.list = All Notices
+master.menu.administrator.notice.create = Create Notice
+master.menu.administrator.inquiry.create = Create Inquiry
+master.menu.administrator.overture.create = Create Overture
+master.menu.administrator.technologyRecord.create = Create Technology Record
+master.menu.administrator.toolRecord.create = Create Tool Record
+master.menu.administrator.challenge.create = Create Challenge
 master.menu.administrator.customisation = Customisation Parameters
 master.menu.administrator.shutdown = Shut down
 
