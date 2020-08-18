@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Range;
 import org.hibernate.validator.constraints.URL;
@@ -24,22 +25,28 @@ public class ToolRecord extends DomainEntity {
 	// Attributes ------------------------------------------------------------
 
 	@NotBlank
+	@Size(min = 0, max = 255)
 	private String				title;
 
 	@NotBlank
+	@Size(min = 0, max = 255)
 	private String				activitySector;
 
 	@NotBlank
+	@Size(min = 0, max = 255)
 	private String				investor;
 
 	@NotBlank
+	@Size(min = 0, max = 255)
 	private String				description;
 
 	@NotBlank
+	@Size(min = 0, max = 255)
 	@URL
 	private String				website;
 
 	@NotBlank
+	@Size(min = 0, max = 255)
 	@Email
 	private String				email;
 

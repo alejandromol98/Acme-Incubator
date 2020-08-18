@@ -8,6 +8,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import acme.framework.datatypes.Money;
 import acme.framework.entities.DomainEntity;
@@ -25,6 +26,7 @@ public class Challenge extends DomainEntity {
 	// Attributes ------------------------------------------------------------
 
 	@NotBlank
+	@Size(min = 0, max = 255)
 	private String				title;
 
 	@NotNull
@@ -32,15 +34,19 @@ public class Challenge extends DomainEntity {
 	private Date				deadline;
 
 	@NotBlank
+	@Size(min = 0, max = 255)
 	private String				description;
 
 	@NotBlank
+	@Size(min = 0, max = 255)
 	private String				goalRookie;
 
 	@NotBlank
+	@Size(min = 0, max = 255)
 	private String				goalAverage;
 
 	@NotBlank
+	@Size(min = 0, max = 255)
 	private String				goalExpert;
 
 	@NotNull

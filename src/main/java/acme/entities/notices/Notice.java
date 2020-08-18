@@ -9,6 +9,7 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.URL;
 
@@ -27,10 +28,12 @@ public class Notice extends DomainEntity {
 	// Attributes ------------------------------------------------------------
 
 	@NotBlank
+	@Size(min = 0, max = 255)
 	@URL
 	private String				headerPicture;
 
 	@NotBlank
+	@Size(min = 0, max = 255)
 	private String				title;
 
 	@Temporal(TemporalType.TIMESTAMP)
@@ -42,11 +45,14 @@ public class Notice extends DomainEntity {
 	private Date				deadline;
 
 	@NotBlank
+	@Size(min = 0, max = 255)
 	private String				body;
 
+	@Size(min = 0, max = 255)
 	@URL
 	private String				link1;
 
+	@Size(min = 0, max = 255)
 	@URL
 	private String				link2;
 

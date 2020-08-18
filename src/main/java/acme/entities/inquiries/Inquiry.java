@@ -11,6 +11,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
 
 import acme.framework.datatypes.Money;
 import acme.framework.entities.DomainEntity;
@@ -28,6 +29,7 @@ public class Inquiry extends DomainEntity {
 	// Attributes ------------------------------------------------------------
 
 	@NotBlank
+	@Size(min = 0, max = 255)
 	private String				title;
 
 	@Temporal(TemporalType.TIMESTAMP)
@@ -39,6 +41,7 @@ public class Inquiry extends DomainEntity {
 	private Date				deadline;
 
 	@NotBlank
+	@Size(min = 0, max = 1024)
 	@Column(length = 1024)
 	private String				description;
 
@@ -49,6 +52,7 @@ public class Inquiry extends DomainEntity {
 	private Money				max;
 
 	@NotBlank
+	@Size(min = 0, max = 255)
 	@Email
 	private String				email;
 
