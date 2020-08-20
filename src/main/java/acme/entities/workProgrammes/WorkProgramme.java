@@ -1,19 +1,19 @@
 
-package acme.entities.inquiries;
+package acme.entities.workProgrammes;
 
 import java.util.Date;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
+import acme.entities.investmentRounds.InvestmentRound;
 import acme.framework.datatypes.Money;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -22,12 +22,13 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Inquiry extends DomainEntity {
+public class WorkProgramme extends DomainEntity {
 
-	// Serialisation identifier ----------------------------------------------
+	// Serialisation identifier -----------------------------------------------
+
 	private static final long	serialVersionUID	= 1L;
 
-	// Attributes ------------------------------------------------------------
+	// Attributes -------------------------------------------------------------
 
 	@NotBlank
 	@Size(min = 0, max = 255)
@@ -37,26 +38,21 @@ public class Inquiry extends DomainEntity {
 	@Past
 	private Date				moment;
 
-	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
 	private Date				deadline;
 
-	@NotBlank
-	@Size(min = 0, max = 1024)
-	@Column(length = 1024)
-	private String				description;
+	@NotNull
+	@Valid
+	private Money				budget;
+
+	// Derived attributes -----------------------------------------------------
+
+	// Relationships ----------------------------------------------------------
 
 	@NotNull
 	@Valid
-	private Money				min;
-
-	@NotNull
-	@Valid
-	private Money				max;
-
-	@NotBlank
-	@Size(min = 0, max = 255)
-	@Email
-	private String				email;
+	@ManyToOne(optional = false)
+	private InvestmentRound		investmentRound;
 
 }

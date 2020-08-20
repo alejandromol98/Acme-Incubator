@@ -1,0 +1,15 @@
+#i18n_en.messages
+
+authenticated.investmentRound.list.label.ticker = Ticker
+authenticated.investmentRound.list.label.title = Title
+authenticated.investmentRound.list.label.kind = Kind of Round
+
+authenticated.investmentRound.form.label.ticker = Ticker
+authenticated.investmentRound.form.label.title = Title
+authenticated.investmentRound.form.label.moment = Moment
+authenticated.investmentRound.form.label.kind = Kind of Round
+authenticated.investmentRound.form.label.description = Description
+authenticated.investmentRound.form.label.moreInfo = Additional Information
+authenticated.investmentRound.form.label.amount = Amount of Money
+
+authenticated.investmentRound.form.button.return = Return
