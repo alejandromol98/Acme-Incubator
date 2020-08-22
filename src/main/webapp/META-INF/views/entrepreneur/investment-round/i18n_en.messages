@@ -11,5 +11,7 @@ entrepreneur.investmentRound.form.label.kind = Kind of Round
 entrepreneur.investmentRound.form.label.description = Description
 entrepreneur.investmentRound.form.label.moreInfo = Additional Information
 entrepreneur.investmentRound.form.label.amount = Amount of Money
+entrepreneur.investmentRound.form.label.isFinalMode = Final Mode
 
+entrepreneur.investmentRound.form.label.workProgrammes = Work Programmes
 entrepreneur.investmentRound.form.button.return = Return

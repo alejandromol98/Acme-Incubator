@@ -3,6 +3,7 @@
 investor.application.list.label.ticker = Código
 investor.application.list.label.statement = Declaración
 investor.application.list.label.offer = Oferta
+investor.application.list.label.status = Estado
 
 investor.application.list.label.invRoundTicker = Código de la Ronda de Inversión
 
@@ -10,6 +11,7 @@ investor.application.form.label.ticker = Código
 investor.application.form.label.moment = Momento
 investor.application.form.label.statement = Declaración
 investor.application.form.label.offer = Oferta
+investor.application.form.label.status = Estado
 
 investor.application.form.label.invRoundTicker = Código de la Ronda de Inversión
 investor.application.form.label.invRoundAmount = Cantidad de Dinero de la Ronda de Inversión

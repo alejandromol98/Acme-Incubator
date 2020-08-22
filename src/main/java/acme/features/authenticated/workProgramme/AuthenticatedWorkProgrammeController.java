@@ -1,5 +1,5 @@
 
-package acme.features.investor;
+package acme.features.authenticated.workProgramme;
 
 import javax.annotation.PostConstruct;
 
@@ -7,23 +7,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.components.CustomCommand;
-import acme.entities.applications.Application;
-import acme.entities.roles.Investor;
+import acme.entities.workProgrammes.WorkProgramme;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
+import acme.framework.entities.Authenticated;
 
 @Controller
-@RequestMapping("/investor/application/")
-public class InvestorApplicationController extends AbstractController<Investor, Application> {
+@RequestMapping("/authenticated/work-programme/")
+public class AuthenticatedWorkProgrammeController extends AbstractController<Authenticated, WorkProgramme> {
 
 	// Internal state -----------------------------------
 
 	@Autowired
-	private InvestorApplicationListMineService	listMineService;
+	private AuthenticatedWorkProgrammeListService	listService;
 
 	@Autowired
-	private InvestorApplicationShowService		showService;
+	private AuthenticatedWorkProgrammeShowService	showService;
 
 
 	// Constructors -------------------------------------
@@ -31,7 +30,7 @@ public class InvestorApplicationController extends AbstractController<Investor, 
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
-		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listMineService);
+		super.addBasicCommand(BasicCommand.LIST, this.listService);
 	}
 
 }

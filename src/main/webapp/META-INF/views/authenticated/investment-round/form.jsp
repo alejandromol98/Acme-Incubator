@@ -11,6 +11,10 @@
 	<acme:form-textarea code="authenticated.investmentRound.form.label.description" path="description"/>
 	<acme:form-money code="authenticated.investmentRound.form.label.amount" path="amount"/>
 	<acme:form-url code="authenticated.investmentRound.form.label.moreInfo" path="moreInfo"/>
+	<acme:form-textbox code="authenticated.investmentRound.form.label.entrepreneur" path="entrepreneur"/>
+	
+	<acme:form-hidden path="id"/>
+	<acme:form-submit code="authenticated.investmentRound.form.label.workProgrammes" method="get" action="/authenticated/work-programme/list?id=${id}" />
 	
 	<acme:form-return code="authenticated.investmentRound.form.button.return"/>
 </acme:form>

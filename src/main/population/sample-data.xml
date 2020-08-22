@@ -414,6 +414,7 @@
 		<property name="description" value="This is the first investment round" />
 		<property name="amount" ref="money05" />
 		<property name="moreInfo" value="http://www.moreInfo.com" />
+		<property name="isFinalMode" value="true" />
 		<property name="entrepreneur" ref="entrepreneur1Entrepreneur" />
 	</bean>
 	<bean name="investmentRound2" class="acme.entities.investmentRounds.InvestmentRound">
@@ -424,6 +425,7 @@
 		<property name="description" value="Second Investment Round" />
 		<property name="amount" ref="money01" />
 		<property name="moreInfo" value="http://www.example.com" />
+		<property name="isFinalMode" value="false" />
 		<property name="entrepreneur" ref="entrepreneur1Entrepreneur" />
 	</bean>
 	<bean name="investmentRound3" class="acme.entities.investmentRounds.InvestmentRound">
@@ -434,6 +436,7 @@
 		<property name="description" value="Another Investment Round" />
 		<property name="amount" ref="money06" />
 		<property name="moreInfo" value="http://www.example.com" />
+		<property name="isFinalMode" value="false" />
 		<property name="entrepreneur" ref="entrepreneur1Entrepreneur" />
 	</bean>
 	<bean name="investmentRound4" class="acme.entities.investmentRounds.InvestmentRound">
@@ -444,6 +447,7 @@
 		<property name="description" value="This is entrepeneur2 first investment round" />
 		<property name="amount" ref="money03" />
 		<property name="moreInfo" value="http://www.moreInfo.com" />
+		<property name="isFinalMode" value="true" />
 		<property name="entrepreneur" ref="entrepreneur2Entrepreneur" />
 	</bean>
 	<bean name="investmentRound5" class="acme.entities.investmentRounds.InvestmentRound">
@@ -454,6 +458,7 @@
 		<property name="description" value="Security Investment round" />
 		<property name="amount" ref="money05" />
 		<property name="moreInfo" value="http://www.example.com" />
+		<property name="isFinalMode" value="false" />
 		<property name="entrepreneur" ref="entrepreneur2Entrepreneur" />
 	</bean>
 	
@@ -486,6 +491,7 @@
 		<property name="moment" value="2020/05/05 09:09" />
 		<property name="statement" value="Application for investmentRound 2" />
 		<property name="offer" ref="money01" />
+		<property name="status" value="PENDING" />
 		<property name="investor" ref="investor1Investor" />
 		<property name="investmentRound" ref="investmentRound2" />
 	</bean>
@@ -494,6 +500,7 @@
 		<property name="moment" value="2020/07/05 09:09" />
 		<property name="statement" value="New application from investor1" />
 		<property name="offer" ref="money05" />
+		<property name="status" value="PENDING" />
 		<property name="investor" ref="investor1Investor" />
 		<property name="investmentRound" ref="investmentRound3" />
 	</bean>
@@ -502,6 +509,7 @@
 		<property name="moment" value="2019/05/05 09:09" />
 		<property name="statement" value="Application for investmentRound 3" />
 		<property name="offer" ref="money06" />
+		<property name="status" value="ACCEPTED" />
 		<property name="investor" ref="investor1Investor" />
 		<property name="investmentRound" ref="investmentRound4" />
 	</bean>
@@ -510,6 +518,7 @@
 		<property name="moment" value="2020/08/05 09:09" />
 		<property name="statement" value="First Application from Investor 2" />
 		<property name="offer" ref="money01" />
+		<property name="status" value="PENDING" />
 		<property name="investor" ref="investor2Investor" />
 		<property name="investmentRound" ref="investmentRound2" />
 	</bean>
@@ -518,6 +527,7 @@
 		<property name="moment" value="2020/01/05 09:09" />
 		<property name="statement" value="Want to apply for this investment round!" />
 		<property name="offer" ref="money03" />
+		<property name="status" value="REJECTED" />
 		<property name="investor" ref="investor2Investor" />
 		<property name="investmentRound" ref="investmentRound4" />
 	</bean>

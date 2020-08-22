@@ -3,6 +3,7 @@
 entrepreneur.application.list.label.ticker = Ticker
 entrepreneur.application.list.label.statement = Statement
 entrepreneur.application.list.label.offer = Offer
+entrepreneur.application.list.label.status = Status
 
 entrepreneur.application.list.label.invRoundTicker = Investment Round Ticker
 
@@ -10,9 +11,10 @@ entrepreneur.application.form.label.ticker = Ticker
 entrepreneur.application.form.label.moment = Moment
 entrepreneur.application.form.label.statement = Statement
 entrepreneur.application.form.label.offer = Offer
+entrepreneur.application.form.label.status = Status
+entrepreneur.application.form.label.applicationInvestor = Investor
 
 entrepreneur.application.form.label.invRoundTicker = Investment Round Ticker
 entrepreneur.application.form.label.invRoundAmount = Investment Round Amount
-entrepreneur.application.form.label.invRoundEntrepreneur = Investment Round Entrepreneur
 
 entrepreneur.application.form.button.return = Return

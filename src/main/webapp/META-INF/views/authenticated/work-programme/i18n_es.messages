@@ -1,0 +1,12 @@
+#i18n_es.messages
+
+authenticated.workProgramme.list.label.title = Título
+authenticated.workProgramme.list.label.budget = Presupuesto
+authenticated.workProgramme.list.label.deadline = Fecha Límite
+
+authenticated.workProgramme.form.label.title = Título
+authenticated.workProgramme.form.label.moment = Momento
+authenticated.workProgramme.form.label.deadline = Fecha Límite
+authenticated.workProgramme.form.label.budget = Presupuesto
+
+authenticated.workProgramme.form.button.return = Volver

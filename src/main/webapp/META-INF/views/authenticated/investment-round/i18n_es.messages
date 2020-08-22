@@ -11,5 +11,7 @@ authenticated.investmentRound.form.label.kind = Tipo de Ronda
 authenticated.investmentRound.form.label.description = Descripción
 authenticated.investmentRound.form.label.moreInfo = Información Adicional
 authenticated.investmentRound.form.label.amount = Cantidad de Dinero
+authenticated.investmentRound.form.label.entrepreneur = Empresario
 
+authenticated.investmentRound.form.label.workProgrammes = Programas de Trabajo
 authenticated.investmentRound.form.button.return = Volver

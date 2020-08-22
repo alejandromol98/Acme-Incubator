@@ -62,10 +62,10 @@ public class EntrepreneurApplicationShowService implements AbstractShowService<E
 		model.setAttribute("investmentRoundTicker", investmentRoundTicker);
 		Money investmentRoundAmount = entity.getInvestmentRound().getAmount();
 		model.setAttribute("investmentRoundAmount", investmentRoundAmount);
-		String investmentRoundEntrepreneur = entity.getInvestmentRound().getEntrepreneur().getUserAccount().getUsername();
-		model.setAttribute("investmentRoundEntrepreneur", investmentRoundEntrepreneur);
+		String applicationInvestor = entity.getInvestor().getUserAccount().getUsername();
+		model.setAttribute("applicationInvestor", applicationInvestor);
 
-		request.unbind(entity, model, "ticker", "moment", "statement", "offer");
+		request.unbind(entity, model, "ticker", "moment", "statement", "offer", "status");
 	}
 
 }

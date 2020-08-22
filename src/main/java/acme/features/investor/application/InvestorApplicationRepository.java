@@ -1,5 +1,5 @@
 
-package acme.features.investor;
+package acme.features.investor.application;
 
 import java.util.Collection;
 

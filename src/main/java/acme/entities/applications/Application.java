@@ -48,6 +48,9 @@ public class Application extends DomainEntity {
 	@Valid
 	private Money				offer;
 
+	@NotNull
+	private Status				status;
+
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------

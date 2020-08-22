@@ -1,5 +1,5 @@
 
-package acme.features.investor;
+package acme.features.investor.application;
 
 import java.util.Collection;
 
@@ -50,7 +50,7 @@ public class InvestorApplicationListMineService implements AbstractListService<I
 		String investmentRoundTicker = entity.getInvestmentRound().getTicker();
 		model.setAttribute("investmentRoundTicker", investmentRoundTicker);
 
-		request.unbind(entity, model, "ticker", "statement", "offer");
+		request.unbind(entity, model, "ticker", "statement", "offer", "status");
 	}
 
 }

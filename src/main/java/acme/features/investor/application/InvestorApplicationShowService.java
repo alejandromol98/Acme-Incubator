@@ -1,5 +1,5 @@
 
-package acme.features.investor;
+package acme.features.investor.application;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -63,7 +63,7 @@ public class InvestorApplicationShowService implements AbstractShowService<Inves
 		Money investmentRoundAmount = entity.getInvestmentRound().getAmount();
 		model.setAttribute("investmentRoundAmount", investmentRoundAmount);
 
-		request.unbind(entity, model, "ticker", "moment", "statement", "offer");
+		request.unbind(entity, model, "ticker", "moment", "statement", "offer", "status");
 	}
 
 }

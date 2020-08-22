@@ -43,6 +43,9 @@ public class AuthenticatedInvestmentRoundShowService implements AbstractShowServ
 		assert entity != null;
 		assert model != null;
 
+		String entrepreneur = entity.getEntrepreneur().getUserAccount().getUsername();
+		model.setAttribute("entrepreneur", entrepreneur);
+
 		request.unbind(entity, model, "ticker", "title", "moment", "kind", "description", "amount", "moreInfo");
 	}
 

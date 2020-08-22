@@ -11,5 +11,7 @@ authenticated.investmentRound.form.label.kind = Kind of Round
 authenticated.investmentRound.form.label.description = Description
 authenticated.investmentRound.form.label.moreInfo = Additional Information
 authenticated.investmentRound.form.label.amount = Amount of Money
+authenticated.investmentRound.form.label.entrepreneur = Entrepreneur
 
+authenticated.investmentRound.form.label.workProgrammes = Work Programmes
 authenticated.investmentRound.form.button.return = Return
