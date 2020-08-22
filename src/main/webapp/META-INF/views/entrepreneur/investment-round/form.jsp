@@ -12,5 +12,5 @@
 	<acme:form-money code="entrepreneur.investmentRound.form.label.amount" path="amount"/>
 	<acme:form-url code="entrepreneur.investmentRound.form.label.moreInfo" path="moreInfo"/>
 	
-	<acme:form-return code="authenticated.investmentRound.form.button.return"/>
+	<acme:form-return code="entrepreneur.investmentRound.form.button.return"/>
 </acme:form>

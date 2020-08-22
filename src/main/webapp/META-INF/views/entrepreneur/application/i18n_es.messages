@@ -1,0 +1,18 @@
+#i18n_es.messages
+
+entrepreneur.application.list.label.ticker = Código
+entrepreneur.application.list.label.statement = Declaración
+entrepreneur.application.list.label.offer = Oferta
+
+entrepreneur.application.list.label.invRoundTicker = Código de la Ronda de Inversión
+
+entrepreneur.application.form.label.ticker = Código
+entrepreneur.application.form.label.moment = Momento
+entrepreneur.application.form.label.statement = Declaración
+entrepreneur.application.form.label.offer = Oferta
+
+entrepreneur.application.form.label.invRoundTicker = Código de la Ronda de Inversión
+entrepreneur.application.form.label.invRoundAmount = Cantidad de Dinero de la Ronda de Inversión
+entrepreneur.application.form.label.invRoundEntrepreneur = Empresario de la Ronda de Inversión
+
+entrepreneur.application.form.button.return = Volver

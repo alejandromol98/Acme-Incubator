@@ -1,6 +1,6 @@
 #i18n_es.messages
 
-entrepreneur.investmentRound.list.label.ticker = Símbolo
+entrepreneur.investmentRound.list.label.ticker = Código
 entrepreneur.investmentRound.list.label.title = Título
 entrepreneur.investmentRound.list.label.kind = Tipo de Ronda
 
