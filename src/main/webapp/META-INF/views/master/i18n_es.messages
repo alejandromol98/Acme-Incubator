@@ -18,7 +18,7 @@ master.banner.background = #FFFFFF
 
 master.welcome.title = ¡Bienvenidos!
 master.welcome.text = \
-	Bienvenidos a Acme Stater!  Nunca antes ha sido tan sencillo desarrollar un \
+	Bienvenidos a Acme Incubator!  Nunca antes ha sido tan sencillo desarrollar un \
 	proyecto y hacerlo funcionar.
 
 # master.menu #################################################################
@@ -86,6 +86,12 @@ master.menu.entrepreneur.application.list = Solicitudes de mis Rondas de Inversi
 master.menu.investor = Inversor
 master.menu.investor.application.list = Lista de mis Solicitudes
 
+# master.menu.bookkeeper ######################################################
+
+master.menu.bookkeeper = Contable
+master.menu.bookkeeper.investmentRound.listMine = Rondas de Inversión donde he escrito
+master.menu.bookkeeper.investmentRound.listNotMine = Rondas de Inversión donde no he escrito
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
@@ -111,7 +117,7 @@ master.footer.label.spanish = Español
 
 master.company.title = La compañía
 master.company.text = \
-	Starter Project, Inc. es una compañía fictícia que proporciona un proyecto \
+	Acme Incubator, Inc. es una compañía fictícia que proporciona un proyecto \
 	plantilla para los estudiantes de la asignatura Diseño y Pruebas, en el Grado \
 	en Ingeniería del Software de la Universidad de Sevilla.
 master.company.name = Acme Incubator, Inc.

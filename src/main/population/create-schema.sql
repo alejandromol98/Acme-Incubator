@@ -1,4 +1,16 @@
 
+    create table `accounting_record` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(1024),
+        `moment` datetime(6),
+        `status` integer,
+        `title` varchar(255),
+        `bookkeeper_id` integer not null,
+        `investment_round_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `administrator` (
        `id` integer not null,
         `version` integer not null,
@@ -34,6 +46,15 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `bookkeeper` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `firm_name` varchar(255),
+        `responsibility_statement` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `challenge` (
        `id` integer not null,
         `version` integer not null,
@@ -64,9 +85,17 @@
     create table `customisation` (
        `id` integer not null,
         `version` integer not null,
-        `activity_sectors` varchar(255),
-        `spamwords` varchar(255),
+        `activity_sectors` varchar(1024),
+        `spamwords` varchar(1024),
         `threshold` double precision,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `discussion_forum` (
+       `id` integer not null,
+        `version` integer not null,
+        `title` varchar(255),
+        `investment_round_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -119,6 +148,17 @@
         `activity_sector` varchar(255),
         `firm_name` varchar(255),
         `profile` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `message` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(1024),
+        `moment` datetime(6),
+        `tags` varchar(255),
+        `title` varchar(255),
+        `forum_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -230,6 +270,16 @@
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);
 
+    alter table `accounting_record` 
+       add constraint `FK41jm4vk7runvmg5tderffrele` 
+       foreign key (`bookkeeper_id`) 
+       references `bookkeeper` (`id`);
+
+    alter table `accounting_record` 
+       add constraint `FKk1pmfnppwk0kav7xloy8u71uq` 
+       foreign key (`investment_round_id`) 
+       references `investment_round` (`id`);
+
     alter table `administrator` 
        add constraint FK_2a5vcjo3stlfcwadosjfq49l1 
        foreign key (`user_account_id`) 
@@ -255,10 +305,20 @@
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
+    alter table `bookkeeper` 
+       add constraint FK_krvjp9eaqyapewl2igugbo9o8 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
+
     alter table `consumer` 
        add constraint FK_6cyha9f1wpj0dpbxrrjddrqed 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `discussion_forum` 
+       add constraint `FKmcgrpw22g3baap51wq319v1bp` 
+       foreign key (`investment_round_id`) 
+       references `investment_round` (`id`);
 
     alter table `entrepreneur` 
        add constraint FK_r6tqltqvrlh1cyy8rsj5pev1q 
@@ -274,6 +334,11 @@
        add constraint FK_dcek5rr514s3rww0yy57vvnpq 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `message` 
+       add constraint `FK7ju7uxmh5mdbjgrfwgoem3eqd` 
+       foreign key (`forum_id`) 
+       references `discussion_forum` (`id`);
 
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 

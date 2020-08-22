@@ -1,0 +1,17 @@
+#i18n_es.messages
+
+bookkeeper.investmentRound.list.label.ticker = Código
+bookkeeper.investmentRound.list.label.title = Título
+bookkeeper.investmentRound.list.label.kind = Tipo de Ronda
+
+bookkeeper.investmentRound.form.label.ticker = Símbolo
+bookkeeper.investmentRound.form.label.title = Título
+bookkeeper.investmentRound.form.label.moment = Momento
+bookkeeper.investmentRound.form.label.kind = Tipo de Ronda
+bookkeeper.investmentRound.form.label.description = Descripción
+bookkeeper.investmentRound.form.label.moreInfo = Información Adicional
+bookkeeper.investmentRound.form.label.amount = Cantidad de Dinero
+bookkeeper.investmentRound.form.label.isFinalMode = Modo Final
+
+bookkeeper.investmentRound.form.label.workProgrammes = Programas de Trabajo
+bookkeeper.investmentRound.form.button.return = Volver

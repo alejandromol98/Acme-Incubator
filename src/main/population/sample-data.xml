@@ -531,5 +531,108 @@
 		<property name="investor" ref="investor2Investor" />
 		<property name="investmentRound" ref="investmentRound4" />
 	</bean>
+	
+	<!-- Bookkeeper -->
+	<!-- Bookkeeper 1 -->
+	<bean name="bookkeeper1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="bookkeeper1" />
+		<property name="password" value="bookkeeper1" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="bookkeeper" />
+				<property name="surname" value="One" />
+				<property name="email" value="bookkeeper1@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="bookkeeper1Bookkeeper" />
+				<ref bean="bookkeeper1Authenticated" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="bookkeeper1Bookkeeper" class="acme.entities.roles.Bookkeeper">
+		<property name="firmName" value="FirmNumber1" />
+		<property name="responsibilityStatement" value="Responsibility Statement from Bookkeeper1" />
+		<property name="userAccount" ref="bookkeeper1UserAccount" />
+	</bean>
+	
+	<bean name="bookkeeper1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="bookkeeper1UserAccount" />
+	</bean>
+	
+	<!-- Bookkeeper 2 -->
+	<bean name="bookkeeper2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="bookkeeper2" />
+		<property name="password" value="bookkeeper2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="bookkeeper" />
+				<property name="surname" value="Two" />
+				<property name="email" value="bookkeeper2@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="bookkeeper2Bookkeeper" />
+				<ref bean="bookkeeper2Authenticated" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="bookkeeper2Bookkeeper" class="acme.entities.roles.Bookkeeper">
+		<property name="firmName" value="FirmNumber2" />
+		<property name="responsibilityStatement" value="Responsibility Statement from Bookkeeper2" />
+		<property name="userAccount" ref="bookkeeper2UserAccount" />
+	</bean>
+	
+	<bean name="bookkeeper2Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="bookkeeper2UserAccount" />
+	</bean>
+	
+	<!-- Accounting Records -->
+	<bean name="accountingRecord1" class="acme.entities.accountingRecords.AccountingRecord">
+		<property name="title" value="Accounting Record 1" />
+		<property name="status" value="PUBLISHED" />
+		<property name="moment" value="2020/05/05 09:09" />
+		<property name="body" value="This is the first accounting record" />
+		<property name="bookkeeper" ref="bookkeeper1Bookkeeper" />
+		<property name="investmentRound" ref="investmentRound1" />
+	</bean>
+	<bean name="accountingRecord2" class="acme.entities.accountingRecords.AccountingRecord">
+		<property name="title" value="Accounting Record 2" />
+		<property name="status" value="DRAFT" />
+		<property name="moment" value="2019/10/05 09:09" />
+		<property name="body" value="This another accounting record from Bookkeeper 1" />
+		<property name="bookkeeper" ref="bookkeeper1Bookkeeper" />
+		<property name="investmentRound" ref="investmentRound1" />
+	</bean>
+	<bean name="accountingRecord3" class="acme.entities.accountingRecords.AccountingRecord">
+		<property name="title" value="Accounting Record 3" />
+		<property name="status" value="PUBLISHED" />
+		<property name="moment" value="2020/01/05 09:09" />
+		<property name="body" value="This is the first accounting record from Bookkeeper 2" />
+		<property name="bookkeeper" ref="bookkeeper2Bookkeeper" />
+		<property name="investmentRound" ref="investmentRound2" />
+	</bean>
+	<bean name="accountingRecord4" class="acme.entities.accountingRecords.AccountingRecord">
+		<property name="title" value="Accounting Record 4" />
+		<property name="status" value="DRAFT" />
+		<property name="moment" value="2020/08/05 09:09" />
+		<property name="body" value="This another accounting record from Bookkeeper 2" />
+		<property name="bookkeeper" ref="bookkeeper2Bookkeeper" />
+		<property name="investmentRound" ref="investmentRound3" />
+	</bean>
+	<bean name="accountingRecord5" class="acme.entities.accountingRecords.AccountingRecord">
+		<property name="title" value="Accounting Record 5" />
+		<property name="status" value="PUBLISHED" />
+		<property name="moment" value="2020/03/13 09:09" />
+		<property name="body" value="This is a published accounting record" />
+		<property name="bookkeeper" ref="bookkeeper2Bookkeeper" />
+		<property name="investmentRound" ref="investmentRound3" />
+	</bean>
 
 </beans>

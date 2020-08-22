@@ -1,0 +1,17 @@
+#i18n_en.messages
+
+bookkeeper.investmentRound.list.label.ticker = Ticker
+bookkeeper.investmentRound.list.label.title = Title
+bookkeeper.investmentRound.list.label.kind = Kind of Round
+
+bookkeeper.investmentRound.form.label.ticker = Ticker
+bookkeeper.investmentRound.form.label.title = Title
+bookkeeper.investmentRound.form.label.moment = Moment
+bookkeeper.investmentRound.form.label.kind = Kind of Round
+bookkeeper.investmentRound.form.label.description = Description
+bookkeeper.investmentRound.form.label.moreInfo = Additional Information
+bookkeeper.investmentRound.form.label.amount = Amount of Money
+bookkeeper.investmentRound.form.label.isFinalMode = Final Mode
+
+bookkeeper.investmentRound.form.label.workProgrammes = Work Programmes
+bookkeeper.investmentRound.form.button.return = Return

@@ -1,6 +1,7 @@
 
 package acme.entities.customisations;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -23,16 +24,18 @@ public class Customisation extends DomainEntity {
 
 	//Atributes ---------------------------------------
 
+	@Column(length = 1024)
 	@NotBlank
-	@Size(min = 0, max = 255)
+	@Size(min = 0, max = 1024)
 	private String				spamwords;
 
 	@Range(min = 0, max = 100)
 	@NotNull
 	private Double				threshold;
 
+	@Column(length = 1024)
 	@NotBlank
-	@Size(min = 0, max = 255)
+	@Size(min = 0, max = 1024)
 	private String				activitySectors;
 
 }
