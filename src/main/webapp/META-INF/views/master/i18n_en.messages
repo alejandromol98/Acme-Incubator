@@ -49,6 +49,7 @@ master.menu.authenticated.overture.list = Overtures List
 master.menu.authenticated.inquire.list = Inquiries List
 master.menu.authenticated.challenge.list = Challenges List
 master.menu.authenticated.investmentRound.list = Investment Rounds List
+master.menu.authenticated.discussionForum.list = Discussion Forums where I´m involved
 
 # master.menu.administrator ###################################################
 

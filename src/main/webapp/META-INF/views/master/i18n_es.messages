@@ -50,6 +50,7 @@ master.menu.authenticated.overture.list = Lista de Propuestas
 master.menu.authenticated.inquire.list = Lista de Consultas
 master.menu.authenticated.challenge.list = Lista de Desafíos
 master.menu.authenticated.investmentRound.list = Lista de Rondas de Inversión
+master.menu.authenticated.discussionForum.list = Foros de Discusión donde he participado
 
 # master.menu.administrator ###################################################
 

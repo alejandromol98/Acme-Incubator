@@ -634,5 +634,59 @@
 		<property name="bookkeeper" ref="bookkeeper2Bookkeeper" />
 		<property name="investmentRound" ref="investmentRound3" />
 	</bean>
+	
+	<!-- Discussion Forums -->
+	<bean name="discussionForum1" class="acme.entities.discussionForums.DiscussionForum">
+		<property name="title" value="Discussion Forum 1" />
+		<property name="moment" value="2020/03/13 09:09" />
+		<property name="users" value="entrepreneur1" />
+		<property name="investmentRound" ref="investmentRound3" />
+	</bean>
+	<bean name="discussionForum2" class="acme.entities.discussionForums.DiscussionForum">
+		<property name="title" value="Discussion Forum 2" />
+		<property name="moment" value="2020/03/13 09:09" />
+		<property name="users" value="entrepreneur1, investor1" />
+		<property name="investmentRound" ref="investmentRound1" />
+	</bean>
+	<bean name="discussionForum3" class="acme.entities.discussionForums.DiscussionForum">
+		<property name="title" value="Discussion Forum 3" />
+		<property name="moment" value="2020/03/13 09:09" />
+		<property name="users" value="entrepreneur2, investor2" />
+		<property name="investmentRound" ref="investmentRound4" />
+	</bean>
+	
+	<!-- Messages -->
+	<bean name="message1" class="acme.entities.messages.Message">
+		<property name="title" value="Message 1" />
+		<property name="moment" value="2020/03/13 09:09" />
+		<property name="tags" value="tag1, tag2" />
+		<property name="body" value="This is a helpfull message" />
+		<property name="forum" ref="discussionForum1" />
+		<property name="author" ref="entrepreneur1Authenticated" />
+	</bean>
+	<bean name="message2" class="acme.entities.messages.Message">
+		<property name="title" value="Message 2" />
+		<property name="moment" value="2020/03/13 09:09" />
+		<property name="tags" value="tag1, tag2" />
+		<property name="body" value="Another message for this forum" />
+		<property name="forum" ref="discussionForum1" />
+		<property name="author" ref="entrepreneur1Authenticated" />
+	</bean>
+	<bean name="message3" class="acme.entities.messages.Message">
+		<property name="title" value="Message 3" />
+		<property name="moment" value="2020/03/13 09:09" />
+		<property name="tags" value="tag1, tag2" />
+		<property name="body" value="First message for this forum" />
+		<property name="forum" ref="discussionForum2" />
+		<property name="author" ref="investor1Authenticated" />
+	</bean>
+	<bean name="message4" class="acme.entities.messages.Message">
+		<property name="title" value="Message 4" />
+		<property name="moment" value="2020/03/13 09:09" />
+		<property name="tags" value="tag1, tag2" />
+		<property name="body" value="First message for this forum" />
+		<property name="forum" ref="discussionForum3" />
+		<property name="author" ref="investor2Authenticated" />
+	</bean>
 
 </beans>

@@ -15,6 +15,7 @@ import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
 import acme.entities.discussionForums.DiscussionForum;
+import acme.framework.entities.Authenticated;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -52,5 +53,10 @@ public class Message extends DomainEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	private DiscussionForum		forum;
+
+	@Valid
+	@NotNull
+	@ManyToOne(optional = false)
+	private Authenticated		author;
 
 }

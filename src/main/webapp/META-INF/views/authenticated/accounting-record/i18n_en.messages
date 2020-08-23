@@ -1,0 +1,12 @@
+#i18n_en.messages
+
+authenticated.accountingRecord.list.label.title = Title
+authenticated.accountingRecord.list.label.status = Status
+authenticated.accountingRecord.list.label.moment = Moment
+
+authenticated.accountingRecord.form.label.title = Title
+authenticated.accountingRecord.form.label.moment = Moment
+authenticated.accountingRecord.form.label.status = Status
+authenticated.accountingRecord.form.label.body = Body
+
+authenticated.accountingRecord.form.button.return = Return

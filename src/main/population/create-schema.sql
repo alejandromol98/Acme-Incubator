@@ -94,7 +94,9 @@
     create table `discussion_forum` (
        `id` integer not null,
         `version` integer not null,
+        `moment` datetime(6),
         `title` varchar(255),
+        `users` varchar(1024),
         `investment_round_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
@@ -158,6 +160,7 @@
         `moment` datetime(6),
         `tags` varchar(255),
         `title` varchar(255),
+        `author_id` integer not null,
         `forum_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
@@ -334,6 +337,11 @@
        add constraint FK_dcek5rr514s3rww0yy57vvnpq 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `message` 
+       add constraint `FKe1edpykjs39o98sfkjafa0dtn` 
+       foreign key (`author_id`) 
+       references `authenticated` (`id`);
 
     alter table `message` 
        add constraint `FK7ju7uxmh5mdbjgrfwgoem3eqd` 

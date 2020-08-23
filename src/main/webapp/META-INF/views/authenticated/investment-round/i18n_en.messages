@@ -14,4 +14,5 @@ authenticated.investmentRound.form.label.amount = Amount of Money
 authenticated.investmentRound.form.label.entrepreneur = Entrepreneur
 
 authenticated.investmentRound.form.label.workProgrammes = Work Programmes
+authenticated.investmentRound.form.label.accountingRecord = Accounting Records
 authenticated.investmentRound.form.button.return = Return

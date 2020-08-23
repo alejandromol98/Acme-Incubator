@@ -15,6 +15,7 @@
 	
 	<acme:form-hidden path="id"/>
 	<acme:form-submit code="bookkeeper.investmentRound.form.label.workProgrammes" method="get" action="/authenticated/work-programme/list?id=${id}" />
+	<acme:form-submit code="bookkeeper.investmentRound.form.label.accountingRecord" method="get" action="/authenticated/accounting-record/list?id=${id}" />
 	
 	<acme:form-return code="bookkeeper.investmentRound.form.button.return"/>
 </acme:form>

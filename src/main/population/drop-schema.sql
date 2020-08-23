@@ -53,6 +53,10 @@
 
     alter table `message` 
        drop 
+       foreign key `FKe1edpykjs39o98sfkjafa0dtn`;
+
+    alter table `message` 
+       drop 
        foreign key `FK7ju7uxmh5mdbjgrfwgoem3eqd`;
 
     alter table `provider` 
