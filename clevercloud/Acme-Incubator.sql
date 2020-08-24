@@ -16,6 +16,39 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `accounting_record`
+--
+
+DROP TABLE IF EXISTS `accounting_record`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `accounting_record` (
+  `id` int NOT NULL,
+  `version` int NOT NULL,
+  `body` varchar(1024) DEFAULT NULL,
+  `moment` datetime(6) DEFAULT NULL,
+  `status` int DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `bookkeeper_id` int NOT NULL,
+  `investment_round_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK41jm4vk7runvmg5tderffrele` (`bookkeeper_id`),
+  KEY `FKk1pmfnppwk0kav7xloy8u71uq` (`investment_round_id`),
+  CONSTRAINT `FK41jm4vk7runvmg5tderffrele` FOREIGN KEY (`bookkeeper_id`) REFERENCES `bookkeeper` (`id`),
+  CONSTRAINT `FKk1pmfnppwk0kav7xloy8u71uq` FOREIGN KEY (`investment_round_id`) REFERENCES `investment_round` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `accounting_record`
+--
+
+LOCK TABLES `accounting_record` WRITE;
+/*!40000 ALTER TABLE `accounting_record` DISABLE KEYS */;
+/*!40000 ALTER TABLE `accounting_record` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `administrator`
 --
 
@@ -70,6 +103,41 @@ INSERT INTO `anonymous` VALUES (2,0,1);
 UNLOCK TABLES;
 
 --
+-- Table structure for table `application`
+--
+
+DROP TABLE IF EXISTS `application`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `application` (
+  `id` int NOT NULL,
+  `version` int NOT NULL,
+  `moment` datetime(6) DEFAULT NULL,
+  `offer_amount` double DEFAULT NULL,
+  `offer_currency` varchar(255) DEFAULT NULL,
+  `statement` varchar(255) DEFAULT NULL,
+  `status` int DEFAULT NULL,
+  `ticker` varchar(255) DEFAULT NULL,
+  `investment_round_id` int NOT NULL,
+  `investor_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKk5ibe41quxsif8im882xv4afo` (`investment_round_id`),
+  KEY `FKl4fp0cd8c008ma79n6w58xhk9` (`investor_id`),
+  CONSTRAINT `FKk5ibe41quxsif8im882xv4afo` FOREIGN KEY (`investment_round_id`) REFERENCES `investment_round` (`id`),
+  CONSTRAINT `FKl4fp0cd8c008ma79n6w58xhk9` FOREIGN KEY (`investor_id`) REFERENCES `investor` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `application`
+--
+
+LOCK TABLES `application` WRITE;
+/*!40000 ALTER TABLE `application` DISABLE KEYS */;
+/*!40000 ALTER TABLE `application` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `authenticated`
 --
 
@@ -94,6 +162,34 @@ LOCK TABLES `authenticated` WRITE;
 /*!40000 ALTER TABLE `authenticated` DISABLE KEYS */;
 INSERT INTO `authenticated` VALUES (5,0,3);
 /*!40000 ALTER TABLE `authenticated` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `bookkeeper`
+--
+
+DROP TABLE IF EXISTS `bookkeeper`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `bookkeeper` (
+  `id` int NOT NULL,
+  `version` int NOT NULL,
+  `user_account_id` int DEFAULT NULL,
+  `firm_name` varchar(255) DEFAULT NULL,
+  `responsibility_statement` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_krvjp9eaqyapewl2igugbo9o8` (`user_account_id`),
+  CONSTRAINT `FK_krvjp9eaqyapewl2igugbo9o8` FOREIGN KEY (`user_account_id`) REFERENCES `user_account` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `bookkeeper`
+--
+
+LOCK TABLES `bookkeeper` WRITE;
+/*!40000 ALTER TABLE `bookkeeper` DISABLE KEYS */;
+/*!40000 ALTER TABLE `bookkeeper` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -169,8 +265,8 @@ DROP TABLE IF EXISTS `customisation`;
 CREATE TABLE `customisation` (
   `id` int NOT NULL,
   `version` int NOT NULL,
-  `activity_sectors` varchar(255) DEFAULT NULL,
-  `spamwords` varchar(255) DEFAULT NULL,
+  `activity_sectors` varchar(1024) DEFAULT NULL,
+  `spamwords` varchar(1024) DEFAULT NULL,
   `threshold` double DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -183,6 +279,65 @@ CREATE TABLE `customisation` (
 LOCK TABLES `customisation` WRITE;
 /*!40000 ALTER TABLE `customisation` DISABLE KEYS */;
 /*!40000 ALTER TABLE `customisation` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `discussion_forum`
+--
+
+DROP TABLE IF EXISTS `discussion_forum`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `discussion_forum` (
+  `id` int NOT NULL,
+  `version` int NOT NULL,
+  `moment` datetime(6) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `users` varchar(1024) DEFAULT NULL,
+  `investment_round_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKmcgrpw22g3baap51wq319v1bp` (`investment_round_id`),
+  CONSTRAINT `FKmcgrpw22g3baap51wq319v1bp` FOREIGN KEY (`investment_round_id`) REFERENCES `investment_round` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `discussion_forum`
+--
+
+LOCK TABLES `discussion_forum` WRITE;
+/*!40000 ALTER TABLE `discussion_forum` DISABLE KEYS */;
+/*!40000 ALTER TABLE `discussion_forum` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `entrepreneur`
+--
+
+DROP TABLE IF EXISTS `entrepreneur`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `entrepreneur` (
+  `id` int NOT NULL,
+  `version` int NOT NULL,
+  `user_account_id` int DEFAULT NULL,
+  `activity_sector` varchar(255) DEFAULT NULL,
+  `qualification_record` varchar(255) DEFAULT NULL,
+  `skills_record` varchar(255) DEFAULT NULL,
+  `startup_name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_r6tqltqvrlh1cyy8rsj5pev1q` (`user_account_id`),
+  CONSTRAINT `FK_r6tqltqvrlh1cyy8rsj5pev1q` FOREIGN KEY (`user_account_id`) REFERENCES `user_account` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `entrepreneur`
+--
+
+LOCK TABLES `entrepreneur` WRITE;
+/*!40000 ALTER TABLE `entrepreneur` DISABLE KEYS */;
+/*!40000 ALTER TABLE `entrepreneur` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -237,6 +392,103 @@ CREATE TABLE `inquiry` (
 LOCK TABLES `inquiry` WRITE;
 /*!40000 ALTER TABLE `inquiry` DISABLE KEYS */;
 /*!40000 ALTER TABLE `inquiry` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `investment_round`
+--
+
+DROP TABLE IF EXISTS `investment_round`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `investment_round` (
+  `id` int NOT NULL,
+  `version` int NOT NULL,
+  `amount_amount` double DEFAULT NULL,
+  `amount_currency` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `is_final_mode` bit(1) DEFAULT NULL,
+  `kind` int DEFAULT NULL,
+  `moment` datetime(6) DEFAULT NULL,
+  `more_info` varchar(255) DEFAULT NULL,
+  `ticker` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `entrepreneur_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKkj1l8c2ftn9c65y061me6t37j` (`entrepreneur_id`),
+  CONSTRAINT `FKkj1l8c2ftn9c65y061me6t37j` FOREIGN KEY (`entrepreneur_id`) REFERENCES `entrepreneur` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `investment_round`
+--
+
+LOCK TABLES `investment_round` WRITE;
+/*!40000 ALTER TABLE `investment_round` DISABLE KEYS */;
+/*!40000 ALTER TABLE `investment_round` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `investor`
+--
+
+DROP TABLE IF EXISTS `investor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `investor` (
+  `id` int NOT NULL,
+  `version` int NOT NULL,
+  `user_account_id` int DEFAULT NULL,
+  `activity_sector` varchar(255) DEFAULT NULL,
+  `firm_name` varchar(255) DEFAULT NULL,
+  `profile` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_dcek5rr514s3rww0yy57vvnpq` (`user_account_id`),
+  CONSTRAINT `FK_dcek5rr514s3rww0yy57vvnpq` FOREIGN KEY (`user_account_id`) REFERENCES `user_account` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `investor`
+--
+
+LOCK TABLES `investor` WRITE;
+/*!40000 ALTER TABLE `investor` DISABLE KEYS */;
+/*!40000 ALTER TABLE `investor` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `message`
+--
+
+DROP TABLE IF EXISTS `message`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `message` (
+  `id` int NOT NULL,
+  `version` int NOT NULL,
+  `body` varchar(1024) DEFAULT NULL,
+  `moment` datetime(6) DEFAULT NULL,
+  `tags` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `author_id` int NOT NULL,
+  `forum_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKe1edpykjs39o98sfkjafa0dtn` (`author_id`),
+  KEY `FK7ju7uxmh5mdbjgrfwgoem3eqd` (`forum_id`),
+  CONSTRAINT `FK7ju7uxmh5mdbjgrfwgoem3eqd` FOREIGN KEY (`forum_id`) REFERENCES `discussion_forum` (`id`),
+  CONSTRAINT `FKe1edpykjs39o98sfkjafa0dtn` FOREIGN KEY (`author_id`) REFERENCES `authenticated` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `message`
+--
+
+LOCK TABLES `message` WRITE;
+/*!40000 ALTER TABLE `message` DISABLE KEYS */;
+/*!40000 ALTER TABLE `message` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -445,8 +697,39 @@ CREATE TABLE `user_account` (
 
 LOCK TABLES `user_account` WRITE;
 /*!40000 ALTER TABLE `user_account` DISABLE KEYS */;
-INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$W6yVNvfl0obbeNYCr8bQKelFpkfJ4KTXEu4se2i1vL9nglnDrsIUO','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$UQ.w0EzF3buXlps7YaTVkOGX4xrLxUnPkDN0hB4AOC4EiM0JfJ932','administrator');
+INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$7Ox.yPionL5Es9rDHydAMOZM6CEv4LKPHHTb0bUC73OSX6Yjqdsey','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$Kr5rxaWTr0ieQlFKzp05DepRGrjU2XSYflJMMAbQesmANhFat5fFS','administrator');
 /*!40000 ALTER TABLE `user_account` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `work_programme`
+--
+
+DROP TABLE IF EXISTS `work_programme`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `work_programme` (
+  `id` int NOT NULL,
+  `version` int NOT NULL,
+  `budget_amount` double DEFAULT NULL,
+  `budget_currency` varchar(255) DEFAULT NULL,
+  `deadline` datetime(6) DEFAULT NULL,
+  `moment` datetime(6) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `investment_round_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK3nxyaik1cnvfdg02p9a8ibiko` (`investment_round_id`),
+  CONSTRAINT `FK3nxyaik1cnvfdg02p9a8ibiko` FOREIGN KEY (`investment_round_id`) REFERENCES `investment_round` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `work_programme`
+--
+
+LOCK TABLES `work_programme` WRITE;
+/*!40000 ALTER TABLE `work_programme` DISABLE KEYS */;
+/*!40000 ALTER TABLE `work_programme` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -458,4 +741,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-08-18 20:19:53
+-- Dump completed on 2020-08-24 21:20:18
