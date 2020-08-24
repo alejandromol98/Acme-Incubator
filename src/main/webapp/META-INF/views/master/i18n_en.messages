@@ -17,7 +17,7 @@ master.banner.background = #FFFFFF
 
 master.welcome.title = Welcome!
 master.welcome.text = \
-	Welcome to Starter Project! Never before has it bee easier to get your \
+	Welcome to Acme Incubator! Never before has it bee easier to get your \
 	project up and running!
 
 # master.menu #################################################################
@@ -48,6 +48,8 @@ master.menu.authenticated.toolRecord.list = Tool Records List
 master.menu.authenticated.overture.list = Overtures List
 master.menu.authenticated.inquire.list = Inquiries List
 master.menu.authenticated.challenge.list = Challenges List
+master.menu.authenticated.investmentRound.list = Investment Rounds List
+master.menu.authenticated.discussionForum.list = Discussion Forums where I´m involved
 
 # master.menu.administrator ###################################################
 
@@ -72,6 +74,23 @@ master.menu.provider.favourite-link = Favourite link
 
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
+
+# master.menu.entrepreneur ####################################################
+
+master.menu.entrepreneur = Entrepreneur
+master.menu.entrepreneur.investmentRound.list = List My Investment Rounds
+master.menu.entrepreneur.application.list = My Investment Rounds´ Applications
+
+# master.menu.investor ########################################################
+
+master.menu.investor = Investor
+master.menu.investor.application.list = List My Applications
+
+# master.menu.bookkeeper ######################################################
+
+master.menu.bookkeeper = Bookkeeper
+master.menu.bookkeeper.investmentRound.listMine = Investment Rounds where I have written
+master.menu.bookkeeper.investmentRound.listNotMine = Investment Rounds where I have not written
 
 # master.menu.user-account ####################################################
 
@@ -98,7 +117,7 @@ master.footer.label.spanish = Spanish
 
 master.company.title = La compañía
 master.company.text = \
-	Starter Project, Inc. is a fictitious fictitious company that provides a \
+	Acme Incubator, Inc. is a fictitious company that provides a \
 	starter project for the students of the Design and Testing subject of the \
 	Software Engineering Curriculum of the University of Sevilla.
 master.company.name = Acme Incubator, Inc.

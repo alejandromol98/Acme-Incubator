@@ -6,6 +6,7 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -50,12 +51,15 @@ public class Challenge extends DomainEntity {
 	private String				goalExpert;
 
 	@NotNull
+	@Valid
 	private Money				rewardRookie;
 
 	@NotNull
+	@Valid
 	private Money				rewardAverage;
 
 	@NotNull
+	@Valid
 	private Money				rewardExpert;
 
 }

@@ -1,0 +1,14 @@
+#i18n_en.messages
+
+authenticated.discussionForum.list.label.title = Title
+authenticated.discussionForum.list.label.moment = Moment
+authenticated.discussionForum.list.label.invRoundTicker = Investment Round Ticker
+
+authenticated.discussionForum.form.label.title = Title
+authenticated.discussionForum.form.label.moment = Moment
+authenticated.discussionForum.form.label.users = Users
+authenticated.discussionForum.form.label.invRoundTicker = Investment Round Ticker
+
+authenticated.discussionForum.form.label.messages = Messages
+
+authenticated.discussionForum.form.button.return = Return

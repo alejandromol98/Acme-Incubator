@@ -1,0 +1,18 @@
+#i18n_en.messages
+
+entrepreneur.investmentRound.list.label.ticker = Ticker
+entrepreneur.investmentRound.list.label.title = Title
+entrepreneur.investmentRound.list.label.kind = Kind of Round
+
+entrepreneur.investmentRound.form.label.ticker = Ticker
+entrepreneur.investmentRound.form.label.title = Title
+entrepreneur.investmentRound.form.label.moment = Moment
+entrepreneur.investmentRound.form.label.kind = Kind of Round
+entrepreneur.investmentRound.form.label.description = Description
+entrepreneur.investmentRound.form.label.moreInfo = Additional Information
+entrepreneur.investmentRound.form.label.amount = Amount of Money
+entrepreneur.investmentRound.form.label.isFinalMode = Final Mode
+
+entrepreneur.investmentRound.form.label.workProgrammes = Work Programmes
+entrepreneur.investmentRound.form.label.accountingRecord = Accounting Records
+entrepreneur.investmentRound.form.button.return = Return

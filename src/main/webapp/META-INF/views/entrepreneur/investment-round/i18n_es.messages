@@ -1,0 +1,18 @@
+#i18n_es.messages
+
+entrepreneur.investmentRound.list.label.ticker = Código
+entrepreneur.investmentRound.list.label.title = Título
+entrepreneur.investmentRound.list.label.kind = Tipo de Ronda
+
+entrepreneur.investmentRound.form.label.ticker = Símbolo
+entrepreneur.investmentRound.form.label.title = Título
+entrepreneur.investmentRound.form.label.moment = Momento
+entrepreneur.investmentRound.form.label.kind = Tipo de Ronda
+entrepreneur.investmentRound.form.label.description = Descripción
+entrepreneur.investmentRound.form.label.moreInfo = Información Adicional
+entrepreneur.investmentRound.form.label.amount = Cantidad de Dinero
+entrepreneur.investmentRound.form.label.isFinalMode = Modo Final
+
+entrepreneur.investmentRound.form.label.workProgrammes = Programas de Trabajo
+entrepreneur.investmentRound.form.label.accountingRecord = Registros de Contabilidad
+entrepreneur.investmentRound.form.button.return = Volver
