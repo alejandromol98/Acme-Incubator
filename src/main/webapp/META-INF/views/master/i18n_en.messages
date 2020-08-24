@@ -89,8 +89,8 @@ master.menu.investor.application.list = List My Applications
 # master.menu.bookkeeper ######################################################
 
 master.menu.bookkeeper = Bookkeeper
-master.menu.bookkeeper.investmentRound.listMine = Investment Rounds where I has written
-master.menu.bookkeeper.investmentRound.listNotMine = Investment Rounds where I has not written
+master.menu.bookkeeper.investmentRound.listMine = Investment Rounds where I have written
+master.menu.bookkeeper.investmentRound.listNotMine = Investment Rounds where I have not written
 
 # master.menu.user-account ####################################################
 

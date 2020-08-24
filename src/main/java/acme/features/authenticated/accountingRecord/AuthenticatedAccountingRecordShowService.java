@@ -44,6 +44,9 @@ public class AuthenticatedAccountingRecordShowService implements AbstractShowSer
 		assert entity != null;
 		assert model != null;
 
+		String bookkeeper = entity.getBookkeeper().getUserAccount().getUsername();
+		model.setAttribute("bookkeeper", bookkeeper);
+
 		request.unbind(entity, model, "title", "status", "moment", "body");
 	}
 

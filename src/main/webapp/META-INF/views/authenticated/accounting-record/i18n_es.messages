@@ -3,10 +3,12 @@
 authenticated.accountingRecord.list.label.title = Título
 authenticated.accountingRecord.list.label.status = Estado
 authenticated.accountingRecord.list.label.moment = Momento
+authenticated.accountingRecord.list.label.bookkeeper = Contable
 
 authenticated.accountingRecord.form.label.title = Título
 authenticated.accountingRecord.form.label.moment = Momento
 authenticated.accountingRecord.form.label.status = Estado
 authenticated.accountingRecord.form.label.body = Cuerpo
+authenticated.accountingRecord.form.label.bookkeeper = Contable
 
 authenticated.accountingRecord.form.button.return = Volver

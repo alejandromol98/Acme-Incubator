@@ -33,6 +33,7 @@ public class AuthenticatedInvestmentRoundListService implements AbstractListServ
 		Collection<InvestmentRound> result;
 
 		result = this.repository.findManyAll();
+		result.removeAll(this.repository.findInactiveInvestmentRounds());
 		return result;
 	}
 

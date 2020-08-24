@@ -156,12 +156,12 @@
 	</bean>
 	
 	<bean id="money05" class="acme.framework.datatypes.Money">
-		<property name="amount" value="15000.98" />
+		<property name="amount" value="15000" />
 		<property name="currency" value="€" />
 	</bean>
 
 	<bean id="money06" class="acme.framework.datatypes.Money">
-		<property name="amount" value="20000.00" />
+		<property name="amount" value="5000.00" />
 		<property name="currency" value="€" />
 	</bean>
 	
@@ -412,7 +412,7 @@
 		<property name="kind" value="SEED" />
 		<property name="title" value="Investment Round 1" />
 		<property name="description" value="This is the first investment round" />
-		<property name="amount" ref="money05" />
+		<property name="amount" ref="money04" />
 		<property name="moreInfo" value="http://www.moreInfo.com" />
 		<property name="isFinalMode" value="true" />
 		<property name="entrepreneur" ref="entrepreneur1Entrepreneur" />
@@ -458,7 +458,7 @@
 		<property name="description" value="Security Investment round" />
 		<property name="amount" ref="money05" />
 		<property name="moreInfo" value="http://www.example.com" />
-		<property name="isFinalMode" value="false" />
+		<property name="isFinalMode" value="true" />
 		<property name="entrepreneur" ref="entrepreneur2Entrepreneur" />
 	</bean>
 	
@@ -467,48 +467,62 @@
 		<property name="title" value="Work Programme 1" />
 		<property name="moment" value="2019/10/05 09:09" />
 		<property name="deadline" value="2020/10/05 09:09" />
-		<property name="budget" ref="money01" />
-		<property name="investmentRound" ref="investmentRound2" />
+		<property name="budget" ref="money05" />
+		<property name="investmentRound" ref="investmentRound1" />
 	</bean>
 	<bean name="workProgramme2" class="acme.entities.workProgrammes.WorkProgramme">
 		<property name="title" value="Work Programme 2" />
 		<property name="moment" value="2020/05/05 09:09" />
 		<property name="deadline" value="2021/05/05 09:09" />
-		<property name="budget" ref="money01" />
-		<property name="investmentRound" ref="investmentRound4" />
+		<property name="budget" ref="money06" />
+		<property name="investmentRound" ref="investmentRound1" />
 	</bean>
 	<bean name="workProgramme3" class="acme.entities.workProgrammes.WorkProgramme">
 		<property name="title" value="Work Programme 3" />
 		<property name="moment" value="2020/08/05 09:09" />
 		<property name="deadline" value="2020/10/05 09:09" />
-		<property name="budget" ref="money05" />
+		<property name="budget" ref="money03" />
 		<property name="investmentRound" ref="investmentRound4" />
+	</bean>
+	<bean name="workProgramme4" class="acme.entities.workProgrammes.WorkProgramme">
+		<property name="title" value="Work Programme 4" />
+		<property name="moment" value="2020/08/05 09:09" />
+		<property name="deadline" value="2020/10/05 09:09" />
+		<property name="budget" ref="money05" />
+		<property name="investmentRound" ref="investmentRound5" />
+	</bean>
+	<bean name="workProgramme5" class="acme.entities.workProgrammes.WorkProgramme">
+		<property name="title" value="Work Programme 3" />
+		<property name="moment" value="2020/08/05 09:09" />
+		<property name="deadline" value="2020/10/05 09:09" />
+		<property name="budget" ref="money06" />
+		<property name="investmentRound" ref="investmentRound2" />
 	</bean>
 	
 	<!-- Applications -->
 	<bean name="application1" class="acme.entities.applications.Application">
 		<property name="ticker" value="ENG-20-000001" />
 		<property name="moment" value="2020/05/05 09:09" />
-		<property name="statement" value="Application for investmentRound 2" />
-		<property name="offer" ref="money01" />
+		<property name="statement" value="Application for investmentRound 1" />
+		<property name="offer" ref="money05" />
 		<property name="status" value="PENDING" />
 		<property name="investor" ref="investor1Investor" />
-		<property name="investmentRound" ref="investmentRound2" />
+		<property name="investmentRound" ref="investmentRound1" />
 	</bean>
 	<bean name="application2" class="acme.entities.applications.Application">
 		<property name="ticker" value="ENG-20-123456" />
 		<property name="moment" value="2020/07/05 09:09" />
 		<property name="statement" value="New application from investor1" />
-		<property name="offer" ref="money05" />
+		<property name="offer" ref="money04" />
 		<property name="status" value="PENDING" />
 		<property name="investor" ref="investor1Investor" />
-		<property name="investmentRound" ref="investmentRound3" />
+		<property name="investmentRound" ref="investmentRound1" />
 	</bean>
 	<bean name="application3" class="acme.entities.applications.Application">
 		<property name="ticker" value="ENG-19-654321" />
 		<property name="moment" value="2019/05/05 09:09" />
-		<property name="statement" value="Application for investmentRound 3" />
-		<property name="offer" ref="money06" />
+		<property name="statement" value="Application for investmentRound 4" />
+		<property name="offer" ref="money03" />
 		<property name="status" value="ACCEPTED" />
 		<property name="investor" ref="investor1Investor" />
 		<property name="investmentRound" ref="investmentRound4" />
@@ -517,16 +531,16 @@
 		<property name="ticker" value="ENG-20-765621" />
 		<property name="moment" value="2020/08/05 09:09" />
 		<property name="statement" value="First Application from Investor 2" />
-		<property name="offer" ref="money01" />
+		<property name="offer" ref="money05" />
 		<property name="status" value="PENDING" />
 		<property name="investor" ref="investor2Investor" />
-		<property name="investmentRound" ref="investmentRound2" />
+		<property name="investmentRound" ref="investmentRound5" />
 	</bean>
 	<bean name="application5" class="acme.entities.applications.Application">
 		<property name="ticker" value="ENG-20-987987" />
 		<property name="moment" value="2020/01/05 09:09" />
 		<property name="statement" value="Want to apply for this investment round!" />
-		<property name="offer" ref="money03" />
+		<property name="offer" ref="money02" />
 		<property name="status" value="REJECTED" />
 		<property name="investor" ref="investor2Investor" />
 		<property name="investmentRound" ref="investmentRound4" />
@@ -616,7 +630,7 @@
 		<property name="moment" value="2020/01/05 09:09" />
 		<property name="body" value="This is the first accounting record from Bookkeeper 2" />
 		<property name="bookkeeper" ref="bookkeeper2Bookkeeper" />
-		<property name="investmentRound" ref="investmentRound2" />
+		<property name="investmentRound" ref="investmentRound1" />
 	</bean>
 	<bean name="accountingRecord4" class="acme.entities.accountingRecords.AccountingRecord">
 		<property name="title" value="Accounting Record 4" />
@@ -624,7 +638,7 @@
 		<property name="moment" value="2020/08/05 09:09" />
 		<property name="body" value="This another accounting record from Bookkeeper 2" />
 		<property name="bookkeeper" ref="bookkeeper2Bookkeeper" />
-		<property name="investmentRound" ref="investmentRound3" />
+		<property name="investmentRound" ref="investmentRound5" />
 	</bean>
 	<bean name="accountingRecord5" class="acme.entities.accountingRecords.AccountingRecord">
 		<property name="title" value="Accounting Record 5" />
@@ -632,7 +646,7 @@
 		<property name="moment" value="2020/03/13 09:09" />
 		<property name="body" value="This is a published accounting record" />
 		<property name="bookkeeper" ref="bookkeeper2Bookkeeper" />
-		<property name="investmentRound" ref="investmentRound3" />
+		<property name="investmentRound" ref="investmentRound5" />
 	</bean>
 	
 	<!-- Discussion Forums -->
@@ -640,7 +654,7 @@
 		<property name="title" value="Discussion Forum 1" />
 		<property name="moment" value="2020/03/13 09:09" />
 		<property name="users" value="entrepreneur1" />
-		<property name="investmentRound" ref="investmentRound3" />
+		<property name="investmentRound" ref="investmentRound1" />
 	</bean>
 	<bean name="discussionForum2" class="acme.entities.discussionForums.DiscussionForum">
 		<property name="title" value="Discussion Forum 2" />
@@ -652,7 +666,7 @@
 		<property name="title" value="Discussion Forum 3" />
 		<property name="moment" value="2020/03/13 09:09" />
 		<property name="users" value="entrepreneur2, investor2" />
-		<property name="investmentRound" ref="investmentRound4" />
+		<property name="investmentRound" ref="investmentRound5" />
 	</bean>
 	
 	<!-- Messages -->

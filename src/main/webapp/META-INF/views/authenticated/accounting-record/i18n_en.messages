@@ -3,10 +3,12 @@
 authenticated.accountingRecord.list.label.title = Title
 authenticated.accountingRecord.list.label.status = Status
 authenticated.accountingRecord.list.label.moment = Moment
+authenticated.accountingRecord.list.label.bookkeeper = Bookkeeper
 
 authenticated.accountingRecord.form.label.title = Title
 authenticated.accountingRecord.form.label.moment = Moment
 authenticated.accountingRecord.form.label.status = Status
 authenticated.accountingRecord.form.label.body = Body
+authenticated.accountingRecord.form.label.bookkeeper = Bookkeeper
 
 authenticated.accountingRecord.form.button.return = Return

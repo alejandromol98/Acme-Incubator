@@ -8,6 +8,7 @@
 	<acme:form-moment code="authenticated.accountingRecord.form.label.moment" path="moment"/>
 	<acme:form-moment code="authenticated.accountingRecord.form.label.status" path="status"/>
 	<acme:form-money code="authenticated.accountingRecord.form.label.body" path="body"/>
+	<acme:form-textbox code="authenticated.accountingRecord.form.label.bookkeeper" path="bookkeeper"/>
 	
 	<acme:form-return code="authenticated.accountingRecord.form.button.return"/>
 </acme:form>

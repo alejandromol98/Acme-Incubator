@@ -4,8 +4,9 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags" %>
 
 <acme:list>
-	<acme:list-column code="authenticated.accountingRecord.list.label.title" path="title" width="60%" />
+	<acme:list-column code="authenticated.accountingRecord.list.label.title" path="title" width="40%" />
 	<acme:list-column code="authenticated.accountingRecord.list.label.moment" path="moment" width="20%" />
 	<acme:list-column code="authenticated.accountingRecord.list.label.status" path="status" width="20%" />
+	<acme:list-column code="authenticated.accountingRecord.list.label.bookkeeper" path="bookkeeper" width="20%" />
 </acme:list>
 

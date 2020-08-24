@@ -39,7 +39,7 @@ public class DiscussionForum extends DomainEntity {
 	private Date				moment;
 
 	@Column(length = 1024)
-	@NotNull
+	@NotBlank
 	@Size(min = 0, max = 1024)
 	private String				users;
 

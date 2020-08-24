@@ -47,6 +47,9 @@ public class AuthenticatedAccountingRecordListService implements AbstractListSer
 		assert entity != null;
 		assert model != null;
 
+		String bookkeeper = entity.getBookkeeper().getUserAccount().getUsername();
+		model.setAttribute("bookkeeper", bookkeeper);
+
 		request.unbind(entity, model, "title", "status", "moment");
 	}
 
