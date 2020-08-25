@@ -1,0 +1,10 @@
+#i18n_es
+
+authenticated.entrepreneur.form.label.startup = Nombre de Start-up
+authenticated.entrepreneur.form.label.activitySector = Sector de Actividad
+authenticated.entrepreneur.form.label.qualificationRecord = Registro de Calificación
+authenticated.entrepreneur.form.label.skillsRecord = Registro de Habilidades
+
+authenticated.entrepreneur.form.button.create = Crear
+authenticated.entrepreneur.form.button.update = Actualizar
+authenticated.entrepreneur.form.button.return = Volver
