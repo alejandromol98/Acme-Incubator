@@ -28,6 +28,7 @@
     create table `application` (
        `id` integer not null,
         `version` integer not null,
+        `justification` varchar(1024),
         `moment` datetime(6),
         `offer_amount` double precision,
         `offer_currency` varchar(255),

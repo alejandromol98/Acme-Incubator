@@ -506,6 +506,7 @@
 		<property name="statement" value="Application for investmentRound 1" />
 		<property name="offer" ref="money05" />
 		<property name="status" value="PENDING" />
+		<property name="justification"><null/></property>
 		<property name="investor" ref="investor1Investor" />
 		<property name="investmentRound" ref="investmentRound1" />
 	</bean>
@@ -515,6 +516,7 @@
 		<property name="statement" value="New application from investor1" />
 		<property name="offer" ref="money04" />
 		<property name="status" value="PENDING" />
+		<property name="justification"><null/></property>
 		<property name="investor" ref="investor1Investor" />
 		<property name="investmentRound" ref="investmentRound1" />
 	</bean>
@@ -524,6 +526,7 @@
 		<property name="statement" value="Application for investmentRound 4" />
 		<property name="offer" ref="money03" />
 		<property name="status" value="ACCEPTED" />
+		<property name="justification"><null/></property>
 		<property name="investor" ref="investor1Investor" />
 		<property name="investmentRound" ref="investmentRound4" />
 	</bean>
@@ -533,6 +536,7 @@
 		<property name="statement" value="First Application from Investor 2" />
 		<property name="offer" ref="money05" />
 		<property name="status" value="PENDING" />
+		<property name="justification"><null/></property>
 		<property name="investor" ref="investor2Investor" />
 		<property name="investmentRound" ref="investmentRound5" />
 	</bean>
@@ -542,6 +546,7 @@
 		<property name="statement" value="Want to apply for this investment round!" />
 		<property name="offer" ref="money02" />
 		<property name="status" value="REJECTED" />
+		<property name="justification" value="Justificating the rejection" />
 		<property name="investor" ref="investor2Investor" />
 		<property name="investmentRound" ref="investmentRound4" />
 	</bean>

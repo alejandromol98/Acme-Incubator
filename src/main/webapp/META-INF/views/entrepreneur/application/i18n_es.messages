@@ -1,9 +1,7 @@
 #i18n_es.messages
 
 entrepreneur.application.list.label.ticker = Código
-entrepreneur.application.list.label.statement = Declaración
-entrepreneur.application.list.label.offer = Oferta
-entrepreneur.application.list.label.status = Estado
+entrepreneur.application.list.label.moment = Momento
 
 entrepreneur.application.list.label.invRoundTicker = Código de la Ronda de Inversión
 
@@ -12,9 +10,17 @@ entrepreneur.application.form.label.moment = Momento
 entrepreneur.application.form.label.statement = Declaración
 entrepreneur.application.form.label.offer = Oferta
 entrepreneur.application.form.label.status = Estado
+entrepreneur.application.form.label.status.pending = Pendiente
+entrepreneur.application.form.label.status.accepted = Aceptada
+entrepreneur.application.form.label.status.rejected = Rechazada
 entrepreneur.application.form.label.applicationInvestor = Inversor
+entrepreneur.application.form.label.justification = Justificación
 
 entrepreneur.application.form.label.invRoundTicker = Código de la Ronda de Inversión
 entrepreneur.application.form.label.invRoundAmount = Cantidad de Dinero de la Ronda de Inversión
 
+entrepreneur.application.form.valid.justificationStatus = Debes añadir una justificación para rechazar
+entrepreneur.application.form.valid.justificationSpam = Justificación no válida
+
+entrepreneur.application.form.button.update = Actualizar
 entrepreneur.application.form.button.return = Volver

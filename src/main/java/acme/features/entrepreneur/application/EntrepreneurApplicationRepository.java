@@ -15,7 +15,7 @@ public interface EntrepreneurApplicationRepository extends AbstractRepository {
 	@Query("select a from Application a where a.id = ?1")
 	Application findOneById(int id);
 
-	@Query("select a from Application a where a.investmentRound.entrepreneur.id = ?1")
+	@Query("select a from Application a where a.investmentRound.entrepreneur.id = ?1 group by a.ticker, a.moment ")
 	Collection<Application> findManyAll(int entrepreneurId);
 
 }
