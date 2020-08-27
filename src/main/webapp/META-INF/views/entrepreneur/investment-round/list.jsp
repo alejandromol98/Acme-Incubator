@@ -9,3 +9,5 @@
 	<acme:list-column code="entrepreneur.investmentRound.list.label.kind" path="kind" width="20%" />
 </acme:list>
 
+<acme:menu-option code="entrepreneur.investmentRound.list.button.create" action="/entrepreneur/investment-round/create"/>
+

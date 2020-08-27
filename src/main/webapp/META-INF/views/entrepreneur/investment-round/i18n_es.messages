@@ -4,15 +4,34 @@ entrepreneur.investmentRound.list.label.ticker = Código
 entrepreneur.investmentRound.list.label.title = Título
 entrepreneur.investmentRound.list.label.kind = Tipo de Ronda
 
-entrepreneur.investmentRound.form.label.ticker = Símbolo
+entrepreneur.investmentRound.list.button.create = Crear Ronda de Inversión
+
+entrepreneur.investmentRound.form.label.ticker = Código
 entrepreneur.investmentRound.form.label.title = Título
 entrepreneur.investmentRound.form.label.moment = Momento
 entrepreneur.investmentRound.form.label.kind = Tipo de Ronda
+entrepreneur.investmentRound.form.label.kind.seed = SEED
+entrepreneur.investmentRound.form.label.kind.angel = ANGEL
+entrepreneur.investmentRound.form.label.kind.series_a = SERIES_A
+entrepreneur.investmentRound.form.label.kind.series_b = SERIES_B
+entrepreneur.investmentRound.form.label.kind.series_c = SERIES_C
+entrepreneur.investmentRound.form.label.kind.bridge = BRIDGE
 entrepreneur.investmentRound.form.label.description = Descripción
 entrepreneur.investmentRound.form.label.moreInfo = Información Adicional
 entrepreneur.investmentRound.form.label.amount = Cantidad de Dinero
 entrepreneur.investmentRound.form.label.isFinalMode = Modo Final
 
+entrepreneur.investmentRound.form.button.create = Crear
+entrepreneur.investmentRound.form.button.update = Actualizar
+entrepreneur.investmentRound.form.button.delete = Eliminar
+
 entrepreneur.investmentRound.form.label.workProgrammes = Programas de Trabajo
 entrepreneur.investmentRound.form.label.accountingRecord = Registros de Contabilidad
 entrepreneur.investmentRound.form.button.return = Volver
+
+entrepreneur.investmentRound.form.valid.ticker = Código no válido: debe seguir el patrón: "SSS-YY-NNNNNN", donde "SSS" son las 3 primeras letras de tu sector de actividad, "YY" los dos últimos dígitos del año y "NNNNNN" 6 números
+entrepreneur.investmentRound.form.valid.amount = La cantidad se debe expresar en EUROS (EUR o €)
+entrepreneur.investmentRound.form.valid.title = Título no válido
+entrepreneur.investmentRound.form.valid.description = Descripción no válida
+entrepreneur.investmentRound.form.valid.isFinalMode = No es posible guardar en Modo Final
+entrepreneur.investmentRound.form.valid.invalidDelete = No es posible eliminar esta Ronda de Inversión

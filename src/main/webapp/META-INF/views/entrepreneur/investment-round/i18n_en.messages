@@ -4,15 +4,34 @@ entrepreneur.investmentRound.list.label.ticker = Ticker
 entrepreneur.investmentRound.list.label.title = Title
 entrepreneur.investmentRound.list.label.kind = Kind of Round
 
+entrepreneur.investmentRound.list.button.create = Create InvestmentRound
+
 entrepreneur.investmentRound.form.label.ticker = Ticker
 entrepreneur.investmentRound.form.label.title = Title
 entrepreneur.investmentRound.form.label.moment = Moment
 entrepreneur.investmentRound.form.label.kind = Kind of Round
+entrepreneur.investmentRound.form.label.kind.seed = SEED
+entrepreneur.investmentRound.form.label.kind.angel = ANGEL
+entrepreneur.investmentRound.form.label.kind.series_a = SERIES_A
+entrepreneur.investmentRound.form.label.kind.series_b = SERIES_B
+entrepreneur.investmentRound.form.label.kind.series_c = SERIES_C
+entrepreneur.investmentRound.form.label.kind.bridge = BRIDGE
 entrepreneur.investmentRound.form.label.description = Description
 entrepreneur.investmentRound.form.label.moreInfo = Additional Information
 entrepreneur.investmentRound.form.label.amount = Amount of Money
 entrepreneur.investmentRound.form.label.isFinalMode = Final Mode
 
+entrepreneur.investmentRound.form.button.create = Create
+entrepreneur.investmentRound.form.button.update = Update
+entrepreneur.investmentRound.form.button.delete = Delete
+
 entrepreneur.investmentRound.form.label.workProgrammes = Work Programmes
 entrepreneur.investmentRound.form.label.accountingRecord = Accounting Records
 entrepreneur.investmentRound.form.button.return = Return
+
+entrepreneur.investmentRound.form.valid.ticker = Ticker must follow pattern: "SSS-YY-NNNNNN", where "SSS" denotes first 3 letters of your activity sector, "YY" the last 2 digits of the year and "NNNNNN" 6 numbers
+entrepreneur.investmentRound.form.valid.amount = Amount must be in EUROS (EUR or € supported)
+entrepreneur.investmentRound.form.valid.title = Invalid Title
+entrepreneur.investmentRound.form.valid.description = Invalid Description
+entrepreneur.investmentRound.form.valid.isFinalMode = Not Possible to set Final Mode
+entrepreneur.investmentRound.form.valid.invalidDelete = Not Possible to delete this Investment Round
