@@ -15,4 +15,6 @@ authenticated.investmentRound.form.label.entrepreneur = Empresario
 
 authenticated.investmentRound.form.label.workProgrammes = Programas de Trabajo
 authenticated.investmentRound.form.label.accountingRecord = Registros de Contabilidad
+
+authenticated.application.form.button.create = Crear solicitud
 authenticated.investmentRound.form.button.return = Volver

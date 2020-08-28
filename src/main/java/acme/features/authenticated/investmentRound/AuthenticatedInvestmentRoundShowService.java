@@ -1,6 +1,8 @@
 
 package acme.features.authenticated.investmentRound;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +24,21 @@ public class AuthenticatedInvestmentRoundShowService implements AbstractShowServ
 	@Override
 	public boolean authorise(final Request<InvestmentRound> request) {
 		assert request != null;
-		return true;
+
+		Boolean result;
+		InvestmentRound invRound;
+		Collection<InvestmentRound> validInvRounds;
+		int id;
+
+		id = request.getModel().getInteger("id");
+		invRound = this.repository.findOneById(id);
+
+		validInvRounds = this.repository.findManyAll();
+		validInvRounds.removeAll(this.repository.findInactiveInvestmentRounds());
+
+		result = validInvRounds.contains(invRound);
+
+		return result;
 	}
 
 	@Override

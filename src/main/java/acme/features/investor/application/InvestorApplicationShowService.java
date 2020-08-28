@@ -63,7 +63,7 @@ public class InvestorApplicationShowService implements AbstractShowService<Inves
 		Money investmentRoundAmount = entity.getInvestmentRound().getAmount();
 		model.setAttribute("investmentRoundAmount", investmentRoundAmount);
 
-		request.unbind(entity, model, "ticker", "moment", "statement", "offer", "status");
+		request.unbind(entity, model, "ticker", "moment", "statement", "offer", "status", "justification");
 	}
 
 }
