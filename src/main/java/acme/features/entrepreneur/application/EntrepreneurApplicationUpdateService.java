@@ -134,10 +134,10 @@ public class EntrepreneurApplicationUpdateService implements AbstractUpdateServi
 		result = this.repository.findOneById(id);
 
 		result.setStatus(entity.getStatus());
-		if (result.getStatus() == Status.REJECTED) {
+		if (result.getStatus() == Status.REJECTED || result.getStatus() == Status.ACCEPTED) {
 			result.setJustification(entity.getJustification());
 		}
 
-		this.repository.save(entity);
+		this.repository.save(result);
 	}
 }
