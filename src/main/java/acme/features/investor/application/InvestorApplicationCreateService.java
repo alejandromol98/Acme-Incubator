@@ -66,11 +66,12 @@ public class InvestorApplicationCreateService implements AbstractCreateService<I
 		InvestmentRound investmentRound;
 		int invRoundId;
 
-		invRoundId = request.getModel().getInteger("id");
+		invRoundId = request.getModel().getInteger("invId");
 		investmentRound = this.investmentRoundRepository.findOneById(invRoundId);
 
 		model.setAttribute("investmentRoundTicker", investmentRound.getTicker());
 		model.setAttribute("investmentRoundAmount", investmentRound.getAmount());
+		model.setAttribute("invId", entity.getInvestmentRound().getId());
 
 		request.unbind(entity, model, "ticker", "statement", "offer");
 
@@ -97,7 +98,7 @@ public class InvestorApplicationCreateService implements AbstractCreateService<I
 
 		result.setStatus(Status.PENDING);
 
-		invRoundId = request.getModel().getInteger("id");
+		invRoundId = request.getModel().getInteger("invId");
 		investmentRound = this.investmentRoundRepository.findOneById(invRoundId);
 		result.setInvestmentRound(investmentRound);
 

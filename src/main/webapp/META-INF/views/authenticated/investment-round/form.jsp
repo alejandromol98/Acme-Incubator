@@ -15,8 +15,9 @@
 	<acme:form-textbox code="authenticated.investmentRound.form.label.entrepreneur" path="entrepreneur"/>
 	
 	<security:authorize access="hasRole('Investor')">
-		<acme:form-submit code="authenticated.application.form.button.create"
-			action="/investor/application/create?id=${id}" />
+		<acme:form-hidden path="invId" />
+		<acme:form-submit method="get" code="authenticated.application.form.button.create"
+			action="/investor/application/create?invId=${id}" />
 	</security:authorize>
 	
 	<acme:form-hidden path="id"/>

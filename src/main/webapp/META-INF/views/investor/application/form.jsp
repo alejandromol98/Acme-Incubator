@@ -24,7 +24,7 @@
 	</jstl:if>
 	
 	<acme:form-submit test="${command == 'create'}" code="investor.application.form.button.create"
-			action="/investor/application/create?id=${id}" />
+			action="/investor/application/create?invId=${invId}" />
 	
 	<acme:form-return code="investor.application.form.button.return"/>
 </acme:form>
