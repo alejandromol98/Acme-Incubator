@@ -1,0 +1,13 @@
+#i18n_es.messages
+
+authenticated.storage.form.title.create = Hazte Contable
+
+authenticated.storage.form.label.firmName = Nombre de Empresa 
+authenticated.storage.form.label.responsibilityStatement = Declaración de responsabilidad
+
+authenticated.storage.form.button.create = Registrar 
+authenticated.storage.form.button.return = Volver
+
+authenticated.storage.form.valid.firmName = Nombre de Empresa no válido
+authenticated.storage.form.valid.responsibilityStatement = Declaración de responsabilidad no válido
+authenticated.storage.error.pending = Su petición esta siendo tramitada

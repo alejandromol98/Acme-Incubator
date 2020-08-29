@@ -1,0 +1,13 @@
+#i18n_en.messages
+
+authenticated.storage.form.title.create = Become a Bookkeeper
+
+authenticated.storage.form.label.firmName = Firm Name 
+authenticated.storage.form.label.responsibilityStatement = Responsibility Statement
+
+authenticated.storage.form.button.create = Register
+authenticated.storage.form.button.return = Return
+
+authenticated.storage.form.valid.firmName = Invalid Firm Name
+authenticated.storage.form.valid.responsibilityStatement = Invalid Responsibility Statement
+authenticated.storage.error.pending = Your request is being processed
