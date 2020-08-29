@@ -57,6 +57,12 @@
 	</jstl:if>
 		
 	<jstl:if test="${command != 'create' }">
+		
+		<jstl:if test="${ isFinalMode == false && workProgrammesAmount == true}">
+			<acme:form-hidden path="invId" />
+			<acme:form-submit method="get" code="entrepreneur.workProgramme.form.button.create"
+			action="/entrepreneur/work-programme/create?invId=${id}" />
+		</jstl:if>
 		<acme:form-submit code="entrepreneur.investmentRound.form.label.workProgrammes" method="get" action="/entrepreneur/work-programme/list?id=${id}" />
 		<acme:form-submit code="entrepreneur.investmentRound.form.label.accountingRecord" method="get" action="/authenticated/accounting-record/list?id=${id}" />
 	</jstl:if>

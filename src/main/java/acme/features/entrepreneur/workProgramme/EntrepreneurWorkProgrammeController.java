@@ -24,6 +24,9 @@ public class EntrepreneurWorkProgrammeController extends AbstractController<Entr
 	@Autowired
 	private EntrepreneurWorkProgrammeShowService	showService;
 
+	@Autowired
+	private EntrepreneurWorkProgrammeCreateService	createService;
+
 
 	// Constructors -------------------------------------
 
@@ -31,6 +34,7 @@ public class EntrepreneurWorkProgrammeController extends AbstractController<Entr
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 	}
 
 }
