@@ -2,6 +2,7 @@
 
 administrator.storage.list.label.firmName = Nombre de la Empresa
 administrator.storage.list.label.responsibilityStatement = Declaración de responsabilidad
+administrator.storage.list.label.authenticated = Usuario de la petición
 
 administrator.storage.form.label.firmName = Nombre de la Empresa
 administrator.storage.form.label.responsibilityStatement = Declaración de responsabilidad

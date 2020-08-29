@@ -3,8 +3,8 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
-<acme:form-textbox code="administrator.storage.form.label.firmName" path="firmName" readonly="true"/>
-	<acme:form-textbox code="administrator.storage.form.label.responsibilityStatement" path="responsibilityStatement" readonly="true"/>
+	<acme:form-textbox code="administrator.storage.form.label.firmName" path="firmName" readonly="true"/>
+	<acme:form-textarea code="administrator.storage.form.label.responsibilityStatement" path="responsibilityStatement" readonly="true"/>
 	<acme:form-select code="administrator.storage.form.label.status" path="status">
         <acme:form-option code="administrator.storage.form.label.status.pending" value="PENDING" selected="${status == 'PENDING'}"/>
         <acme:form-option code="administrator.storage.form.label.status.accepted" value="ACCEPTED" selected="${status == 'ACCEPTED'}"/>

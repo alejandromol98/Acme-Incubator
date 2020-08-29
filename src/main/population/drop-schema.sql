@@ -63,6 +63,10 @@
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
 
+    alter table `storage` 
+       drop 
+       foreign key `FKbak20tfheetwsi0t2ammfwip0`;
+
     alter table `work_programme` 
        drop 
        foreign key `FK3nxyaik1cnvfdg02p9a8ibiko`;
@@ -104,6 +108,8 @@
     drop table if exists `overture`;
 
     drop table if exists `provider`;
+
+    drop table if exists `storage`;
 
     drop table if exists `technology_record`;
 

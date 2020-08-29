@@ -10,6 +10,7 @@ import acme.entities.storages.Storage;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
+import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractListService;
 
 @Service
@@ -31,6 +32,9 @@ public class AdministratorStorageListService implements AbstractListService<Admi
 		assert request != null;
 		assert entity != null;
 		assert model != null;
+
+		Authenticated authenticated = entity.getAuthenticated();
+		model.setAttribute("authenticated", authenticated.getUserAccount().getUsername());
 
 		request.unbind(entity, model, "firmName", "responsibilityStatement", "status");
 	}

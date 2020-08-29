@@ -52,7 +52,7 @@
         `version` integer not null,
         `user_account_id` integer,
         `firm_name` varchar(255),
-        `responsibility_statement` varchar(255),
+        `responsibility_statement` varchar(1024),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -213,6 +213,16 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `storage` (
+       `id` integer not null,
+        `version` integer not null,
+        `firm_name` varchar(255),
+        `responsibility_statement` varchar(255),
+        `status` integer,
+        `authenticated_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `technology_record` (
        `id` integer not null,
         `version` integer not null,
@@ -353,6 +363,11 @@
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `storage` 
+       add constraint `FKbak20tfheetwsi0t2ammfwip0` 
+       foreign key (`authenticated_id`) 
+       references `authenticated` (`id`);
 
     alter table `work_programme` 
        add constraint `FK3nxyaik1cnvfdg02p9a8ibiko` 

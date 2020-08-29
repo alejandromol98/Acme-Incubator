@@ -107,6 +107,7 @@ master.menu.user-account.entrepreneur = Entrepreneur data
 master.menu.user-account.become-investor = Become an investor
 master.menu.user-account.investor = Investor data
 master.menu.storage.become-bookkeeper = Become a bookkeeper
+master.menu.user-account.bookkeeper = Bookkeeper data
 
 # master.footer ###############################################################
 

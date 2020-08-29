@@ -2,6 +2,7 @@
 
 administrator.storage.list.label.firmName = Firm Name
 administrator.storage.list.label.responsibilityStatement = Responsibility Statement
+administrator.storage.list.label.authenticated = User Who Requests
 
 administrator.storage.form.label.firmName = Firm Name
 administrator.storage.form.label.responsibilityStatement = Responsibility Statement

@@ -5,7 +5,7 @@
 
 <acme:form>
 	<acme:form-textbox code="authenticated.storage.form.label.firmName" path="firmName" />
-	<acme:form-textbox code="authenticated.storage.form.label.responsibilityStatement" path="responsibilityStatement" />
+	<acme:form-textarea code="authenticated.storage.form.label.responsibilityStatement" path="responsibilityStatement" />
 
 	<acme:form-submit test="${command == 'create'}" code="authenticated.storage.form.button.create" action="/authenticated/storage/create"/>
 	 
