@@ -33,5 +33,5 @@ entrepreneur.investmentRound.form.valid.ticker = Código no válido: debe seguir
 entrepreneur.investmentRound.form.valid.amount = La cantidad se debe expresar en EUROS (EUR o €)
 entrepreneur.investmentRound.form.valid.title = Título no válido
 entrepreneur.investmentRound.form.valid.description = Descripción no válida
-entrepreneur.investmentRound.form.valid.isFinalMode = No es posible guardar en Modo Final
+entrepreneur.investmentRound.form.valid.isFinalMode = No es posible guardar en Modo Final: el presupuesto de los programas de trabajo debe ascender a la cantidad de la ronda de inversión 
 entrepreneur.investmentRound.form.valid.invalidDelete = No es posible eliminar esta Ronda de Inversión

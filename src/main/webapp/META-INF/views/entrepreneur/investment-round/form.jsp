@@ -49,7 +49,7 @@
 	<jstl:if test="${command == 'create'}">
 		<acme:form-submit code="entrepreneur.investmentRound.form.button.create" action="/entrepreneur/investment-round/create"/>
 	</jstl:if>
-	<jstl:if test="${command == 'update' && isFinalMode == false}">
+	<jstl:if test="${command == 'update' }">
 		<acme:form-submit code="entrepreneur.investmentRound.form.button.update" action="/entrepreneur/investment-round/update"/>
 	</jstl:if>
 	<jstl:if test="${command == 'delete'}">

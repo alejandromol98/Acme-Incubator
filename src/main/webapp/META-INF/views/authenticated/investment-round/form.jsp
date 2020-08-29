@@ -19,6 +19,13 @@
 		<acme:form-submit method="get" code="authenticated.application.form.button.create"
 			action="/investor/application/create?invId=${id}" />
 	</security:authorize>
+	<security:authorize access="hasRole('Bookkeeper')">
+		<acme:form-hidden path="invId" />
+		<acme:form-submit method="get" code="authenticated.accountingRecord.form.button.create"
+			action="/bookkeeper/accounting-record/create?invId=${id}" />
+	</security:authorize>
+	
+		
 	
 	<acme:form-hidden path="id"/>
 	<acme:form-submit code="authenticated.investmentRound.form.label.workProgrammes" method="get" action="/authenticated/work-programme/list?id=${id}" />

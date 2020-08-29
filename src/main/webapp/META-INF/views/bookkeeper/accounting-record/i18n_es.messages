@@ -1,0 +1,18 @@
+#i18n_es.messages
+
+bookkeeper.accountingRecord.list.label.title = Título
+bookkeeper.accountingRecord.list.label.moment = Momento
+bookkeeper.accountingRecord.list.label.status = Estado
+
+bookkeeper.accountingRecord.form.label.title = Título
+bookkeeper.accountingRecord.form.label.moment = Momento
+bookkeeper.accountingRecord.form.label.body = Cuerpo
+bookkeeper.accountingRecord.form.label.status = Estado
+bookkeeper.accountingRecord.form.label.status.draft = Borrador
+bookkeeper.accountingRecord.form.label.status.published = Publicado
+
+bookkeeper.accountingRecord.form.valid.title = Título no válido
+bookkeeper.accountingRecord.form.valid.body = Cuerpo no válido
+
+bookkeeper.accountingRecord.form.button.update = Actualizar
+bookkeeper.accountingRecord.form.button.return = Volver

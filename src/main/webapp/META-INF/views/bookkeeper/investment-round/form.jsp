@@ -13,7 +13,9 @@
 	<acme:form-money code="bookkeeper.investmentRound.form.label.amount" path="amount"/>
 	<acme:form-url code="bookkeeper.investmentRound.form.label.moreInfo" path="moreInfo"/>
 	
-	<acme:form-hidden path="id"/>
+	<acme:form-hidden path="invId" />
+	<acme:form-submit method="get" code="bookkeeper.accountingRecord.form.button.create"
+			action="/bookkeeper/accounting-record/create?invId=${id}" />
 	<acme:form-submit code="bookkeeper.investmentRound.form.label.workProgrammes" method="get" action="/authenticated/work-programme/list?id=${id}" />
 	<acme:form-submit code="bookkeeper.investmentRound.form.label.accountingRecord" method="get" action="/authenticated/accounting-record/list?id=${id}" />
 	

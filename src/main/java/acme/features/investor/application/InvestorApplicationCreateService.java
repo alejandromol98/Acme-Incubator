@@ -2,6 +2,7 @@
 package acme.features.investor.application;
 
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
@@ -45,7 +46,22 @@ public class InvestorApplicationCreateService implements AbstractCreateService<I
 	public boolean authorise(final Request<Application> request) {
 		assert request != null;
 
-		return true;
+		boolean result;
+		int invRoundId;
+		InvestmentRound invRound;
+		Collection<InvestmentRound> investmentRoundsTotal;
+		Collection<InvestmentRound> investmentRoundsInactive;
+
+		invRoundId = request.getModel().getInteger("invId");
+		invRound = this.investmentRoundRepository.findOneById(invRoundId);
+
+		investmentRoundsTotal = this.investmentRoundRepository.findManyAll();
+		investmentRoundsInactive = this.investmentRoundRepository.findInactiveInvestmentRounds();
+		investmentRoundsTotal.removeAll(investmentRoundsInactive);
+
+		result = investmentRoundsTotal.contains(invRound);
+
+		return result;
 	}
 
 	@Override

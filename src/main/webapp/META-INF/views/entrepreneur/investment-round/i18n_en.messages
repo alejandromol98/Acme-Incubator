@@ -33,5 +33,5 @@ entrepreneur.investmentRound.form.valid.ticker = Ticker must follow pattern: "SS
 entrepreneur.investmentRound.form.valid.amount = Amount must be in EUROS (EUR or € supported)
 entrepreneur.investmentRound.form.valid.title = Invalid Title
 entrepreneur.investmentRound.form.valid.description = Invalid Description
-entrepreneur.investmentRound.form.valid.isFinalMode = Not Possible to set Final Mode
+entrepreneur.investmentRound.form.valid.isFinalMode = Not Possible to set Final Mode: Work Programmes´ budget must sum up to the amount of money of the investment round
 entrepreneur.investmentRound.form.valid.invalidDelete = Not Possible to delete this Investment Round

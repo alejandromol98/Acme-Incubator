@@ -94,6 +94,7 @@ master.menu.investor.application.list = Lista de mis Solicitudes
 master.menu.bookkeeper = Contable
 master.menu.bookkeeper.investmentRound.listMine = Rondas de Inversión donde he escrito
 master.menu.bookkeeper.investmentRound.listNotMine = Rondas de Inversión donde no he escrito
+master.menu.bookkeeper.accountingRecord.listMine = Mis Registros de Contabilidad
 
 # master.menu.user-account ####################################################
 

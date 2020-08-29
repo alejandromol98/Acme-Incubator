@@ -17,4 +17,6 @@ authenticated.investmentRound.form.label.workProgrammes = Programas de Trabajo
 authenticated.investmentRound.form.label.accountingRecord = Registros de Contabilidad
 
 authenticated.application.form.button.create = Crear solicitud
+authenticated.accountingRecord.form.button.create = Crear Registro de Contabilidad
+
 authenticated.investmentRound.form.button.return = Volver
