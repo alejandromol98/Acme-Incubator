@@ -1,6 +1,9 @@
 
 package acme.features.authenticated.inquire;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +25,18 @@ public class AuthenticatedInquireShowService implements AbstractShowService<Auth
 	@Override
 	public boolean authorise(final Request<Inquire> request) {
 		assert request != null;
-		return true;
+
+		boolean result;
+		int inquireId;
+		Inquire inquire;
+
+		Date date = Calendar.getInstance().getTime();
+		inquireId = request.getModel().getInteger("id");
+		inquire = this.repository.findOneById(inquireId);
+
+		result = this.repository.findManyAll(date).contains(inquire);
+
+		return result;
 	}
 
 	@Override

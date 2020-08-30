@@ -1,6 +1,9 @@
 
 package acme.features.anonymous.notice;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +25,18 @@ public class AnonymousNoticeShowService implements AbstractShowService<Anonymous
 	@Override
 	public boolean authorise(final Request<Notice> request) {
 		assert request != null;
-		return true;
+
+		boolean result;
+		int noticeId;
+		Notice notice;
+
+		Date date = Calendar.getInstance().getTime();
+		noticeId = request.getModel().getInteger("id");
+		notice = this.repository.findOneById(noticeId);
+
+		result = this.repository.findManyAll(date).contains(notice);
+
+		return result;
 	}
 
 	@Override
