@@ -31,7 +31,6 @@ public class AuthenticatedWorkProgrammeListService implements AbstractListServic
 		assert request != null;
 
 		Boolean result;
-		WorkProgramme workProgramme;
 		InvestmentRound invRound;
 		Collection<InvestmentRound> validInvRounds;
 		int id;

@@ -32,7 +32,6 @@ public class AuthenticatedAccountingRecordListService implements AbstractListSer
 		assert request != null;
 
 		Boolean result;
-		AccountingRecord accRecord;
 		InvestmentRound invRound;
 		Collection<InvestmentRound> validInvRounds;
 		int id;
