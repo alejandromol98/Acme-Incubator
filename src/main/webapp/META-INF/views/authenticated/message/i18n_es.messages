@@ -10,4 +10,9 @@ authenticated.message.form.label.tags = Etiquetas
 authenticated.message.form.label.body = Cuerpo del mensaje
 authenticated.message.form.label.author = Autor
 
+authenticated.message.form.valid.title = Título no válido
+authenticated.message.form.valid.tags = Etiquetas no válidas
+authenticated.message.form.valid.body = Cuerpo del mensaje no válido
+
+authenticated.message.form.button.create = Create
 authenticated.message.form.button.return = Volver

@@ -11,6 +11,10 @@ authenticated.discussionForum.form.label.invRoundTicker = Investment Round Ticke
 authenticated.discussionForum.form.label.author = Discussion forum Author
 
 authenticated.discussionForum.form.label.messages = Messages
+authenticated.discussionForum.form.button.createMessages = Post a Message
+
+authenticated.discussionForum.form.valid.title = Invalid Title
+authenticated.discussionForum.form.valid.users = Invalid Users
 
 authenticated.discussionForum.form.button.delete = Delete
 authenticated.discussionForum.form.button.update = Update

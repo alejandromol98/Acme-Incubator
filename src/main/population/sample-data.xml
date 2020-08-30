@@ -658,7 +658,7 @@
 	<bean name="discussionForum1" class="acme.entities.discussionForums.DiscussionForum">
 		<property name="title" value="Discussion Forum 1" />
 		<property name="moment" value="2020/03/13 09:09" />
-		<property name="users" value="entrepreneur1" />
+		<property name="users" value="entrepreneur1, investor1" />
 		<property name="author" ref="entrepreneur1Authenticated" />
 		<property name="investmentRound" ref="investmentRound1" />
 	</bean>

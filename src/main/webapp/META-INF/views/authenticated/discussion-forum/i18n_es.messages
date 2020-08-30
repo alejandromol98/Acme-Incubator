@@ -11,6 +11,10 @@ authenticated.discussionForum.form.label.invRoundTicker = Código de la Ronda de
 authenticated.discussionForum.form.label.author = Autor del foro de discusión
 
 authenticated.discussionForum.form.label.messages = Mensajes
+authenticated.discussionForum.form.button.createMessages = Añadir un Mensaje
+
+authenticated.discussionForum.form.valid.title = Título no válido
+authenticated.discussionForum.form.valid.users = Usuarios no válidos
 
 authenticated.discussionForum.form.button.delete = Eliminar
 authenticated.discussionForum.form.button.update = Actualizar

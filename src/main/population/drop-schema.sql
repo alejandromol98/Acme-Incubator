@@ -37,6 +37,10 @@
 
     alter table `discussion_forum` 
        drop 
+       foreign key `FKgkgyrl9xew6uucn4vldachbih`;
+
+    alter table `discussion_forum` 
+       drop 
        foreign key `FKmcgrpw22g3baap51wq319v1bp`;
 
     alter table `entrepreneur` 
