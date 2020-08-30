@@ -15,6 +15,7 @@ import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
 import acme.entities.investmentRounds.InvestmentRound;
+import acme.framework.entities.Authenticated;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -39,9 +40,13 @@ public class DiscussionForum extends DomainEntity {
 	private Date				moment;
 
 	@Column(length = 1024)
-	@NotBlank
 	@Size(min = 0, max = 1024)
 	private String				users;
+
+	@Valid
+	@NotNull
+	@ManyToOne(optional = false)
+	private Authenticated		author;
 
 	// Relationships ----------------------------------------------------------
 

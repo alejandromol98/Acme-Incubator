@@ -1,6 +1,9 @@
 
 package acme.features.authenticated.message;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,18 +29,22 @@ public class AuthenticatedMessageShowService implements AbstractShowService<Auth
 	public boolean authorise(final Request<Message> request) {
 		assert request != null;
 
-		boolean result;
+		boolean result = false;
 		int messageId;
 		Message message;
-		String usernames;
 		Principal principal;
 
 		messageId = request.getModel().getInteger("id");
 		message = this.repository.findOneById(messageId);
-		usernames = message.getForum().getUsers();
+		String users = message.getForum().getUsers().replaceAll("\\s", "");
+		List<String> usernames = Arrays.asList(users.split(","));
 		principal = request.getPrincipal();
-
-		result = usernames.contains(principal.getUsername());
+		String author = message.getForum().getAuthor().getUserAccount().getUsername();
+		for (String u : usernames) {
+			if (u.equals(principal.getUsername()) || author.equals(principal.getUsername())) {
+				result = true;
+			}
+		}
 
 		return result;
 

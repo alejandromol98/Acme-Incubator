@@ -25,7 +25,9 @@
 			action="/bookkeeper/accounting-record/create?invId=${id}" />
 	</security:authorize>
 	
-		
+	<!-- <acme:form-hidden path="invId" /> -->
+	<acme:form-submit method="get" code="authenticated.discussionForum.form.button.create"
+			action="/authenticated/discussion-forum/create?invId=${id}" />	
 	
 	<acme:form-hidden path="id"/>
 	<acme:form-submit code="authenticated.investmentRound.form.label.workProgrammes" method="get" action="/authenticated/work-programme/list?id=${id}" />

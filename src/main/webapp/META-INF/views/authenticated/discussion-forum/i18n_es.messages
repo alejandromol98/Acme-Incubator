@@ -8,7 +8,11 @@ authenticated.discussionForum.form.label.title = Título
 authenticated.discussionForum.form.label.moment = Momento
 authenticated.discussionForum.form.label.users = Usuarios
 authenticated.discussionForum.form.label.invRoundTicker = Código de la Ronda de Inversión
+authenticated.discussionForum.form.label.author = Autor del foro de discusión
 
 authenticated.discussionForum.form.label.messages = Mensajes
+
+authenticated.discussionForum.form.button.delete = Eliminar
+authenticated.discussionForum.form.button.update = Actualizar
 
 authenticated.discussionForum.form.button.return = Volver

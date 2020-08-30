@@ -21,4 +21,7 @@ public interface AuthenticatedInvestmentRoundRepository extends AbstractReposito
 	@Query("select distinct i from InvestmentRound i inner join Application a on a.investmentRound.id = i.id where a.status = 1")
 	Collection<InvestmentRound> findInactiveInvestmentRounds();
 
+	@Query("select distinct a.investor.userAccount.username from Application a inner join InvestmentRound i on a.investmentRound.id = i.id where i.id = ?1")
+	Collection<String> findUsernameInvestorsByInvestmentRound(int invRoundId);
+
 }

@@ -1,6 +1,9 @@
 
 package acme.features.authenticated.discussionForum;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,17 +27,22 @@ public class AuthenticatedDiscussionForumShowService implements AbstractShowServ
 	public boolean authorise(final Request<DiscussionForum> request) {
 		assert request != null;
 
-		boolean result;
+		boolean result = false;
 		int forumId;
 		DiscussionForum forum;
-		String usernames;
 		Principal principal;
 
 		forumId = request.getModel().getInteger("id");
 		forum = this.repository.findOneById(forumId);
-		usernames = forum.getUsers();
+		String users = forum.getUsers().replaceAll("\\s", "");
+		List<String> usernames = Arrays.asList(users.split(","));
 		principal = request.getPrincipal();
-		result = usernames.contains(principal.getUsername());
+		String author = forum.getAuthor().getUserAccount().getUsername();
+		for (String u : usernames) {
+			if (u.equals(principal.getUsername()) || author.equals(principal.getUsername())) {
+				result = true;
+			}
+		}
 
 		return result;
 	}
@@ -57,8 +65,12 @@ public class AuthenticatedDiscussionForumShowService implements AbstractShowServ
 		assert entity != null;
 		assert model != null;
 
+		Boolean isAuthor = entity.getAuthor().getUserAccount().getId() == request.getPrincipal().getAccountId();
+		model.setAttribute("isAuthor", isAuthor);
 		String investmentRoundTicker = entity.getInvestmentRound().getTicker();
 		model.setAttribute("invRoundTicker", investmentRoundTicker);
+		String authorUsername = entity.getAuthor().getUserAccount().getUsername();
+		model.setAttribute("authorUsername", authorUsername);
 
 		request.unbind(entity, model, "title", "moment", "users");
 	}

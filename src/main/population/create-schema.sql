@@ -98,6 +98,7 @@
         `moment` datetime(6),
         `title` varchar(255),
         `users` varchar(1024),
+        `author_id` integer not null,
         `investment_round_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
@@ -328,6 +329,11 @@
        add constraint FK_6cyha9f1wpj0dpbxrrjddrqed 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `discussion_forum` 
+       add constraint `FKgkgyrl9xew6uucn4vldachbih` 
+       foreign key (`author_id`) 
+       references `authenticated` (`id`);
 
     alter table `discussion_forum` 
        add constraint `FKmcgrpw22g3baap51wq319v1bp` 

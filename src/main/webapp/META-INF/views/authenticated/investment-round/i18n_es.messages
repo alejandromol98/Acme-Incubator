@@ -18,5 +18,6 @@ authenticated.investmentRound.form.label.accountingRecord = Registros de Contabi
 
 authenticated.application.form.button.create = Crear solicitud
 authenticated.accountingRecord.form.button.create = Crear Registro de Contabilidad
+authenticated.discussionForum.form.button.create = Crear Foro de Discusión
 
 authenticated.investmentRound.form.button.return = Volver

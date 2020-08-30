@@ -659,18 +659,21 @@
 		<property name="title" value="Discussion Forum 1" />
 		<property name="moment" value="2020/03/13 09:09" />
 		<property name="users" value="entrepreneur1" />
+		<property name="author" ref="entrepreneur1Authenticated" />
 		<property name="investmentRound" ref="investmentRound1" />
 	</bean>
 	<bean name="discussionForum2" class="acme.entities.discussionForums.DiscussionForum">
 		<property name="title" value="Discussion Forum 2" />
 		<property name="moment" value="2020/03/13 09:09" />
 		<property name="users" value="entrepreneur1, investor1" />
+		<property name="author" ref="entrepreneur1Authenticated" />
 		<property name="investmentRound" ref="investmentRound1" />
 	</bean>
 	<bean name="discussionForum3" class="acme.entities.discussionForums.DiscussionForum">
 		<property name="title" value="Discussion Forum 3" />
 		<property name="moment" value="2020/03/13 09:09" />
 		<property name="users" value="entrepreneur2, investor2" />
+		<property name="author" ref="entrepreneur2Authenticated" />
 		<property name="investmentRound" ref="investmentRound5" />
 	</bean>
 	
