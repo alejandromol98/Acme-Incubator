@@ -8,6 +8,7 @@ import acme.entities.roles.Entrepreneur;
 import acme.entities.workProgrammes.WorkProgramme;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
@@ -23,19 +24,19 @@ public class EntrepreneurWorkProgrammeShowService implements AbstractShowService
 	public boolean authorise(final Request<WorkProgramme> request) {
 		assert request != null;
 
-		//		boolean result;
-		//		int invRoundId;
-		//		WorkProgramme invRound;
-		//		Entrepreneur entrepreneur;
-		//		Principal principal;
-		//
-		//		invRoundId = request.getModel().getInteger("id");
-		//		invRound = this.repository.findOneById(invRoundId);
-		//		entrepreneur = invRound.getEntrepreneur();
-		//		principal = request.getPrincipal();
-		//		result = entrepreneur.getUserAccount().getId() == principal.getAccountId();
+		boolean result;
+		int workProgrammeId;
+		WorkProgramme workProgramme;
+		Entrepreneur entrepreneur;
+		Principal principal;
 
-		return true;
+		workProgrammeId = request.getModel().getInteger("id");
+		workProgramme = this.repository.findOneById(workProgrammeId);
+		entrepreneur = workProgramme.getInvestmentRound().getEntrepreneur();
+		principal = request.getPrincipal();
+		result = entrepreneur.getUserAccount().getId() == principal.getAccountId();
+
+		return result;
 	}
 
 	@Override

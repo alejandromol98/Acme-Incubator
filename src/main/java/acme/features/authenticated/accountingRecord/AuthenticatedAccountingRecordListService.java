@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.accountingRecords.AccountingRecord;
 import acme.entities.accountingRecords.Status;
+import acme.entities.investmentRounds.InvestmentRound;
+import acme.features.authenticated.investmentRound.AuthenticatedInvestmentRoundRepository;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
@@ -18,14 +20,31 @@ public class AuthenticatedAccountingRecordListService implements AbstractListSer
 
 	// Internal State ---------------------------------------
 	@Autowired
-	AuthenticatedAccountingRecordRepository repository;
+	AuthenticatedAccountingRecordRepository	repository;
+
+	@Autowired
+	AuthenticatedInvestmentRoundRepository	investmentRoundRepository;
 
 
 	// AbstractListService interface ------------------------
 	@Override
 	public boolean authorise(final Request<AccountingRecord> request) {
 		assert request != null;
-		return true;
+
+		Boolean result;
+		InvestmentRound invRound;
+		Collection<InvestmentRound> validInvRounds;
+		int id;
+
+		id = request.getModel().getInteger("id");
+		invRound = this.investmentRoundRepository.findOneById(id);
+
+		validInvRounds = this.investmentRoundRepository.findManyAll();
+		validInvRounds.removeAll(this.investmentRoundRepository.findInactiveInvestmentRounds());
+
+		result = validInvRounds.contains(invRound);
+
+		return result;
 	}
 
 	@Override

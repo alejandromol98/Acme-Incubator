@@ -1,10 +1,14 @@
 
 package acme.features.authenticated.accountingRecord;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.accountingRecords.AccountingRecord;
+import acme.entities.investmentRounds.InvestmentRound;
+import acme.features.authenticated.investmentRound.AuthenticatedInvestmentRoundRepository;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
@@ -15,7 +19,10 @@ public class AuthenticatedAccountingRecordShowService implements AbstractShowSer
 
 	// Internal State ---------------------------------------
 	@Autowired
-	AuthenticatedAccountingRecordRepository repository;
+	AuthenticatedAccountingRecordRepository	repository;
+
+	@Autowired
+	AuthenticatedInvestmentRoundRepository	investmentRoundRepository;
 
 
 	// AbstractListService interface ------------------------
@@ -23,7 +30,22 @@ public class AuthenticatedAccountingRecordShowService implements AbstractShowSer
 	public boolean authorise(final Request<AccountingRecord> request) {
 		assert request != null;
 
-		return true;
+		Boolean result;
+		AccountingRecord accRecord;
+		InvestmentRound invRound;
+		Collection<InvestmentRound> validInvRounds;
+		int id;
+
+		id = request.getModel().getInteger("id");
+		accRecord = this.repository.findOneById(id);
+		invRound = accRecord.getInvestmentRound();
+
+		validInvRounds = this.investmentRoundRepository.findManyAll();
+		validInvRounds.removeAll(this.investmentRoundRepository.findInactiveInvestmentRounds());
+
+		result = validInvRounds.contains(invRound);
+
+		return result;
 	}
 
 	@Override
