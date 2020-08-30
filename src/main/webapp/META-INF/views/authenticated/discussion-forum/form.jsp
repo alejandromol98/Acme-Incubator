@@ -10,6 +10,9 @@
 			<acme:form-moment code="authenticated.discussionForum.form.label.moment" path="moment" readonly="true"/>
 	</jstl:if>
 	
+
+	<acme:message code="authenticated.discussionForum.form.label.users.valid"/>
+	<br/>
 	<acme:form-textarea code="authenticated.discussionForum.form.label.users" path="users"/>
 	
 	<jstl:if test="${command != 'create' }">

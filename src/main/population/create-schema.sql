@@ -282,6 +282,9 @@
 
     insert into `hibernate_sequence` values ( 1 );
 
+    alter table `storage` 
+       add constraint UK_efthk7gn1p8761xs9lnetdfh5 unique (`authenticated_id`);
+
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);
 

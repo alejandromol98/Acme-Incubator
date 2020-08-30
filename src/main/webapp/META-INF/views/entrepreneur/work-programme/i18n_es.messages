@@ -9,7 +9,7 @@ entrepreneur.workProgramme.form.label.moment = Momento
 entrepreneur.workProgramme.form.label.deadline = Fecha Límite
 entrepreneur.workProgramme.form.label.budget = Presupuesto
 
-entrepreneur.workProgramme.form.valid.budgetSum = El presupuesto de los programas de trabajo debe sumar la cantidad de la ronda de inversión
+entrepreneur.workProgramme.form.valid.budgetSum = El presupuesto de los programas de trabajo debe ser como máximo el importe de la ronda de inversiones
 entrepreneur.workProgramme.form.valid.deadline = La fecha límite debe ser en el futuro
 
 entrepreneur.workProgramme.form.button.create = Crear Programa de Trabajo

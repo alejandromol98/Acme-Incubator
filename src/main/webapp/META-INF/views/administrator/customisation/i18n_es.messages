@@ -1,5 +1,7 @@
 #i18n_es.messages
 
+administrator.form.label.spamwords.validate = Las palabras de spam deben estar separadas por una coma (,)
+
 administrator.customisation.form.label.spamwords = Palabras Spam
 administrator.customisation.form.label.threshold = Umbral de Spam
 administrator.customisation.form.label.activitySectors = Lista de Sectores de Actividad

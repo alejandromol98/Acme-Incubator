@@ -4,9 +4,11 @@ authenticated.discussionForum.list.label.title = Title
 authenticated.discussionForum.list.label.moment = Moment
 authenticated.discussionForum.list.label.invRoundTicker = Investment Round Ticker
 
+authenticated.discussionForum.form.label.users.valid = Users allowed to participate must be separated by a comma (,)
+
 authenticated.discussionForum.form.label.title = Title
 authenticated.discussionForum.form.label.moment = Moment
-authenticated.discussionForum.form.label.users = Users
+authenticated.discussionForum.form.label.users = Users allowed to participate
 authenticated.discussionForum.form.label.invRoundTicker = Investment Round Ticker
 authenticated.discussionForum.form.label.author = Discussion forum Author
 

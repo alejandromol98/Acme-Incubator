@@ -9,7 +9,7 @@ entrepreneur.workProgramme.form.label.moment = Moment
 entrepreneur.workProgramme.form.label.deadline = Deadline
 entrepreneur.workProgramme.form.label.budget = Budget
 
-entrepreneur.workProgramme.form.valid.budgetSum = The budget of the work programmes should sum up to the amount of the investment round
+entrepreneur.workProgramme.form.valid.budgetSum = The budget of the work programmes must be maximum the amount of the investment round
 entrepreneur.workProgramme.form.valid.deadline = Deadline must be in the future
 
 entrepreneur.workProgramme.form.button.create = Create Work Programme

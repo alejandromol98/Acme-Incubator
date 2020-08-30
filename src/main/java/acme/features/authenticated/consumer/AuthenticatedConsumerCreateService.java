@@ -42,7 +42,15 @@ public class AuthenticatedConsumerCreateService implements AbstractCreateService
 	public boolean authorise(final Request<Consumer> request) {
 		assert request != null;
 
-		return true;
+		boolean result;
+		int consumerId;
+		Consumer consumer;
+
+		consumerId = request.getPrincipal().getAccountId();
+		consumer = this.repository.findOneConsumerByUserAccountId(consumerId);
+		result = consumer == null;
+
+		return result;
 	}
 
 	@Override

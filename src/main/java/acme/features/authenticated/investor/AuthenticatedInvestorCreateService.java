@@ -42,7 +42,15 @@ public class AuthenticatedInvestorCreateService implements AbstractCreateService
 	public boolean authorise(final Request<Investor> request) {
 		assert request != null;
 
-		return true;
+		boolean result;
+		int investorId;
+		Investor investor;
+
+		investorId = request.getPrincipal().getAccountId();
+		investor = this.repository.findOneInvestorByUserAccountId(investorId);
+		result = investor == null;
+
+		return result;
 	}
 
 	@Override

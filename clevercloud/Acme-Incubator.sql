@@ -112,6 +112,7 @@ DROP TABLE IF EXISTS `application`;
 CREATE TABLE `application` (
   `id` int NOT NULL,
   `version` int NOT NULL,
+  `justification` varchar(1024) DEFAULT NULL,
   `moment` datetime(6) DEFAULT NULL,
   `offer_amount` double DEFAULT NULL,
   `offer_currency` varchar(255) DEFAULT NULL,
@@ -176,7 +177,7 @@ CREATE TABLE `bookkeeper` (
   `version` int NOT NULL,
   `user_account_id` int DEFAULT NULL,
   `firm_name` varchar(255) DEFAULT NULL,
-  `responsibility_statement` varchar(255) DEFAULT NULL,
+  `responsibility_statement` varchar(1024) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_krvjp9eaqyapewl2igugbo9o8` (`user_account_id`),
   CONSTRAINT `FK_krvjp9eaqyapewl2igugbo9o8` FOREIGN KEY (`user_account_id`) REFERENCES `user_account` (`id`)
@@ -294,9 +295,12 @@ CREATE TABLE `discussion_forum` (
   `moment` datetime(6) DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
   `users` varchar(1024) DEFAULT NULL,
+  `author_id` int NOT NULL,
   `investment_round_id` int NOT NULL,
   PRIMARY KEY (`id`),
+  KEY `FKgkgyrl9xew6uucn4vldachbih` (`author_id`),
   KEY `FKmcgrpw22g3baap51wq319v1bp` (`investment_round_id`),
+  CONSTRAINT `FKgkgyrl9xew6uucn4vldachbih` FOREIGN KEY (`author_id`) REFERENCES `authenticated` (`id`),
   CONSTRAINT `FKmcgrpw22g3baap51wq319v1bp` FOREIGN KEY (`investment_round_id`) REFERENCES `investment_round` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -609,6 +613,35 @@ LOCK TABLES `provider` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `storage`
+--
+
+DROP TABLE IF EXISTS `storage`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `storage` (
+  `id` int NOT NULL,
+  `version` int NOT NULL,
+  `firm_name` varchar(255) DEFAULT NULL,
+  `responsibility_statement` varchar(255) DEFAULT NULL,
+  `status` int DEFAULT NULL,
+  `authenticated_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UK_efthk7gn1p8761xs9lnetdfh5` (`authenticated_id`),
+  CONSTRAINT `FKbak20tfheetwsi0t2ammfwip0` FOREIGN KEY (`authenticated_id`) REFERENCES `authenticated` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `storage`
+--
+
+LOCK TABLES `storage` WRITE;
+/*!40000 ALTER TABLE `storage` DISABLE KEYS */;
+/*!40000 ALTER TABLE `storage` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `technology_record`
 --
 
@@ -697,7 +730,7 @@ CREATE TABLE `user_account` (
 
 LOCK TABLES `user_account` WRITE;
 /*!40000 ALTER TABLE `user_account` DISABLE KEYS */;
-INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$7Ox.yPionL5Es9rDHydAMOZM6CEv4LKPHHTb0bUC73OSX6Yjqdsey','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$Kr5rxaWTr0ieQlFKzp05DepRGrjU2XSYflJMMAbQesmANhFat5fFS','administrator');
+INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$a/Z4X0dx0aTSkajk6reJ6uN8OGe1Ms3jGM7STYTofG4TH7m.gvJpS','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$MZkztDAedeWhdYEwAb8an.rFJ9.tSgopzqI5h4PX8DT2xXHhVwdli','administrator');
 /*!40000 ALTER TABLE `user_account` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -741,4 +774,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-08-24 21:20:18
+-- Dump completed on 2020-08-30 22:58:15

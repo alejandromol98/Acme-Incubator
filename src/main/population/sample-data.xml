@@ -208,7 +208,7 @@
 		<property name="title" value="Inquiry about notice 1" />
 		<property name="moment" value="2019/10/19 19:32" />
 		<property name="deadline" value="2021/10/19 17:17" />
-		<property name="description" value="I wanna inquiry about notice 1 from the webpage " />
+		<property name="description" value="I wanna inquire about notice 1 from the webpage " />
 		<property name="min" ref="money04" />
 		<property name="max" ref="money01" />
 		<property name="email" value="hola@ejemplo.com" />
@@ -272,7 +272,7 @@
 	<!-- Customisation -->
 	
 	<bean id="Customisation" class="acme.entities.customisations.Customisation">
-		<property name="spamwords" value="sex,hard core,viagra,cialis,nigeria,you've won, million dollar,sexo,duro,has ganado,millon de dolares"/>
+		<property name="spamwords" value="sex,hard core,hardcore,viagra,cialis,nigeria,you've won, million dollar,sexo,duro,has ganado,millon de dolares"/>
 		<property name="threshold" value="2.50"/>
 		<property name="activitySectors" value="Technology,Science,Arts,Business,Health"/>
 	</bean>

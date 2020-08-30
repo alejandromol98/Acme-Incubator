@@ -42,7 +42,15 @@ public class AuthenticatedEntrepreneurCreateService implements AbstractCreateSer
 	public boolean authorise(final Request<Entrepreneur> request) {
 		assert request != null;
 
-		return true;
+		boolean result;
+		int entrepreneurId;
+		Entrepreneur entrepreneur;
+
+		entrepreneurId = request.getPrincipal().getAccountId();
+		entrepreneur = this.repository.findOneEntrepreneurByUserAccountId(entrepreneurId);
+		result = entrepreneur == null;
+
+		return result;
 	}
 
 	@Override
