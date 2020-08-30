@@ -1,10 +1,14 @@
 
 package acme.features.authenticated.workProgramme;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.investmentRounds.InvestmentRound;
 import acme.entities.workProgrammes.WorkProgramme;
+import acme.features.authenticated.investmentRound.AuthenticatedInvestmentRoundRepository;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
@@ -15,7 +19,10 @@ public class AuthenticatedWorkProgrammeShowService implements AbstractShowServic
 
 	// Internal State ---------------------------------------
 	@Autowired
-	AuthenticatedWorkProgrammeRepository repository;
+	AuthenticatedWorkProgrammeRepository	repository;
+
+	@Autowired
+	AuthenticatedInvestmentRoundRepository	investmentRoundRepository;
 
 
 	// AbstractListService interface ------------------------
@@ -23,19 +30,22 @@ public class AuthenticatedWorkProgrammeShowService implements AbstractShowServic
 	public boolean authorise(final Request<WorkProgramme> request) {
 		assert request != null;
 
-		//		boolean result;
-		//		int invRoundId;
-		//		WorkProgramme invRound;
-		//		Entrepreneur entrepreneur;
-		//		Principal principal;
-		//
-		//		invRoundId = request.getModel().getInteger("id");
-		//		invRound = this.repository.findOneById(invRoundId);
-		//		entrepreneur = invRound.getEntrepreneur();
-		//		principal = request.getPrincipal();
-		//		result = entrepreneur.getUserAccount().getId() == principal.getAccountId();
+		Boolean result;
+		WorkProgramme workProgramme;
+		InvestmentRound invRound;
+		Collection<InvestmentRound> validInvRounds;
+		int id;
 
-		return true;
+		id = request.getModel().getInteger("id");
+		workProgramme = this.repository.findOneById(id);
+		invRound = workProgramme.getInvestmentRound();
+
+		validInvRounds = this.investmentRoundRepository.findManyAll();
+		validInvRounds.removeAll(this.investmentRoundRepository.findInactiveInvestmentRounds());
+
+		result = validInvRounds.contains(invRound);
+
+		return result;
 	}
 
 	@Override

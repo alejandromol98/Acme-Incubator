@@ -6,7 +6,9 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.investmentRounds.InvestmentRound;
 import acme.entities.workProgrammes.WorkProgramme;
+import acme.features.authenticated.investmentRound.AuthenticatedInvestmentRoundRepository;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
@@ -17,14 +19,31 @@ public class AuthenticatedWorkProgrammeListService implements AbstractListServic
 
 	// Internal State ---------------------------------------
 	@Autowired
-	AuthenticatedWorkProgrammeRepository repository;
+	AuthenticatedWorkProgrammeRepository	repository;
+
+	@Autowired
+	AuthenticatedInvestmentRoundRepository	investmentRoundRepository;
 
 
 	// AbstractListService interface ------------------------
 	@Override
 	public boolean authorise(final Request<WorkProgramme> request) {
 		assert request != null;
-		return true;
+
+		Boolean result;
+		InvestmentRound invRound;
+		Collection<InvestmentRound> validInvRounds;
+		int id;
+
+		id = request.getModel().getInteger("id");
+		invRound = this.investmentRoundRepository.findOneById(id);
+
+		validInvRounds = this.investmentRoundRepository.findManyAll();
+		validInvRounds.removeAll(this.investmentRoundRepository.findInactiveInvestmentRounds());
+
+		result = validInvRounds.contains(invRound);
+
+		return result;
 	}
 
 	@Override
