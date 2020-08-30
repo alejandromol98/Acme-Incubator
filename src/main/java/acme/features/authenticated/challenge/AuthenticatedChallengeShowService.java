@@ -1,6 +1,9 @@
 
 package acme.features.authenticated.challenge;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +25,18 @@ public class AuthenticatedChallengeShowService implements AbstractShowService<Au
 	@Override
 	public boolean authorise(final Request<Challenge> request) {
 		assert request != null;
-		return true;
+
+		boolean result;
+		int challengeId;
+		Challenge challenge;
+
+		Date date = Calendar.getInstance().getTime();
+		challengeId = request.getModel().getInteger("id");
+		challenge = this.repository.findOneById(challengeId);
+
+		result = this.repository.findManyAll(date).contains(challenge);
+
+		return result;
 	}
 
 	@Override

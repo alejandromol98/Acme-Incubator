@@ -24,6 +24,7 @@ public class AuthenticatedInvestmentRoundListService implements AbstractListServ
 	@Override
 	public boolean authorise(final Request<InvestmentRound> request) {
 		assert request != null;
+
 		return true;
 	}
 

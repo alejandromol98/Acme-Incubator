@@ -1,6 +1,9 @@
 
 package acme.features.authenticated.overture;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +25,18 @@ public class AuthenticatedOvertureShowService implements AbstractShowService<Aut
 	@Override
 	public boolean authorise(final Request<Overture> request) {
 		assert request != null;
-		return true;
+
+		boolean result;
+		int overtureId;
+		Overture overture;
+
+		Date date = Calendar.getInstance().getTime();
+		overtureId = request.getModel().getInteger("id");
+		overture = this.repository.findOneById(overtureId);
+
+		result = this.repository.findManyAll(date).contains(overture);
+
+		return result;
 	}
 
 	@Override

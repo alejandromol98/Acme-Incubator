@@ -4,6 +4,7 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
+	<acme:message code="administrator.form.label.spamwords.validate"/>
 	<acme:form-textarea code="administrator.customisation.form.label.spamwords" path="spamwords"/>
 	<acme:form-double code="administrator.customisation.form.label.threshold" path="threshold" />
 	<acme:form-textarea code="administrator.customisation.form.label.activitySectors" path="activitySectors"/>
