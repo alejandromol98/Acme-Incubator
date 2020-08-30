@@ -1,7 +1,10 @@
 
 package acme.features.authenticated.discussionForum;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,16 +36,21 @@ public class AuthenticatedDiscussionForumListMineService implements AbstractList
 
 		Collection<DiscussionForum> result;
 		Collection<DiscussionForum> forums;
-		String username;
+		String principalUsername;
 
-		username = request.getPrincipal().getUsername();
+		principalUsername = request.getPrincipal().getUsername();
 
 		forums = this.repository.findManyAll();
-		result = this.repository.findManyAll();
+		result = new ArrayList<DiscussionForum>();
 
 		for (DiscussionForum forum : forums) {
-			if (!forum.getUsers().contains(username)) {
-				result.remove(forum);
+			String users = forum.getUsers().replaceAll("\\s", "");
+			List<String> usernames = Arrays.asList(users.split(","));
+			String author = forum.getAuthor().getUserAccount().getUsername();
+			for (String u : usernames) {
+				if ((u.equals(principalUsername) || author.equals(principalUsername)) && !result.contains(forum)) {
+					result.add(forum);
+				}
 			}
 		}
 		return result;

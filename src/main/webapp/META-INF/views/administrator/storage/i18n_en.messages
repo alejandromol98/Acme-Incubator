@@ -1,0 +1,14 @@
+#i18n_en.messages
+
+administrator.storage.list.label.firmName = Firm Name
+administrator.storage.list.label.responsibilityStatement = Responsibility Statement
+administrator.storage.list.label.authenticated = User Who Requests
+
+administrator.storage.form.label.firmName = Firm Name
+administrator.storage.form.label.responsibilityStatement = Responsibility Statement
+administrator.storage.form.label.status = Status
+administrator.storage.form.label.status.pending = Pending
+administrator.storage.form.label.status.accepted = Accepted
+
+administrator.storage.form.button.update = Update Request
+administrator.storage.form.button.return = Return

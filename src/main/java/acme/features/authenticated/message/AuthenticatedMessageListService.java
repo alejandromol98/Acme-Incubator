@@ -1,15 +1,20 @@
 
 package acme.features.authenticated.message;
 
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.discussionForums.DiscussionForum;
 import acme.entities.messages.Message;
+import acme.features.authenticated.discussionForum.AuthenticatedDiscussionForumRepository;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
@@ -18,7 +23,10 @@ public class AuthenticatedMessageListService implements AbstractListService<Auth
 	// Internal state -------------------------------------------
 
 	@Autowired
-	AuthenticatedMessageRepository repository;
+	AuthenticatedMessageRepository			repository;
+
+	@Autowired
+	AuthenticatedDiscussionForumRepository	discForumRepository;
 
 
 	//AbstractLiveService interface ----------------------------
@@ -26,7 +34,25 @@ public class AuthenticatedMessageListService implements AbstractListService<Auth
 	@Override
 	public boolean authorise(final Request<Message> request) {
 		assert request != null;
-		return true;
+
+		boolean result = false;
+		int forumId;
+		DiscussionForum forum;
+		Principal principal;
+
+		forumId = request.getModel().getInteger("id");
+		forum = this.discForumRepository.findOneById(forumId);
+		String users = forum.getUsers().replaceAll("\\s", "");
+		List<String> usernames = Arrays.asList(users.split(","));
+		principal = request.getPrincipal();
+		String author = forum.getAuthor().getUserAccount().getUsername();
+		for (String u : usernames) {
+			if (u.equals(principal.getUsername()) || author.equals(principal.getUsername())) {
+				result = true;
+			}
+		}
+
+		return result;
 	}
 
 	@Override

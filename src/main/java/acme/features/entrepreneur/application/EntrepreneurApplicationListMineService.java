@@ -50,7 +50,7 @@ public class EntrepreneurApplicationListMineService implements AbstractListServi
 		String investmentRoundTicker = entity.getInvestmentRound().getTicker();
 		model.setAttribute("investmentRoundTicker", investmentRoundTicker);
 
-		request.unbind(entity, model, "ticker", "statement", "offer", "status");
+		request.unbind(entity, model, "ticker", "moment");
 	}
 
 }

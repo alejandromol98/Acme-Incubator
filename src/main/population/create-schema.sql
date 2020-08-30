@@ -28,6 +28,7 @@
     create table `application` (
        `id` integer not null,
         `version` integer not null,
+        `justification` varchar(1024),
         `moment` datetime(6),
         `offer_amount` double precision,
         `offer_currency` varchar(255),
@@ -51,7 +52,7 @@
         `version` integer not null,
         `user_account_id` integer,
         `firm_name` varchar(255),
-        `responsibility_statement` varchar(255),
+        `responsibility_statement` varchar(1024),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -97,6 +98,7 @@
         `moment` datetime(6),
         `title` varchar(255),
         `users` varchar(1024),
+        `author_id` integer not null,
         `investment_round_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
@@ -212,6 +214,16 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `storage` (
+       `id` integer not null,
+        `version` integer not null,
+        `firm_name` varchar(255),
+        `responsibility_statement` varchar(255),
+        `status` integer,
+        `authenticated_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `technology_record` (
        `id` integer not null,
         `version` integer not null,
@@ -270,6 +282,9 @@
 
     insert into `hibernate_sequence` values ( 1 );
 
+    alter table `storage` 
+       add constraint UK_efthk7gn1p8761xs9lnetdfh5 unique (`authenticated_id`);
+
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);
 
@@ -319,6 +334,11 @@
        references `user_account` (`id`);
 
     alter table `discussion_forum` 
+       add constraint `FKgkgyrl9xew6uucn4vldachbih` 
+       foreign key (`author_id`) 
+       references `authenticated` (`id`);
+
+    alter table `discussion_forum` 
        add constraint `FKmcgrpw22g3baap51wq319v1bp` 
        foreign key (`investment_round_id`) 
        references `investment_round` (`id`);
@@ -352,6 +372,11 @@
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `storage` 
+       add constraint `FKbak20tfheetwsi0t2ammfwip0` 
+       foreign key (`authenticated_id`) 
+       references `authenticated` (`id`);
 
     alter table `work_programme` 
        add constraint `FK3nxyaik1cnvfdg02p9a8ibiko` 

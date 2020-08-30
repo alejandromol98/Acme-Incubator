@@ -12,8 +12,10 @@ investor.application.form.label.moment = Moment
 investor.application.form.label.statement = Statement
 investor.application.form.label.offer = Offer
 investor.application.form.label.status = Status
+investor.application.form.label.justification = Justification
 
 investor.application.form.label.invRoundTicker = Investment Round Ticker
 investor.application.form.label.invRoundAmount = Investment Round Amount
 
+investor.application.form.button.create = Create Application
 investor.application.form.button.return = Return

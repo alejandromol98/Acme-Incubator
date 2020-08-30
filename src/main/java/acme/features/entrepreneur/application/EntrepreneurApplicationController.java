@@ -25,12 +25,16 @@ public class EntrepreneurApplicationController extends AbstractController<Entrep
 	@Autowired
 	private EntrepreneurApplicationShowService		showService;
 
+	@Autowired
+	private EntrepreneurApplicationUpdateService	updateService;
+
 
 	// Constructors -------------------------------------
 
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
 		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listMineService);
 	}
 

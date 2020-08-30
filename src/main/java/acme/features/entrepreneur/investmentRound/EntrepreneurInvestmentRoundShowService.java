@@ -57,6 +57,20 @@ public class EntrepreneurInvestmentRoundShowService implements AbstractShowServi
 		assert entity != null;
 		assert model != null;
 
+		boolean result;
+		int id;
+		int workProgrammesCount;
+
+		id = request.getModel().getInteger("id");
+		workProgrammesCount = this.repository.getCountWorkProgrammesByInvRound(id);
+		if (workProgrammesCount > 0) {
+			result = this.repository.getSumWorkProgrammesByInvRound(id) < entity.getAmount().getAmount();
+			model.setAttribute("workProgrammesAmount", result);
+		}
+		if (workProgrammesCount == 0) {
+			model.setAttribute("workProgrammesAmount", true);
+		}
+
 		request.unbind(entity, model, "ticker", "title", "moment", "kind", "description", "amount", "moreInfo", "isFinalMode");
 	}
 

@@ -2,6 +2,7 @@
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
+<%@taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
 
 <acme:form readonly="true">
 	<acme:form-textbox code="authenticated.investmentRound.form.label.ticker" path="ticker"/>
@@ -12,6 +13,21 @@
 	<acme:form-money code="authenticated.investmentRound.form.label.amount" path="amount"/>
 	<acme:form-url code="authenticated.investmentRound.form.label.moreInfo" path="moreInfo"/>
 	<acme:form-textbox code="authenticated.investmentRound.form.label.entrepreneur" path="entrepreneur"/>
+	
+	<security:authorize access="hasRole('Investor')">
+		<acme:form-hidden path="invId" />
+		<acme:form-submit method="get" code="authenticated.application.form.button.create"
+			action="/investor/application/create?invId=${id}" />
+	</security:authorize>
+	<security:authorize access="hasRole('Bookkeeper')">
+		<acme:form-hidden path="invId" />
+		<acme:form-submit method="get" code="authenticated.accountingRecord.form.button.create"
+			action="/bookkeeper/accounting-record/create?invId=${id}" />
+	</security:authorize>
+	
+	<!-- <acme:form-hidden path="invId" /> -->
+	<acme:form-submit method="get" code="authenticated.discussionForum.form.button.create"
+			action="/authenticated/discussion-forum/create?invId=${id}" />	
 	
 	<acme:form-hidden path="id"/>
 	<acme:form-submit code="authenticated.investmentRound.form.label.workProgrammes" method="get" action="/authenticated/work-programme/list?id=${id}" />

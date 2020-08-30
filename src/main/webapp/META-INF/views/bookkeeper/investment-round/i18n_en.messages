@@ -15,4 +15,7 @@ bookkeeper.investmentRound.form.label.isFinalMode = Final Mode
 
 bookkeeper.investmentRound.form.label.workProgrammes = Work Programmes
 bookkeeper.investmentRound.form.label.accountingRecord = Accounting Records
+
+bookkeeper.accountingRecord.form.button.create = Create Accounting Record
+
 bookkeeper.investmentRound.form.button.return = Return

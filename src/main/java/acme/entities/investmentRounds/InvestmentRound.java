@@ -34,7 +34,7 @@ public class InvestmentRound extends DomainEntity {
 	// Attributes -------------------------------------------------------------
 
 	@NotBlank
-	@Pattern(regexp = "^[A-Z]{3}[-][0-9]{2}[-][0-9]{6}$")
+	@Pattern(regexp = "^[A-Z]{3}[-][0-9]{2}[-][0-9]{6}$", message = "{entrepreneur.investmentRound.form.valid.ticker}")
 	private String				ticker;
 
 	@Temporal(TemporalType.TIMESTAMP)
@@ -60,7 +60,6 @@ public class InvestmentRound extends DomainEntity {
 	@Size(min = 0, max = 255)
 	private String				moreInfo;
 
-	@NotNull
 	private Boolean				isFinalMode;
 
 	// Derived attributes -----------------------------------------------------

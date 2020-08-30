@@ -4,11 +4,21 @@ authenticated.discussionForum.list.label.title = Título
 authenticated.discussionForum.list.label.moment = Momento
 authenticated.discussionForum.list.label.invRoundTicker = Código de la Ronda de Inversión
 
+authenticated.discussionForum.form.label.users.valid = Los usuarios a los que se les permite participar deben estar separados por una coma (,)
+
 authenticated.discussionForum.form.label.title = Título
 authenticated.discussionForum.form.label.moment = Momento
 authenticated.discussionForum.form.label.users = Usuarios
 authenticated.discussionForum.form.label.invRoundTicker = Código de la Ronda de Inversión
+authenticated.discussionForum.form.label.author = Autor del foro de discusión
 
 authenticated.discussionForum.form.label.messages = Mensajes
+authenticated.discussionForum.form.button.createMessages = Añadir un Mensaje
+
+authenticated.discussionForum.form.valid.title = Título no válido
+authenticated.discussionForum.form.valid.users = Usuarios no válidos
+
+authenticated.discussionForum.form.button.delete = Eliminar
+authenticated.discussionForum.form.button.update = Actualizar
 
 authenticated.discussionForum.form.button.return = Volver

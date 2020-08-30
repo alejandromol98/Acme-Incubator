@@ -3,6 +3,7 @@ package acme.entities.applications;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
@@ -50,6 +51,10 @@ public class Application extends DomainEntity {
 
 	@NotNull
 	private Status				status;
+
+	@Column(length = 1024)
+	@Size(min = 0, max = 1024)
+	private String				justification;
 
 	// Derived attributes -----------------------------------------------------
 

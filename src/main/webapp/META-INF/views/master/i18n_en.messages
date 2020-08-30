@@ -55,6 +55,7 @@ master.menu.authenticated.discussionForum.list = Discussion Forums where I´m in
 
 master.menu.administrator = Administrator
 master.menu.administrator.user-accounts = User accounts
+master.menu.administrator.bookkeeper.list = Requests to become Bookkeeper
 master.menu.administrator.notice.list = All Notices
 master.menu.administrator.notice.create = Create Notice
 master.menu.administrator.inquiry.create = Create Inquiry
@@ -80,6 +81,7 @@ master.menu.consumer.favourite-link = Favourite link
 master.menu.entrepreneur = Entrepreneur
 master.menu.entrepreneur.investmentRound.list = List My Investment Rounds
 master.menu.entrepreneur.application.list = My Investment Rounds´ Applications
+master.menu.entrepreneur.investmentRound.create = Create Investment Round
 
 # master.menu.investor ########################################################
 
@@ -91,6 +93,7 @@ master.menu.investor.application.list = List My Applications
 master.menu.bookkeeper = Bookkeeper
 master.menu.bookkeeper.investmentRound.listMine = Investment Rounds where I have written
 master.menu.bookkeeper.investmentRound.listNotMine = Investment Rounds where I have not written
+master.menu.bookkeeper.accountingRecord.listMine = My Accounting Records
 
 # master.menu.user-account ####################################################
 
@@ -100,6 +103,12 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.become-entrepreneur = Become an entrepreneur
+master.menu.user-account.entrepreneur = Entrepreneur data
+master.menu.user-account.become-investor = Become an investor
+master.menu.user-account.investor = Investor data
+master.menu.storage.become-bookkeeper = Become a bookkeeper
+master.menu.user-account.bookkeeper = Bookkeeper data
 
 # master.footer ###############################################################
 

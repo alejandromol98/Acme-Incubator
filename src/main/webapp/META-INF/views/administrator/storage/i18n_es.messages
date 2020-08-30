@@ -1,0 +1,14 @@
+#i18n_es.messages
+
+administrator.storage.list.label.firmName = Nombre de la Empresa
+administrator.storage.list.label.responsibilityStatement = Declaración de responsabilidad
+administrator.storage.list.label.authenticated = Usuario de la petición
+
+administrator.storage.form.label.firmName = Nombre de la Empresa
+administrator.storage.form.label.responsibilityStatement = Declaración de responsabilidad
+administrator.storage.form.label.status = Estado
+administrator.storage.form.label.status.pending = Pendiente
+administrator.storage.form.label.status.accepted = Aceptada
+
+administrator.storage.form.button.update = Actualizar Petición
+administrator.storage.form.button.return = Volver

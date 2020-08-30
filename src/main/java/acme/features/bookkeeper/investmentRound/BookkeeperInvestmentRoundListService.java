@@ -34,12 +34,16 @@ public class BookkeeperInvestmentRoundListService implements AbstractListService
 
 		Collection<InvestmentRound> result;
 		Collection<InvestmentRound> invRoundBookkeeper;
+		Collection<InvestmentRound> invRoundInactive;
 		Principal principal;
 
 		principal = request.getPrincipal();
 
 		result = this.repository.findManyAll();
+		invRoundInactive = this.repository.findInactiveInvestmentRounds();
 		invRoundBookkeeper = this.repository.findManyByBookkeeper(principal.getActiveRoleId());
+
+		result.removeAll(invRoundInactive);
 		result.removeAll(invRoundBookkeeper);
 		return result;
 	}

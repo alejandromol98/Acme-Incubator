@@ -37,6 +37,10 @@
 
     alter table `discussion_forum` 
        drop 
+       foreign key `FKgkgyrl9xew6uucn4vldachbih`;
+
+    alter table `discussion_forum` 
+       drop 
        foreign key `FKmcgrpw22g3baap51wq319v1bp`;
 
     alter table `entrepreneur` 
@@ -62,6 +66,10 @@
     alter table `provider` 
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
+
+    alter table `storage` 
+       drop 
+       foreign key `FKbak20tfheetwsi0t2ammfwip0`;
 
     alter table `work_programme` 
        drop 
@@ -104,6 +112,8 @@
     drop table if exists `overture`;
 
     drop table if exists `provider`;
+
+    drop table if exists `storage`;
 
     drop table if exists `technology_record`;
 

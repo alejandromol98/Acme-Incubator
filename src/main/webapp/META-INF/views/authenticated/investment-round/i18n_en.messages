@@ -15,4 +15,9 @@ authenticated.investmentRound.form.label.entrepreneur = Entrepreneur
 
 authenticated.investmentRound.form.label.workProgrammes = Work Programmes
 authenticated.investmentRound.form.label.accountingRecord = Accounting Records
+
+authenticated.application.form.button.create = Create Application
+authenticated.accountingRecord.form.button.create = Create Accounting Record
+authenticated.discussionForum.form.button.create = Create Discussion Forum
+
 authenticated.investmentRound.form.button.return = Return
