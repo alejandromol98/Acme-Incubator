@@ -148,7 +148,7 @@ public class EntrepreneurInvestmentRoundCreateService implements AbstractCreateS
 		}
 
 		//Validate Description Spam
-		if (!errors.hasErrors("title")) {
+		if (!errors.hasErrors("description")) {
 			String descripcion = entity.getDescription();
 			Integer n = 0;
 
