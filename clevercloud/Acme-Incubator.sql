@@ -229,34 +229,6 @@ LOCK TABLES `challenge` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `consumer`
---
-
-DROP TABLE IF EXISTS `consumer`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `consumer` (
-  `id` int NOT NULL,
-  `version` int NOT NULL,
-  `user_account_id` int DEFAULT NULL,
-  `company` varchar(255) DEFAULT NULL,
-  `sector` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FK_6cyha9f1wpj0dpbxrrjddrqed` (`user_account_id`),
-  CONSTRAINT `FK_6cyha9f1wpj0dpbxrrjddrqed` FOREIGN KEY (`user_account_id`) REFERENCES `user_account` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `consumer`
---
-
-LOCK TABLES `consumer` WRITE;
-/*!40000 ALTER TABLE `consumer` DISABLE KEYS */;
-/*!40000 ALTER TABLE `consumer` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `customisation`
 --
 
@@ -585,34 +557,6 @@ LOCK TABLES `overture` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `provider`
---
-
-DROP TABLE IF EXISTS `provider`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `provider` (
-  `id` int NOT NULL,
-  `version` int NOT NULL,
-  `user_account_id` int DEFAULT NULL,
-  `company` varchar(255) DEFAULT NULL,
-  `sector` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FK_b1gwnjqm6ggy9yuiqm0o4rlmd` (`user_account_id`),
-  CONSTRAINT `FK_b1gwnjqm6ggy9yuiqm0o4rlmd` FOREIGN KEY (`user_account_id`) REFERENCES `user_account` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `provider`
---
-
-LOCK TABLES `provider` WRITE;
-/*!40000 ALTER TABLE `provider` DISABLE KEYS */;
-/*!40000 ALTER TABLE `provider` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `storage`
 --
 
@@ -730,7 +674,7 @@ CREATE TABLE `user_account` (
 
 LOCK TABLES `user_account` WRITE;
 /*!40000 ALTER TABLE `user_account` DISABLE KEYS */;
-INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$a/Z4X0dx0aTSkajk6reJ6uN8OGe1Ms3jGM7STYTofG4TH7m.gvJpS','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$MZkztDAedeWhdYEwAb8an.rFJ9.tSgopzqI5h4PX8DT2xXHhVwdli','administrator');
+INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$KaQFGzK7TBwcqZdtuAAULePHPw/nXhnFWsckF/Wk3py6bgY8RN5v.','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$J.b2K3YY7PAGsBH9pgjGbOy6Bfcb1GEy6PKI4NOBfd2Ng.RfKX73.','administrator');
 /*!40000 ALTER TABLE `user_account` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -774,4 +718,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-08-30 22:58:15
+-- Dump completed on 2020-08-31 20:28:42
