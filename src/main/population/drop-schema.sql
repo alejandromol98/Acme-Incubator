@@ -31,10 +31,6 @@
        drop 
        foreign key FK_krvjp9eaqyapewl2igugbo9o8;
 
-    alter table `consumer` 
-       drop 
-       foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
-
     alter table `discussion_forum` 
        drop 
        foreign key `FKgkgyrl9xew6uucn4vldachbih`;
@@ -63,10 +59,6 @@
        drop 
        foreign key `FK7ju7uxmh5mdbjgrfwgoem3eqd`;
 
-    alter table `provider` 
-       drop 
-       foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
-
     alter table `storage` 
        drop 
        foreign key `FKbak20tfheetwsi0t2ammfwip0`;
@@ -89,8 +81,6 @@
 
     drop table if exists `challenge`;
 
-    drop table if exists `consumer`;
-
     drop table if exists `customisation`;
 
     drop table if exists `discussion_forum`;
@@ -110,8 +100,6 @@
     drop table if exists `notice`;
 
     drop table if exists `overture`;
-
-    drop table if exists `provider`;
 
     drop table if exists `storage`;
 
