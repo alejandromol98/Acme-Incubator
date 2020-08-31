@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.accountingRecords.AccountingRecord;
+import acme.entities.accountingRecords.Status;
 import acme.entities.investmentRounds.InvestmentRound;
 import acme.features.authenticated.investmentRound.AuthenticatedInvestmentRoundRepository;
 import acme.framework.components.Model;
@@ -43,7 +44,7 @@ public class AuthenticatedAccountingRecordShowService implements AbstractShowSer
 		validInvRounds = this.investmentRoundRepository.findManyAll();
 		validInvRounds.removeAll(this.investmentRoundRepository.findInactiveInvestmentRounds());
 
-		result = validInvRounds.contains(invRound);
+		result = validInvRounds.contains(invRound) && accRecord.getStatus().equals(Status.PUBLISHED);
 
 		return result;
 	}
