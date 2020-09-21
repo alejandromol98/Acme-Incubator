@@ -18,6 +18,10 @@
 	<acme:menu-separator/>
 	<acme:form-textbox code="entrepreneur.application.form.label.invRoundTicker" path="investmentRoundTicker" readonly="true"/>
 	<acme:form-money code="entrepreneur.application.form.label.invRoundAmount" path="investmentRoundAmount" readonly="true"/>
+	<acme:menu-separator/>
+	<acme:form-textarea code="investor.application.form.label.offerMonema" path="offerMonema" readonly="true"/>
+	<acme:form-url code="investor.application.form.label.link" path="link" readonly="true"/>
+	<acme:form-textbox code="investor.application.form.label.password" path="password" readonly="true"/>
 	
 	<acme:form-hidden path="id"/>
 	<jstl:if test="${command == 'show' && status == 'PENDING'}">

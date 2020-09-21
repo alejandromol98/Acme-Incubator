@@ -48,6 +48,7 @@
 			<acme:menu-suboption code="master.menu.administrator.challenge.create" action="/administrator/challenge/create"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.customisation" action="/administrator/customisation/show"/>
+			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 		</acme:menu-option>

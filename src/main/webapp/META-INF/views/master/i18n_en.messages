@@ -64,6 +64,7 @@ master.menu.administrator.technologyRecord.create = Create Technology Record
 master.menu.administrator.toolRecord.create = Create Tool Record
 master.menu.administrator.challenge.create = Create Challenge
 master.menu.administrator.customisation = Customisation Parameters
+master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.shutdown = Shut down
 
 # master.menu.provider ########################################################

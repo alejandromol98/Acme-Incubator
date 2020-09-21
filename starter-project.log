@@ -1618,3 +1618,169 @@ ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.fr
 ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
 ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
 ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: java.lang.AssertionError
+ERROR [org.hibernate.hql.internal.ast.ErrorTracker] Invalid path: 'w.id'
+ERROR [org.hibernate.hql.internal.ast.ErrorTracker] at org.hibernate.hql.internal.ast.util.LiteralProcessor.lookupConstant(LiteralProcessor.java:111): Invalid path: 'w.id'
+ERROR [org.hibernate.hql.internal.ast.ErrorTracker] <AST>:0:0: unexpected end of subtree
+ERROR [org.hibernate.hql.internal.ast.ErrorTracker] at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.exprOrSubquery(HqlSqlBaseWalker.java:4788): unexpected end of subtree
+ERROR [org.hibernate.hql.internal.ast.ErrorTracker] left-hand operand of a binary operator was null
+ERROR [org.hibernate.hql.internal.ast.ErrorTracker] at org.hibernate.hql.internal.ast.tree.BinaryLogicOperatorNode.initialize(BinaryLogicOperatorNode.java:40): left-hand operand of a binary operator was null
+WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'entrepreneurProblemController': Unsatisfied dependency expressed through field 'showService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'entrepreneurProblemShowService': Unsatisfied dependency expressed through field 'repository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entrepreneurProblemRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract acme.entities.problems.Problem acme.features.entrepreneur.problem.EntrepreneurProblemRepository.findOneById(int)!
+ERROR [org.springframework.boot.SpringApplication] at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596): Error creating bean with name 'entrepreneurProblemController': Unsatisfied dependency expressed through field 'showService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'entrepreneurProblemShowService': Unsatisfied dependency expressed through field 'repository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entrepreneurProblemRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract acme.entities.problems.Problem acme.features.entrepreneur.problem.EntrepreneurProblemRepository.findOneById(int)!
+at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596): Error creating bean with name 'entrepreneurProblemShowService': Unsatisfied dependency expressed through field 'repository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entrepreneurProblemRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract acme.entities.problems.Problem acme.features.entrepreneur.problem.EntrepreneurProblemRepository.findOneById(int)!
+at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778): Error creating bean with name 'entrepreneurProblemRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract acme.entities.problems.Problem acme.features.entrepreneur.problem.EntrepreneurProblemRepository.findOneById(int)!
+at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:93): Validation failed for query for method public abstract acme.entities.problems.Problem acme.features.entrepreneur.problem.EntrepreneurProblemRepository.findOneById(int)!
+at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:138): org.hibernate.hql.internal.ast.QuerySyntaxException: Invalid path: 'w.id' [select p from acme.entities.problems.Problem p where w.id = ?1]
+at org.hibernate.hql.internal.ast.QuerySyntaxException.convert(QuerySyntaxException.java:74): Invalid path: 'w.id' [select p from acme.entities.problems.Problem p where w.id = ?1]
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: java.lang.NullPointerException
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: java.lang.NullPointerException
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: java.lang.NullPointerException
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP POST /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: java.lang.NullPointerException
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP POST /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: java.lang.NullPointerException
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP POST /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: java.lang.NullPointerException
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: java.util.ArrayList.rangeCheck(Unknown Source): Index: 0, Size: 0
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: java.util.ArrayList.rangeCheck(Unknown Source): Index: 0, Size: 0
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: java.util.ArrayList.rangeCheck(Unknown Source): Index: 0, Size: 0
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): End-point not available
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP POST /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): End-point not available
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: java.lang.NullPointerException
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: java.lang.AssertionError
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: java.lang.NullPointerException
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised

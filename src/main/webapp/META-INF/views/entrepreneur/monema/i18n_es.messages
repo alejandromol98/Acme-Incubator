@@ -1,0 +1,10 @@
+#i18n_es.messages
+
+entrepreneur.monema.list.label.text = Texto
+
+entrepreneur.monema.form.label.text = Texto
+
+entrepreneur.monema.form.valid.text = Texto no válido
+
+entrepreneur.monema.form.button.create = Crear Monema
+entrepreneur.monema.form.button.return = Volver

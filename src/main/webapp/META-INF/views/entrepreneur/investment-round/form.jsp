@@ -67,5 +67,12 @@
 		<acme:form-submit code="entrepreneur.investmentRound.form.label.accountingRecord" method="get" action="/authenticated/accounting-record/list?id=${id}" />
 	</jstl:if>
 	
+	<jstl:if test="${command != 'create' }"> 
+		<acme:form-hidden path="invId" />
+			<acme:form-submit method="get" code="entrepreneur.monema.form.button.create"
+			action="/entrepreneur/monema/create?invId=${id}" />
+	</jstl:if>
+	<acme:form-submit code="entrepreneur.investmentRound.form.label.monema" method="get" action="/entrepreneur/monema/list?id=${id}" />
+	
 	<acme:form-return code="entrepreneur.investmentRound.form.button.return"/>
 </acme:form>

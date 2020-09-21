@@ -19,3 +19,12 @@ investor.application.form.label.invRoundAmount = Investment Round Amount
 
 investor.application.form.button.create = Create Application
 investor.application.form.button.return = Return
+
+investor.application.form.label.offerMonema = Offer for the Monema associated
+investor.application.form.label.link = Additional Information
+investor.application.form.label.password = Password for the link
+
+investor.application.form.valid.offerMonemaLink = You must provide an offer for the monema
+investor.application.form.valid.offerMonema = Invalid offer for the Monema
+investor.application.form.valid.linkPassword = Link must not be blank
+investor.application.form.valid.passwordCharacters = Password must has at least 10 characters: 1 digit, 1 letter and 1 symbol

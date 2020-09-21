@@ -59,6 +59,10 @@
        drop 
        foreign key `FK7ju7uxmh5mdbjgrfwgoem3eqd`;
 
+    alter table `monema` 
+       drop 
+       foreign key `FKcujvi89uqkav60w3e6rkvuiy6`;
+
     alter table `storage` 
        drop 
        foreign key `FKbak20tfheetwsi0t2ammfwip0`;
@@ -83,6 +87,8 @@
 
     drop table if exists `customisation`;
 
+    drop table if exists `dashboard`;
+
     drop table if exists `discussion_forum`;
 
     drop table if exists `entrepreneur`;
@@ -96,6 +102,8 @@
     drop table if exists `message`;
 
     drop table if exists `molina_bulletin`;
+
+    drop table if exists `monema`;
 
     drop table if exists `notice`;
 

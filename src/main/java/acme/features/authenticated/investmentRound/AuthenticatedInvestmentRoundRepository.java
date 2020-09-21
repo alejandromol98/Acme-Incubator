@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.entities.investmentRounds.InvestmentRound;
+import acme.entities.monemas.Monema;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
@@ -23,5 +24,8 @@ public interface AuthenticatedInvestmentRoundRepository extends AbstractReposito
 
 	@Query("select distinct a.investor.userAccount.username from Application a inner join InvestmentRound i on a.investmentRound.id = i.id where i.id = ?1")
 	Collection<String> findUsernameInvestorsByInvestmentRound(int invRoundId);
+
+	@Query("select m from Monema m where m.investmentRound.id = ?1")
+	Collection<Monema> findMonemaByInvRound(int invRoundId);
 
 }

@@ -65,6 +65,7 @@ master.menu.administrator.technologyRecord.create = Crear Registro Tecnológico
 master.menu.administrator.toolRecord.create = Crear Registro de Herramientas
 master.menu.administrator.challenge.create = Crear Desafío
 master.menu.administrator.customisation = Parámetros de Personalización
+master.menu.administrator.dashboard = Panel de Control
 master.menu.administrator.shutdown = Parar el sistema
 
 # master.menu.provider ########################################################

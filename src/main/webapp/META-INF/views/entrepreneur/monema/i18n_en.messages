@@ -1,0 +1,13 @@
+#i18n_en.messages
+
+entrepreneur.monema.list.label.text = Text
+
+entrepreneur.monema.form.label.text = Text
+
+entrepreneur.monema.form.valid.text = Invalid Text
+
+entrepreneur.monema.form.button.create = Create Monema
+entrepreneur.monema.form.button.return = Return
+
+entrepreneur.monema.form.button.update = Update
+entrepreneur.monema.form.button.delete = Delete

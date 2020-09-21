@@ -23,6 +23,15 @@
 		<acme:form-money code="investor.application.form.label.invRoundAmount" path="investmentRoundAmount" readonly="true"/>
 	</jstl:if>
 	
+	<jstl:if test="${ monemaId != null }">
+		<acme:menu-separator/>
+		<acme:form-textarea code="investor.application.form.label.offerMonema" path="offerMonema" />
+		<acme:form-url code="investor.application.form.label.link" path="link" />
+		<acme:form-password code="investor.application.form.label.password" path="password" />
+		<acme:form-hidden path="monemaId"/>
+	</jstl:if>
+	
+	
 	<acme:form-submit test="${command == 'create'}" code="investor.application.form.button.create"
 			action="/investor/application/create?invId=${invId}" />
 	

@@ -29,9 +29,12 @@
        `id` integer not null,
         `version` integer not null,
         `justification` varchar(1024),
+        `link` varchar(255),
         `moment` datetime(6),
         `offer_amount` double precision,
         `offer_currency` varchar(255),
+        `offer_monema` varchar(255),
+        `password` varchar(255),
         `statement` varchar(255),
         `status` integer,
         `ticker` varchar(255),
@@ -80,6 +83,15 @@
         `activity_sectors` varchar(1024),
         `spamwords` varchar(1024),
         `threshold` double precision,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `dashboard` (
+       `id` integer not null,
+        `version` integer not null,
+        `ratio_applications_with_link` double precision not null,
+        `ratio_applications_with_password` double precision not null,
+        `ratio_inv_round_with_monema` double precision not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -165,6 +177,14 @@
         `moment` datetime(6),
         `text` varchar(255),
         `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `monema` (
+       `id` integer not null,
+        `version` integer not null,
+        `text` varchar(1024),
+        `investment_round_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -264,6 +284,9 @@
 
     insert into `hibernate_sequence` values ( 1 );
 
+    alter table `monema` 
+       add constraint UK_aaiy09m81olhhtqsspu9lta49 unique (`investment_round_id`);
+
     alter table `storage` 
        add constraint UK_efthk7gn1p8761xs9lnetdfh5 unique (`authenticated_id`);
 
@@ -344,6 +367,11 @@
        add constraint `FK7ju7uxmh5mdbjgrfwgoem3eqd` 
        foreign key (`forum_id`) 
        references `discussion_forum` (`id`);
+
+    alter table `monema` 
+       add constraint `FKcujvi89uqkav60w3e6rkvuiy6` 
+       foreign key (`investment_round_id`) 
+       references `investment_round` (`id`);
 
     alter table `storage` 
        add constraint `FKbak20tfheetwsi0t2ammfwip0` 

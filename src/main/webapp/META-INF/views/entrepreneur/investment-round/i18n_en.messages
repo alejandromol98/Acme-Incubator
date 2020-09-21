@@ -29,6 +29,8 @@ entrepreneur.investmentRound.form.label.workProgrammes = Work Programmes
 entrepreneur.investmentRound.form.label.accountingRecord = Accounting Records
 entrepreneur.investmentRound.form.button.return = Return
 
+entrepreneur.investmentRound.form.label.monema = Investment Round Monema
+
 entrepreneur.investmentRound.form.valid.ticker = Ticker must follow pattern: "SSS-YY-NNNNNN", where "SSS" denotes first 3 letters of your activity sector, "YY" the last 2 digits of the year and "NNNNNN" 6 numbers
 entrepreneur.investmentRound.form.valid.amount = Amount must be in EUROS (EUR or € supported)
 entrepreneur.investmentRound.form.valid.title = Invalid Title

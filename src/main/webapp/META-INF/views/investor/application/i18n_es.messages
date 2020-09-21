@@ -19,3 +19,12 @@ investor.application.form.label.invRoundAmount = Cantidad de Dinero de la Ronda 
 
 investor.application.form.button.create = Crear Solicitud
 investor.application.form.button.return = Volver
+
+investor.application.form.label.offerMonema = Oferta para el monema asociado
+investor.application.form.label.link = Información adicional
+investor.application.form.label.password = Contraseña para el link
+
+investor.application.form.valid.offerProblemLink = La oferta del monema no debe estar vacía
+investor.application.form.valid.offerProblem = Oferta del monema no válida
+investor.application.form.valid.linkPassword = El link no debe estar vacío
+investor.application.form.valid.passwordCharacters = La contraseña debe tener al menos 10 caracteres: 1 dígito, 1 letra y 1 símbolo

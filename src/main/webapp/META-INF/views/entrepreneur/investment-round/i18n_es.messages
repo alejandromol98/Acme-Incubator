@@ -29,6 +29,8 @@ entrepreneur.investmentRound.form.label.workProgrammes = Programas de Trabajo
 entrepreneur.investmentRound.form.label.accountingRecord = Registros de Contabilidad
 entrepreneur.investmentRound.form.button.return = Volver
 
+entrepreneur.investmentRound.form.label.monema = Monema de Ronda de Inversión
+
 entrepreneur.investmentRound.form.valid.ticker = Código no válido: debe seguir el patrón: "SSS-YY-NNNNNN", donde "SSS" son las 3 primeras letras de tu sector de actividad, "YY" los dos últimos dígitos del año y "NNNNNN" 6 números
 entrepreneur.investmentRound.form.valid.amount = La cantidad se debe expresar en EUROS (EUR o €)
 entrepreneur.investmentRound.form.valid.title = Título no válido

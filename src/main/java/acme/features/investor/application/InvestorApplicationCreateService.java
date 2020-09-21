@@ -13,6 +13,7 @@ import acme.entities.applications.Application;
 import acme.entities.applications.Status;
 import acme.entities.customisations.Customisation;
 import acme.entities.investmentRounds.InvestmentRound;
+import acme.entities.monemas.Monema;
 import acme.entities.roles.Investor;
 import acme.features.administrator.customisation.AdministratorCustomisationRepository;
 import acme.features.authenticated.investmentRound.AuthenticatedInvestmentRoundRepository;
@@ -89,7 +90,13 @@ public class InvestorApplicationCreateService implements AbstractCreateService<I
 		model.setAttribute("investmentRoundAmount", investmentRound.getAmount());
 		model.setAttribute("invId", entity.getInvestmentRound().getId());
 
-		request.unbind(entity, model, "ticker", "statement", "offer");
+		List<Monema> monemas = (List<Monema>) this.investmentRoundRepository.findMonemaByInvRound(invRoundId);
+		if (!monemas.isEmpty()) {
+			Monema problem = monemas.get(0);
+			model.setAttribute("monemaId", problem.getId());
+		}
+
+		request.unbind(entity, model, "ticker", "statement", "offer", "offerMonema", "link", "password");
 
 	}
 
@@ -183,6 +190,86 @@ public class InvestorApplicationCreateService implements AbstractCreateService<I
 			}
 
 			errors.state(request, n <= threshold, "statement", "entrepreneur.investmentRound.form.valid.title");
+		}
+
+		//Control Check validation
+
+		if (entity.getOfferMonema() != null) {
+
+			//Validate Problem Spam
+			if (!errors.hasErrors("offerProblem")) {
+				String offerProblem = entity.getOfferMonema();
+				Integer n = 0;
+
+				Double threshold;
+
+				threshold = Double.valueOf(offerProblem.split(" ").length) * customisation.getThreshold() / 100;
+
+				for (String s : spam) {
+					if (offerProblem.toLowerCase().contains(s.toLowerCase())) {
+						n++;
+					}
+				}
+
+				errors.state(request, n <= threshold, "offerMonema", "investor.application.form.valid.offerMonema");
+			}
+			// Validate if exist an password, it must exist a link
+			if (!errors.hasErrors("offerProblem")) {
+				boolean result;
+				String link = entity.getLink();
+				if (!link.isEmpty()) {
+					result = !entity.getOfferMonema().isEmpty();
+				} else {
+					result = true;
+				}
+				errors.state(request, result, "offerMonema", "investor.application.form.valid.offerMonemaLink");
+			}
+		}
+
+		if (entity.getLink() != null) {
+
+			// Validate if exist a password, it must exist a link
+			if (!errors.hasErrors("link")) {
+				boolean result;
+				String password = entity.getPassword();
+				if (!password.isEmpty()) {
+					result = !entity.getLink().isEmpty();
+				} else {
+					result = true;
+				}
+				errors.state(request, result, "link", "investor.application.form.valid.linkPassword");
+			}
+		}
+
+		if (entity.getPassword() != null) {
+
+			// Validate password characters
+			if (!errors.hasErrors("password")) {
+				boolean result;
+				int numLetters = 0;
+				int numDigits = 0;
+				int numSymbols = 0;
+				String password = entity.getPassword();
+				if (!password.isEmpty()) {
+					for (int i = 0; i < password.length(); i++) {
+						Character c = password.charAt(i);
+						if (Character.isDigit(c)) {
+							numDigits += 1;
+						}
+						if (Character.isLetter(c)) {
+							numLetters += 1;
+						}
+						if (!Character.isDigit(c) && !Character.isLetter(c) && !c.equals(' ')) {
+							numSymbols += 1;
+						}
+					}
+
+					result = password.length() >= 10 && numDigits >= 1 && numLetters >= 1 && numSymbols >= 1;
+				} else {
+					result = true;
+				}
+				errors.state(request, result, "password", "investor.application.form.valid.passwordCharacters");
+			}
 		}
 
 	}

@@ -15,6 +15,8 @@ import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.URL;
+
 import acme.entities.investmentRounds.InvestmentRound;
 import acme.entities.roles.Investor;
 import acme.framework.datatypes.Money;
@@ -55,6 +57,14 @@ public class Application extends DomainEntity {
 	@Column(length = 1024)
 	@Size(min = 0, max = 1024)
 	private String				justification;
+
+	//Check Control Attributes
+	private String				offerMonema;
+
+	@URL
+	private String				link;
+
+	private String				password;
 
 	// Derived attributes -----------------------------------------------------
 

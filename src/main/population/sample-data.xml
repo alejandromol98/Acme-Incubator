@@ -710,5 +710,11 @@
 		<property name="forum" ref="discussionForum3" />
 		<property name="author" ref="investor2Authenticated" />
 	</bean>
+	
+	<!-- Monemas -->
+	<bean name="monema1" class="acme.entities.monemas.Monema">
+		<property name="text" value="Monema for the Investment Round 1" />
+		<property name="investmentRound" ref="investmentRound2" />
+	</bean>
 
 </beans>

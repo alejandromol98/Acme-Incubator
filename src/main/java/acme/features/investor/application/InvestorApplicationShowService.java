@@ -1,11 +1,15 @@
 
 package acme.features.investor.application;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.applications.Application;
+import acme.entities.monemas.Monema;
 import acme.entities.roles.Investor;
+import acme.features.authenticated.investmentRound.AuthenticatedInvestmentRoundRepository;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.datatypes.Money;
@@ -17,7 +21,10 @@ public class InvestorApplicationShowService implements AbstractShowService<Inves
 
 	// Internal State ---------------------------------------
 	@Autowired
-	InvestorApplicationRepository repository;
+	InvestorApplicationRepository			repository;
+
+	@Autowired
+	AuthenticatedInvestmentRoundRepository	investmentRoundRepository;
 
 
 	// AbstractListService interface ------------------------
@@ -63,7 +70,13 @@ public class InvestorApplicationShowService implements AbstractShowService<Inves
 		Money investmentRoundAmount = entity.getInvestmentRound().getAmount();
 		model.setAttribute("investmentRoundAmount", investmentRoundAmount);
 
-		request.unbind(entity, model, "ticker", "moment", "statement", "offer", "status", "justification");
+		List<Monema> monemas = (List<Monema>) this.investmentRoundRepository.findMonemaByInvRound(entity.getInvestmentRound().getId());
+		if (!monemas.isEmpty()) {
+			Monema problem = monemas.get(0);
+			model.setAttribute("monemaId", problem.getId());
+		}
+
+		request.unbind(entity, model, "ticker", "moment", "statement", "offer", "status", "justification", "offerMonema", "link", "password");
 	}
 
 }

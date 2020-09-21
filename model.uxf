@@ -548,7 +548,7 @@ Published By ^</panel_attributes>
       <x>546</x>
       <y>525</y>
       <w>217</w>
-      <h>91</h>
+      <h>126</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Application
@@ -557,7 +557,10 @@ Application
 + moment: Date {Temporal(TIMESTAMP), Past}
 + statement: String {NotBlank}
 + offer: Money {NotNull}
-+ status: StatusApplications {NotNull}</panel_attributes>
++ status: StatusApplications {NotNull}
++ offerMonema: String
++ link: String {URL}
++ password:String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -752,16 +755,16 @@ m2=0...*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>392</x>
-      <y>700</y>
-      <w>378</w>
-      <h>112</h>
+      <x>469</x>
+      <y>693</y>
+      <w>301</w>
+      <h>119</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=0...*
 Written Into ^</panel_attributes>
-    <additional_attributes>10.0;10.0;520.0;140.0</additional_attributes>
+    <additional_attributes>10.0;10.0;410.0;150.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -836,5 +839,48 @@ StorageStatus
 + ACCEPTED
 </panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1106</x>
+      <y>609</y>
+      <w>224</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Dashboard
+--
++ ratioInvRoundWithMonema: Double {NotNull}
++ ratioApplicationsWithLink: Double {NotNull}
++ ratioApplicationsWithPassword: Double {NotNull}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>497</x>
+      <y>889</y>
+      <w>217</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Monema
+--
++ text: String{NotBlank, max=1024}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>700</y>
+      <w>175</w>
+      <h>203</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+m1=1
+m2=0...1</panel_attributes>
+    <additional_attributes>10.0;10.0;210.0;270.0</additional_attributes>
   </element>
 </diagram>

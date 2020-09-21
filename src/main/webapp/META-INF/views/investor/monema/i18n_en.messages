@@ -1,0 +1,8 @@
+#i18n_en.messages
+
+investor.monema.list.label.text = Text
+
+investor.monema.form.label.text = Text
+
+investor.monema.form.button.create = Create Monema
+investor.monema.form.button.return = Return

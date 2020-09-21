@@ -33,5 +33,9 @@
 	<acme:form-submit code="authenticated.investmentRound.form.label.workProgrammes" method="get" action="/authenticated/work-programme/list?id=${id}" />
 	<acme:form-submit code="authenticated.investmentRound.form.label.accountingRecord" method="get" action="/authenticated/accounting-record/list?id=${id}" />
 	
+	<security:authorize access="hasRole('Investor')">
+		<acme:form-submit code="entrepreneur.investmentRound.form.label.monema" method="get" action="/investor/monema/list?id=${id}" />
+	</security:authorize>
+	
 	<acme:form-return code="authenticated.investmentRound.form.button.return"/>
 </acme:form>

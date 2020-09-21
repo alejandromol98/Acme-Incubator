@@ -1,0 +1,7 @@
+#i18n_es.messages
+
+administrator.dashboard.form.label.ratioInvRoundWithMonema = Ratio de Rondas de Inversión que tienen Monema
+administrator.dashboard.form.label.ratioApplicationsWithLink= Ratio de Aplicaciones que tienen un link para el monema
+administrator.dashboard.form.label.ratioApplicationsWithPassword = Ratio de Aplicaciones que tienen un link protegido con contraseña
+
+administrator.dashboard.form.button.return = Volver
